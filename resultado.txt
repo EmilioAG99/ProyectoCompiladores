@@ -1,0 +1,338 @@
+ABIWORLD
+se encontro tipoSTRING
+STRING
+nombre de variable STRING
+ID
+ASIG
+el valor a diccionario es 5
+{'chrisesguapo': {'STRING': '5'}}
+NUMERO
+C
+se encontro tipoSTRING
+STRING
+nombre de variable STRING
+ID
+ASIG
+el valor a diccionario es 2
+{'chrisesguapo': {'STRING': '5'}, 'variable2': {'STRING': '2'}}
+NUMERO
+C
+se encontro tipoSTRING
+STRING
+nombre de variable STRING
+ID
+ASIG
+el valor a diccionario es TRUE
+{'chrisesguapo': {'STRING': '5'}, 'variable2': {'STRING': '2'}, 'a': {'STRING': 'TRUE'}}
+TRUE
+C
+se encontro arregloABIRRAY
+ABIRRAY
+STRING
+ID
+ASIG
+CORA
+{'chrisesguapo': {'STRING': '5'}, 'variable2': {'STRING': '2'}, 'a': {'STRING': 'TRUE'}, 'arreglo1': {'STRING': '10'}}
+NUMERO
+CORC
+PC
+ABISTRUCT
+ID
+LLAVEA
+se encontro tipoINT
+INT
+nombre de variable INT
+ID
+ASIG
+el valor a diccionario es 100
+{'chrisesguapo': {'STRING': '5'}, 'variable2': {'STRING': '2'}, 'a': {'STRING': 'TRUE'}, 'arreglo1': {'STRING': '10'}, 'guapura': {'INT': '100'}}
+NUMERO
+C
+se encontro tipoINT
+INT
+nombre de variable INT
+ID
+ASIG
+el valor a diccionario es "hola"
+{'chrisesguapo': {'STRING': '5'}, 'variable2': {'STRING': '2'}, 'a': {'STRING': 'TRUE'}, 'arreglo1': {'STRING': '10'}, 'guapura': {'INT': '100'}, 'chris': {'INT': '"hola"'}}
+STRING_VALOR
+LLAVEC
+PC
+VOID
+ID
+PARENTA
+se encontro tipoINT
+INT
+nombre de variable INT
+ID
+{'chrisesguapo': {'STRING': '5'}, 'variable2': {'STRING': '2'}, 'a': {'STRING': 'TRUE'}, 'arreglo1': {'STRING': '10'}, 'guapura': {'INT': '100'}, 'chris': {'INT': '"hola"'}, 'tupodeDato1': {'INT': 'NULL'}}
+C
+se encontro tipoINT
+INT
+nombre de variable INT
+ID
+{'chrisesguapo': {'STRING': '5'}, 'variable2': {'STRING': '2'}, 'a': {'STRING': 'TRUE'}, 'arreglo1': {'STRING': '10'}, 'guapura': {'INT': '100'}, 'chris': {'INT': '"hola"'}, 'tupodeDato1': {'INT': 'NULL'}, 'param2': {'INT': 'NULL'}}
+PARENTC
+LLAVEA
+ABIF
+PARENTA
+ID
+LT
+NUMERO
+PARENTC
+LLAVEA
+ABIN
+PARENTA
+ID
+PARENTC
+PC
+ABOUT
+PARENTA
+STRING_VALOR
+C
+ID
+PARENTC
+PC
+ID
+ASIG
+NUMERO
+MULT
+NUMERO
+PC
+ID
+ASIG
+STRING_VALOR
+PC
+LLAVEC
+ELSE
+LLAVEA
+ABIN
+PARENTA
+ID
+PARENTC
+PC
+ABOUT
+PARENTA
+STRING_VALOR
+C
+ID
+PARENTC
+PC
+ID
+ASIG
+NUMERO
+MULT
+NUMERO
+PC
+ID
+ASIG
+STRING_VALOR
+PC
+LLAVEC
+RETURN
+ID
+PC
+LLAVEC
+VOID
+ID
+PARENTA
+se encontro tipoINT
+INT
+nombre de variable INT
+ID
+{'chrisesguapo': {'STRING': '5'}, 'variable2': {'STRING': '2'}, 'a': {'STRING': 'TRUE'}, 'arreglo1': {'STRING': '10'}, 'guapura': {'INT': '100'}, 'chris': {'INT': '"hola"'}, 'tupodeDato1': {'INT': 'NULL'}, 'param2': {'INT': 'NULL'}, 'tupodeDato3': {'INT': 'NULL'}}
+PARENTC
+LLAVEA
+se encontro tipoBOOL
+BOOL
+nombre de variable BOOL
+ID
+ASIG
+el valor a diccionario es TRUE
+{'chrisesguapo': {'STRING': '5'}, 'variable2': {'STRING': '2'}, 'a': {'STRING': 'TRUE'}, 'arreglo1': {'STRING': '10'}, 'guapura': {'INT': '100'}, 'chris': {'INT': '"hola"'}, 'tupodeDato1': {'INT': 'NULL'}, 'param2': {'INT': 'NULL'}, 'tupodeDato3': {'INT': 'NULL'}, 'boleanoss': {'BOOL': 'TRUE'}}
+TRUE
+ABIF
+PARENTA
+ID
+LT
+NUMERO
+AND
+NOT
+PARENTA
+ID
+PARENTC
+PARENTC
+LLAVEA
+ABIDECLARA
+ID
+ID
+PC
+ID
+P
+ID
+PC
+ID
+ASIG
+ID
+P
+ID
+PC
+ID
+ASIG
+ID
+CORA
+NUMERO
+CORC
+PC
+se encontro tipoINT
+INT
+nombre de variable INT
+ID
+ASIG
+el valor a diccionario es 0
+{'chrisesguapo': {'STRING': '5'}, 'variable2': {'STRING': '2'}, 'a': {'INT': '0'}, 'arreglo1': {'STRING': '10'}, 'guapura': {'INT': '100'}, 'chris': {'INT': '"hola"'}, 'tupodeDato1': {'INT': 'NULL'}, 'param2': {'INT': 'NULL'}, 'tupodeDato3': {'INT': 'NULL'}, 'boleanoss': {'BOOL': 'TRUE'}}
+NUMERO
+ID
+ASIG
+NUMERO
+MULT
+NUMERO
+PC
+ABIF
+PARENTA
+ID
+LT
+NUMERO
+PARENTC
+LLAVEA
+ABIN
+PARENTA
+ID
+PARENTC
+PC
+ID
+ASIG
+ID
+AGREGA
+ID
+PC
+ABOUT
+PARENTA
+STRING_VALOR
+PARENTC
+PC
+LLAVEC
+ABOUT
+PARENTA
+STRING_VALOR
+PARENTC
+PC
+LLAVEC
+ELSE
+LLAVEA
+ID
+ASIG
+STRING_VALOR
+PC
+LLAVEC
+RETURN
+ID
+PC
+LLAVEC
+ABIMAIN
+LLAVEA
+ABIN
+PARENTA
+ID
+PARENTC
+PC
+ID
+ASIG
+ID
+PARENTA
+NUMERO
+C
+ID
+CORA
+NUMERO
+CORC
+C
+NUMERO
+PARENTC
+PC
+ABOUT
+PARENTA
+STRING_VALOR
+C
+ID
+PARENTC
+PC
+se encontro tipoINT
+INT
+nombre de variable INT
+ID
+ASIG
+el valor a diccionario es 10
+{'chrisesguapo': {'STRING': '5'}, 'variable2': {'STRING': '2'}, 'a': {'INT': '0'}, 'arreglo1': {'STRING': '10'}, 'guapura': {'INT': '100'}, 'chris': {'INT': '"hola"'}, 'tupodeDato1': {'INT': 'NULL'}, 'param2': {'INT': 'NULL'}, 'tupodeDato3': {'INT': 'NULL'}, 'boleanoss': {'BOOL': 'TRUE'}, 'variableEnmain': {'INT': '10'}}
+NUMERO
+C
+se encontro tipoINT
+INT
+nombre de variable INT
+ID
+ASIG
+el valor a diccionario es 20
+{'chrisesguapo': {'STRING': '5'}, 'variable2': {'STRING': '2'}, 'a': {'INT': '0'}, 'arreglo1': {'STRING': '10'}, 'guapura': {'INT': '100'}, 'chris': {'INT': '"hola"'}, 'tupodeDato1': {'INT': 'NULL'}, 'param2': {'INT': 'NULL'}, 'tupodeDato3': {'INT': 'NULL'}, 'boleanoss': {'BOOL': 'TRUE'}, 'variableEnmain': {'INT': '10'}, 'b': {'INT': '20'}}
+NUMERO
+ID
+ASIG
+NUMERO
+PC
+LLAVEC
+tipo de datos
+variable unica
+tipo de datos
+variable unica
+tipo de datos
+variable unica
+tipo de datos
+ABIRRAY DETECTADO
+variable unica
+Multiples variables
+Multiples variables
+Multiples variables
+abiworld
+tipo de datos
+variable unica
+tipo de datos
+variable unica
+Multiples variables
+abistruct
+tipo de datos
+tipo de datos
+encuentra Parametro
+tipo de datos
+encuentra Parametro
+encuentra multiparametros
+se encontro el ELSE
+Se encontro el IF
+tipo de datos
+tipo de datos
+encuentra Parametro
+tipo de datos
+variable unica
+tipo de datos
+variable unica
+Se encontro el IF
+se encontro el ELSE
+Se encontro el IF
+encuentra Funcion
+encuentra Funcion
+tipo de datos
+variable unica
+tipo de datos
+variable unica
+Multiples variables
+se encontro main
+inicio
+None

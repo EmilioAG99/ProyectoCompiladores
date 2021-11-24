@@ -1,0 +1,139 @@
+LexToken(ABIWORLD,'ABIWORLD',1,0)
+LexToken(STRING,'STRING',1,9)
+LexToken(ID,'chrisselacome',1,16)
+LexToken(ASIG,'=',1,30)
+LexToken(NUMERO,5,1,32)
+LexToken(C,',',1,33)
+LexToken(CHAR,'CHAR',1,35)
+LexToken(ID,'variable2',1,40)
+LexToken(ASIG,'=',1,50)
+LexToken(NUMERO,2,1,52)
+LexToken(C,',',1,54)
+LexToken(STRING,'STRING',1,56)
+LexToken(ID,'a',1,64)
+LexToken(ASIG,'=',1,65)
+LexToken(TRUE,'TRUE',1,67)
+LexToken(C,',',1,72)
+LexToken(ABIRRAY,'ABIRRAY',1,74)
+LexToken(STRING,'STRING',1,82)
+LexToken(ID,'a',1,89)
+LexToken(ASIG,'=',1,91)
+LexToken(CORA,'[',1,93)
+LexToken(CORC,']',1,94)
+LexToken(PC,';',1,95)
+LexToken(ABIWORLD,'ABIWORLD',2,97)
+LexToken(ABIRRAY,'ABIRRAY',2,106)
+LexToken(STRING,'STRING',2,114)
+LexToken(ID,'a',2,121)
+LexToken(ASIG,'=',2,123)
+LexToken(CORA,'[',2,125)
+LexToken(CORC,']',2,126)
+LexToken(PC,';',2,127)
+LexToken(ABISTRUCT,'ABISTRUCT',3,129)
+LexToken(ID,'andres',3,139)
+LexToken(LLAVEA,'{',3,146)
+LexToken(INT,'INT',4,152)
+LexToken(ID,'guapura',4,156)
+LexToken(ASIG,'=',4,164)
+LexToken(NUMERO,100,4,166)
+LexToken(C,',',4,169)
+LexToken(INT,'INT',5,175)
+LexToken(ID,'chris',5,179)
+LexToken(ASIG,'=',5,185)
+LexToken(STRING_VALOR,'"gay"',5,187)
+LexToken(LLAVEC,'}',6,193)
+LexToken(PC,';',6,194)
+LexToken(ABISTRUCT,'ABISTRUCT',7,196)
+LexToken(ID,'andres',7,206)
+LexToken(LLAVEA,'{',7,213)
+LexToken(INT,'INT',8,219)
+LexToken(ID,'guapura',8,223)
+LexToken(ASIG,'=',8,231)
+LexToken(NUMERO,100,8,233)
+LexToken(C,',',8,236)
+LexToken(INT,'INT',9,242)
+LexToken(ID,'chris',9,246)
+LexToken(ASIG,'=',9,252)
+LexToken(STRING_VALOR,'"gay"',9,254)
+LexToken(C,',',9,259)
+LexToken(ABIRRAY,'ABIRRAY',10,265)
+LexToken(INT,'INT',10,273)
+LexToken(ID,'chrisesgay',10,277)
+LexToken(LLAVEC,'}',11,288)
+LexToken(PC,';',11,289)
+LexToken(VOID,'VOID',12,291)
+LexToken(ID,'funcion1',12,296)
+LexToken(PARENTA,'(',12,305)
+LexToken(INT,'INT',12,306)
+LexToken(ID,'tupodeDato1',12,310)
+LexToken(C,',',12,321)
+LexToken(INT,'INT',12,323)
+LexToken(ID,'param2',12,327)
+LexToken(PARENTC,')',12,333)
+LexToken(LLAVEA,'{',12,334)
+LexToken(LLAVEC,'}',14,341)
+LexToken(VOID,'VOID',15,343)
+LexToken(ID,'funcion1',15,348)
+LexToken(PARENTA,'(',15,357)
+LexToken(INT,'INT',15,358)
+LexToken(ID,'tupodeDato1',15,362)
+LexToken(C,',',15,373)
+LexToken(INT,'INT',15,375)
+LexToken(ID,'param2',15,379)
+LexToken(PARENTC,')',15,385)
+LexToken(LLAVEA,'{',15,386)
+LexToken(LLAVEC,'}',17,393)
+LexToken(ABIMAIN,'ABIMAIN',18,395)
+LexToken(LLAVEA,'{',18,402)
+LexToken(LLAVEC,'}',20,408)
+tipo de datos
+vatriable unica
+tipo de datos
+vatriable unica
+tipo de datos
+vatriable unica
+tipo de datos
+ABIRRAY DETECTADO
+vatriable unica
+Multiples variables
+Multiples variables
+Multiples variables
+tipo de datos
+ABIRRAY DETECTADO
+vatriable unica
+vacio
+abiworld
+abiworld
+tipo de datos
+vatriable unica
+tipo de datos
+vatriable unica
+Multiples variables
+tipo de datos
+vatriable unica
+tipo de datos
+vatriable unica
+tipo de datos
+ABIRRAY DETECTADO
+vatriable unica
+Multiples variables
+Multiples variables
+abistruct
+abistruct
+tipo de datos
+tipo de datos
+encuentra Parametro
+tipo de datos
+encuentra Parametro
+encuentra multiparametros
+tipo de datos
+tipo de datos
+encuentra Parametro
+tipo de datos
+encuentra Parametro
+encuentra multiparametros
+encuentra Funcion
+encuentra Funcion
+se encontro main
+inicio
+None

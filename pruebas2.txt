@@ -1,0 +1,49 @@
+abiworld string chrisesguapo = 5, string variable2 = 2 , string  a= true , abirray string arreglo1 = [10];
+abistruct andres {
+    int guapura = 100,
+    int chris = "hola"
+};
+void funcion1 (int tupodeDato1, int param2){
+     abif( a<10){
+        abin(abijora);
+        about("gamer" , abijora);
+        a = 4 * 3;
+        a = "Hola";
+    }
+    else{
+        abin(abijora);
+        about("gamer" , abijora);
+        a = 4 * 3;
+        a = "Hola";
+    }
+    return a;
+}
+void funcion2 (int tupodeDato3){
+     bool boleanoss = TRUE
+     abif( a<10 AND NOT(boleanoss)){
+        abideclara andres andres1;
+        andres1.guapura;
+        a = andres1.guapura;
+        a = b[10];
+        int a =0
+        a = 4 * 3;
+        abif(a<10){
+            abin(abijora);
+            a = a + b;
+            about("afuera");
+        }
+        about("afuera");
+    }
+    else{   
+        a = "Hola";
+    }
+    return a;
+}
+abimain{
+    
+       abin(abijora);
+       resultado = funcion2(1,cora[1],2);
+       about("gamer",abijora);
+        int variableEnmain =10, int b=20
+        a = 10;  
+}
