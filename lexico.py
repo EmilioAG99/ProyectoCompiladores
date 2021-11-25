@@ -101,7 +101,10 @@ analizador.input(cadena)
 diccionario = {}
 asignacionSimple = 0
 asignacionArreglo = 0
-reasignacion = 0
+asignacionEstructura = 0
+reasigna=0
+declaraEstructura = 0
+bandFunciones = 0
 llaveAuxiliar = ""
 valorAuxiliar = ""
 tipoAuxiliar =""
@@ -116,44 +119,40 @@ while True:
         if (tok.type == "INT" or tok.type == "CHAR"  or tok.type == "STRING"  or tok.type == "FLOAT"  or tok.type == "BOOL")and asignacionSimple == 0 and  asignacionArreglo == 0:
             asignacionSimple = 1
             tipoAuxiliar = str(tok.type)
-            print("se encontro tipo"+ str(tok.type))
         elif tok.type == "ABIRRAY":
             asignacionArreglo = 1
-            print("se encontro arreglo"+ str(tok.type))
+        elif tok.type == "ABIDECLARA":
+            declaraEstructura = 1
         elif tok.type == "ABISTRUCT":
             asignacionEstructura =1
-    """     elif tok.type == "ID":
-            llaveAuxiliar = str(tok.value)
-            reasignacion = 1
-    if reasignacion == 1 and tok.value !=llaveAuxiliar and tok.type!="ASIG":
-        if tok.type == "PARENTA":
-             diccionario[llaveAuxiliar]={"FUNCION":valorReasignar}
-             reasignacion = 0
-        elif tok.type == "PC":
-            lista = list(diccionario[llaveAuxiliar].keys())
-            tipoDatos = lista[0]
-            diccionario[llaveAuxiliar]={tipoDatos:valorReasignar}
-            reasignacion = 0
-        elif tok.type == "ID": 
-            llaveAuxiliar = str(tok.value)
-            diccionario[llaveAuxiliar]={"Estructura":"NULO"}
-            reasignacion = 0
-        valorReasignar = valorReasignar + str(tok.value) """
+   
     if asignacionSimple == 1:
         if tok.type == "ID":
             llaveAuxiliar = str(tok.value)
-            print("nombre de variable "+str(tipoAuxiliar))
         if tok.type == "NUMERO" or  tok.type == "FLOAT_VALOR" or tok.type == "CHAR_VALOR" or tok.type == "STRING_VALOR" or tok.type == "TRUE" or tok.type == "FALSE":
             valorAuxiliar = str(tok.value)
-            print("el valor a diccionario es "+ str(tok.value))
             diccionario[llaveAuxiliar]={tipoAuxiliar:valorAuxiliar} 
-            print(diccionario)
             asignacionSimple = 0
         if tok.type == "C" or  tok.type == "PARENTC":
             diccionario[llaveAuxiliar]={tipoAuxiliar:"NULL"} 
-            print(diccionario)
             asignacionSimple = 0
-    if asignacionArreglo == 1:
+    elif reasigna == 1 and tok.type != "ASIG" :
+        if tok.type == "PC":
+          lista = list(diccionario[llaveAuxiliar].keys())
+          if(valorReasignar!=""):
+            diccionario[llaveAuxiliar]={lista[0]:valorReasignar}
+          valorReasignar= ""
+          reasigna = 0
+        if tok.type == "P":
+            valorReasignar= ""
+            reasigna = 0
+        if tok.type == "PARENTC":
+            valorReasignar =""
+            reasigna = 0
+        if(reasigna != 0):
+            valorReasignar = valorReasignar + str(tok.value)
+        else: valorReasignar =""
+    elif asignacionArreglo == 1:
         if (tok.type == "INT" or tok.type == "CHAR"  or tok.type == "STRING"  or tok.type == "FLOAT"  or tok.type == "BOOL"):
             tipoAuxiliar = str(tok.type)
         if tok.type == "ID":
@@ -161,6 +160,22 @@ while True:
         if tok.type == "NUMERO":
             sizeArray = str(tok.value)
             diccionario[llaveAuxiliar]={tipoAuxiliar:sizeArray}
-            print(diccionario)
             asignacionArreglo = 0
+    elif asignacionEstructura == 1:
+        if tok.type == "ID":
+            llaveAuxiliar = str(tok.value)
+            diccionario[llaveAuxiliar]={"ESTRUCTURA":"NULL"}
+            asignacionEstructura = 0
+    elif declaraEstructura == 1:
+        if tok.type == "ID" and diccionario.get(str(tok.value)) is None:
+          llaveAuxiliar = str(tok.value)
+          diccionario[llaveAuxiliar]={tipoAuxiliar:"NUEVAESTRUCTURA"}
+          declaraEstructura = 0
+        if tok.type == "ID":
+            tipoAuxiliar = str(tok.value)
+    elif tok.type == "ID" :
+        llaveAuxiliar = str(tok.value)
+        reasigna =1
+               
     print(tok.type)
+print(diccionario)

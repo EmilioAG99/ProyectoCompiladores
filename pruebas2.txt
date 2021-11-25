@@ -45,5 +45,6 @@ abimain{
        resultado = funcion2(1,cora[1],2);
        about("gamer",abijora);
         int variableEnmain =10, int b=20
-        a = 10;  
+        a = 10; 
+         
 }
