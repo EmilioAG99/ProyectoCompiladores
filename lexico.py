@@ -111,6 +111,7 @@ tipoAuxiliar =""
 sizeArray = ""
 valorReasignar =""
 diccionario = {}
+diccionarioFunciones ={}
 while True:
     tok = analizador.token()
     if not tok : 
@@ -131,10 +132,12 @@ while True:
             llaveAuxiliar = str(tok.value)
         if tok.type == "NUMERO" or  tok.type == "FLOAT_VALOR" or tok.type == "CHAR_VALOR" or tok.type == "STRING_VALOR" or tok.type == "TRUE" or tok.type == "FALSE":
             valorAuxiliar = str(tok.value)
-            diccionario[llaveAuxiliar]={tipoAuxiliar:valorAuxiliar} 
-            asignacionSimple = 0
+            if(diccionario.get(llaveAuxiliar) is None):
+                diccionario[llaveAuxiliar]={tipoAuxiliar:valorAuxiliar}
+                asignacionSimple = 0
+            else:  sys.exit("Repeticion de declaracion con nombre {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))
         if tok.type == "C" or  tok.type == "PARENTC":
-            diccionario[llaveAuxiliar]={tipoAuxiliar:"NULL"} 
+            diccionarioFunciones[llaveAuxiliar]={tipoAuxiliar:"NULL"} 
             asignacionSimple = 0
     elif reasigna == 1 and tok.type != "ASIG" :
         if tok.type == "PC":
@@ -179,3 +182,4 @@ while True:
                
     print(tok.type)
 print(diccionario)
+print(diccionarioFunciones)

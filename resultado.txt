@@ -1,29 +1,19 @@
 ABIWORLD
-se encontro tipoSTRING
 STRING
-nombre de variable STRING
 ID
 ASIG
-el valor a diccionario es 5
 NUMERO
 C
-se encontro tipoSTRING
 STRING
-nombre de variable STRING
 ID
 ASIG
-el valor a diccionario es 2
 NUMERO
 C
-se encontro tipoSTRING
 STRING
-nombre de variable STRING
 ID
 ASIG
-el valor a diccionario es TRUE
 TRUE
 C
-se encontro arregloABIRRAY
 ABIRRAY
 STRING
 ID
@@ -35,35 +25,29 @@ PC
 ABISTRUCT
 ID
 LLAVEA
-se encontro tipoINT
 INT
-nombre de variable INT
 ID
 ASIG
-el valor a diccionario es 100
 NUMERO
 C
-se encontro tipoINT
 INT
-nombre de variable INT
 ID
 ASIG
-el valor a diccionario es "hola"
+NUMERO
+C
+INT
+ID
+ASIG
 STRING_VALOR
 LLAVEC
 PC
 VOID
-tokenID funcion1
 ID
 PARENTA
-se encontro tipoINT
 INT
-nombre de variable INT
 ID
 C
-se encontro tipoINT
 INT
-nombre de variable INT
 ID
 PARENTC
 LLAVEA
@@ -76,7 +60,6 @@ PARENTC
 LLAVEA
 ABIN
 PARENTA
-tokenID abijora
 ID
 PARENTC
 PC
@@ -84,18 +67,15 @@ ABOUT
 PARENTA
 STRING_VALOR
 C
-tokenID abijora
 ID
 PARENTC
 PC
-tokenID a
 ID
 ASIG
 NUMERO
 MULT
 NUMERO
 PC
-tokenID a
 ID
 ASIG
 STRING_VALOR
@@ -105,7 +85,6 @@ ELSE
 LLAVEA
 ABIN
 PARENTA
-tokenID abijora
 ID
 PARENTC
 PC
@@ -113,44 +92,34 @@ ABOUT
 PARENTA
 STRING_VALOR
 C
-tokenID abijora
 ID
 PARENTC
 PC
-tokenID a
 ID
 ASIG
 NUMERO
 MULT
 NUMERO
 PC
-tokenID a
 ID
 ASIG
 STRING_VALOR
 PC
 LLAVEC
 RETURN
-tokenID a
 ID
 PC
 LLAVEC
 VOID
-tokenID funcion2
 ID
 PARENTA
-se encontro tipoINT
 INT
-nombre de variable INT
 ID
 PARENTC
 LLAVEA
-se encontro tipoBOOL
 BOOL
-nombre de variable BOOL
 ID
 ASIG
-el valor a diccionario es TRUE
 TRUE
 ABIF
 PARENTA
@@ -164,26 +133,20 @@ ID
 PARENTC
 PARENTC
 LLAVEA
-se encontro declaracionABIDECLARA
 ABIDECLARA
 ID
 ID
 PC
-tokenID andres1
 ID
 P
-tokenID guapura
 ID
 PC
-tokenID a
 ID
 ASIG
 ID
 P
-tokenID guapura
 ID
 PC
-tokenID a
 ID
 ASIG
 ID
@@ -191,14 +154,10 @@ CORA
 NUMERO
 CORC
 PC
-se encontro tipoINT
 INT
-nombre de variable INT
 ID
 ASIG
-el valor a diccionario es 0
 NUMERO
-tokenID a
 ID
 ASIG
 NUMERO
@@ -207,7 +166,6 @@ NUMERO
 PC
 ABIF
 PARENTA
-tokenID a
 ID
 LT
 NUMERO
@@ -215,11 +173,9 @@ PARENTC
 LLAVEA
 ABIN
 PARENTA
-tokenID abijora
 ID
 PARENTC
 PC
-tokenID a
 ID
 ASIG
 ID
@@ -240,14 +196,12 @@ PC
 LLAVEC
 ELSE
 LLAVEA
-tokenID a
 ID
 ASIG
 STRING_VALOR
 PC
 LLAVEC
 RETURN
-tokenID a
 ID
 PC
 LLAVEC
@@ -255,11 +209,9 @@ ABIMAIN
 LLAVEA
 ABIN
 PARENTA
-tokenID abijora
 ID
 PARENTC
 PC
-tokenID resultado
 ID
 ASIG
 ID
@@ -278,32 +230,25 @@ ABOUT
 PARENTA
 STRING_VALOR
 C
-tokenID abijora
 ID
 PARENTC
 PC
-se encontro tipoINT
 INT
-nombre de variable INT
 ID
 ASIG
-el valor a diccionario es 10
 NUMERO
 C
-se encontro tipoINT
 INT
-nombre de variable INT
 ID
 ASIG
-el valor a diccionario es 20
 NUMERO
-tokenID a
 ID
 ASIG
 NUMERO
 PC
 LLAVEC
-{'chrisesguapo': {'STRING': '5'}, 'variable2': {'STRING': '2'}, 'a': {'INT': '10'}, 'arreglo1': {'STRING': '10'}, 'andres': {'ESTRUCTURA': 'NULL'}, 'guapura': {'INT': '100'}, 'chris': {'INT': '"hola"'}, 'tupodeDato1': {'INT': 'NULL'}, 'param2': {'INT': 'NULL'}, 'tupodeDato3': {'INT': 'NULL'}, 'boleanoss': {'BOOL': 'TRUE'}, 'andres1': {'andres': 'NUEVAESTRUCTURA'}, 'variableEnmain': {'INT': '10'}, 'b': {'INT': '20'}}
+{'chrisesguapo': {'STRING': '5'}, 'variable2': {'STRING': '2'}, 'a': {'STRING': '10'}, 'arreglo1': {'STRING': '10'}, 'andres': {'ESTRUCTURA': 'NULL'}, 'guapura': {'INT': '100'}, 'guap': {'INT': '100'}, 'chris': {'INT': '"hola"'}, 'boleanoss': {'BOOL': 'TRUE'}, 'andres1': {'andres': 'NUEVAESTRUCTURA'}, 'aa': {'INT': '0'}, 'variableEnmain': {'INT': '10'}, 'b': {'INT': '20'}}
+{'tupodeDato1': {'INT': 'NULL'}, 'param2': {'INT': 'NULL'}, 'tupodeDato3': {'INT': 'NULL'}}
 tipo de datos
 variable unica
 tipo de datos
@@ -321,6 +266,9 @@ tipo de datos
 variable unica
 tipo de datos
 variable unica
+tipo de datos
+variable unica
+Multiples variables
 Multiples variables
 abistruct
 tipo de datos

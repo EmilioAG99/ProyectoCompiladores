@@ -1,6 +1,7 @@
 abiworld string chrisesguapo = 5, string variable2 = 2 , string  a= true , abirray string arreglo1 = [10];
 abistruct andres {
     int guapura = 100,
+    int guap = 100,
     int chris = "hola"
 };
 void funcion1 (int tupodeDato1, int param2){
@@ -25,7 +26,7 @@ void funcion2 (int tupodeDato3){
         andres1.guapura;
         a = andres1.guapura;
         a = b[10];
-        int a =0
+        int aa =0
         a = 4 * 3;
         abif(a<10){
             abin(abijora);
