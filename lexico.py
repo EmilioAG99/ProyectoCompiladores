@@ -98,7 +98,6 @@ fp.close()
 analizador = lex.lex()
 analizador.input(cadena)
 
-diccionario = {}
 asignacionSimple = 0
 asignacionArreglo = 0
 asignacionEstructura = 0
@@ -120,12 +119,15 @@ while True:
         if (tok.type == "INT" or tok.type == "CHAR"  or tok.type == "STRING"  or tok.type == "FLOAT"  or tok.type == "BOOL")and asignacionSimple == 0 and  asignacionArreglo == 0:
             asignacionSimple = 1
             tipoAuxiliar = str(tok.type)
+            print("dentro", tipoAuxiliar)
         elif tok.type == "ABIRRAY":
             asignacionArreglo = 1
         elif tok.type == "ABIDECLARA":
             declaraEstructura = 1
         elif tok.type == "ABISTRUCT":
             asignacionEstructura =1
+        elif (tok.type == "INT" or tok.type == "CHAR"  or tok.type == "STRING"  or tok.type == "FLOAT"  or tok.type == "BOOL" or tok.type=="VOID"):
+            tipoAuxiliar = str(tok.type)
    
     if asignacionSimple == 1:
         if tok.type == "ID":
@@ -137,13 +139,21 @@ while True:
                 asignacionSimple = 0
             else:  sys.exit("Repeticion de declaracion con nombre {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))
         if tok.type == "C" or  tok.type == "PARENTC":
-            diccionarioFunciones[llaveAuxiliar]={tipoAuxiliar:"NULL"} 
+            if(diccionarioFunciones.get(llaveAuxiliar) is None):
+                diccionarioFunciones[llaveAuxiliar]={tipoAuxiliar:"NULL"} 
+                asignacionSimple = 0
+            else:  sys.exit("Repeticion de declaracion con nombre {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))
+        if tok.type == "PARENTA":
             asignacionSimple = 0
+            if(diccionarioFunciones.get(llaveAuxiliar) is None):
+                diccionarioFunciones[llaveAuxiliar]={tipoAuxiliar:"DECLARACIONFUNCION"}
+            else:sys.exit("Repeticion de declaracion con nombre {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))
+        if(reasigna != 0):
+            valorReasignar = valorReasignar + str(tok.value)
     elif reasigna == 1 and tok.type != "ASIG" :
         if tok.type == "PC":
-          lista = list(diccionario[llaveAuxiliar].keys())
-          if(valorReasignar!=""):
-            diccionario[llaveAuxiliar]={lista[0]:valorReasignar}
+          lista = list(diccionario[llaveAuxiliar].keys())     
+          diccionario[llaveAuxiliar]={lista[0]:valorReasignar}
           valorReasignar= ""
           reasigna = 0
         if tok.type == "P":
@@ -152,6 +162,12 @@ while True:
         if tok.type == "PARENTC":
             valorReasignar =""
             reasigna = 0
+        if tok.type == "PARENTA" and valorReasignar=="":
+            if(diccionarioFunciones.get(llaveAuxiliar) is None):
+                diccionarioFunciones[llaveAuxiliar]={tipoAuxiliar:"DECLARACIONFUNCION"}
+                valorReasignar =""
+                reasigna = 0
+            else:  sys.exit("Repeticion de declaracion con nombre {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))
         if(reasigna != 0):
             valorReasignar = valorReasignar + str(tok.value)
         else: valorReasignar =""
@@ -162,23 +178,30 @@ while True:
             llaveAuxiliar = str(tok.value)
         if tok.type == "NUMERO":
             sizeArray = str(tok.value)
-            diccionario[llaveAuxiliar]={tipoAuxiliar:sizeArray}
+            if(diccionario.get(llaveAuxiliar) is None):
+                diccionario[llaveAuxiliar]={tipoAuxiliar:sizeArray}
+            else:  sys.exit("Repeticion de declaracion con nombre {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))
             asignacionArreglo = 0
     elif asignacionEstructura == 1:
         if tok.type == "ID":
             llaveAuxiliar = str(tok.value)
-            diccionario[llaveAuxiliar]={"ESTRUCTURA":"NULL"}
-            asignacionEstructura = 0
+            if(diccionario.get(llaveAuxiliar) is None):
+                diccionario[llaveAuxiliar]={"ESTRUCTURA":"NULL"}
+                asignacionEstructura = 0
+            else:  sys.exit("Repeticion de declaracion con nombre {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))
     elif declaraEstructura == 1:
         if tok.type == "ID" and diccionario.get(str(tok.value)) is None:
           llaveAuxiliar = str(tok.value)
-          diccionario[llaveAuxiliar]={tipoAuxiliar:"NUEVAESTRUCTURA"}
-          declaraEstructura = 0
+          if(diccionario.get(llaveAuxiliar) is None):
+            diccionario[llaveAuxiliar]={tipoAuxiliar:"NUEVAESTRUCTURA"}
+            declaraEstructura = 0
+          else:  sys.exit("Repeticion de declaracion con nombre {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))
         if tok.type == "ID":
             tipoAuxiliar = str(tok.value)
     elif tok.type == "ID" :
         llaveAuxiliar = str(tok.value)
         reasigna =1
+        
                
     print(tok.type)
 print(diccionario)

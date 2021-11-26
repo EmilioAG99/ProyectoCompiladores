@@ -4,7 +4,8 @@ abistruct andres {
     int guap = 100,
     int chris = "hola"
 };
-void funcion1 (int tupodeDato1, int param2){
+
+string funcion2 (int tupodeDato1, int tupodeDato){
      abif( a<10){
         abin(abijora);
         about("gamer" , abijora);
@@ -19,7 +20,8 @@ void funcion1 (int tupodeDato1, int param2){
     }
     return a;
 }
-void funcion2 (int tupodeDato3){
+
+void funcion1 (int tupodeDato3){
      bool boleanoss = TRUE
      abif( a<10 AND NOT(boleanoss)){
         abideclara andres andres1;
@@ -39,6 +41,9 @@ void funcion2 (int tupodeDato3){
         a = "Hola";
     }
     return a;
+}
+void funcion3 (int tupodeDato4, int tipodeDato5, int tipodeDato6){
+     return ;
 }
 abimain{
     

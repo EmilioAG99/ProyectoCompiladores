@@ -1,14 +1,17 @@
 ABIWORLD
+dentro STRING
 STRING
 ID
 ASIG
 NUMERO
 C
+dentro STRING
 STRING
 ID
 ASIG
 NUMERO
 C
+dentro STRING
 STRING
 ID
 ASIG
@@ -25,28 +28,34 @@ PC
 ABISTRUCT
 ID
 LLAVEA
+dentro INT
 INT
 ID
 ASIG
 NUMERO
 C
+dentro INT
 INT
 ID
 ASIG
 NUMERO
 C
+dentro INT
 INT
 ID
 ASIG
 STRING_VALOR
 LLAVEC
 PC
-VOID
+dentro STRING
+STRING
 ID
 PARENTA
+dentro INT
 INT
 ID
 C
+dentro INT
 INT
 ID
 PARENTC
@@ -113,10 +122,12 @@ LLAVEC
 VOID
 ID
 PARENTA
+dentro INT
 INT
 ID
 PARENTC
 LLAVEA
+dentro BOOL
 BOOL
 ID
 ASIG
@@ -154,6 +165,7 @@ CORA
 NUMERO
 CORC
 PC
+dentro INT
 INT
 ID
 ASIG
@@ -205,6 +217,25 @@ RETURN
 ID
 PC
 LLAVEC
+VOID
+ID
+PARENTA
+dentro INT
+INT
+ID
+C
+dentro INT
+INT
+ID
+C
+dentro INT
+INT
+ID
+PARENTC
+LLAVEA
+RETURN
+PC
+LLAVEC
 ABIMAIN
 LLAVEA
 ABIN
@@ -233,11 +264,13 @@ C
 ID
 PARENTC
 PC
+dentro INT
 INT
 ID
 ASIG
 NUMERO
 C
+dentro INT
 INT
 ID
 ASIG
@@ -247,8 +280,8 @@ ASIG
 NUMERO
 PC
 LLAVEC
-{'chrisesguapo': {'STRING': '5'}, 'variable2': {'STRING': '2'}, 'a': {'STRING': '10'}, 'arreglo1': {'STRING': '10'}, 'andres': {'ESTRUCTURA': 'NULL'}, 'guapura': {'INT': '100'}, 'guap': {'INT': '100'}, 'chris': {'INT': '"hola"'}, 'boleanoss': {'BOOL': 'TRUE'}, 'andres1': {'andres': 'NUEVAESTRUCTURA'}, 'aa': {'INT': '0'}, 'variableEnmain': {'INT': '10'}, 'b': {'INT': '20'}}
-{'tupodeDato1': {'INT': 'NULL'}, 'param2': {'INT': 'NULL'}, 'tupodeDato3': {'INT': 'NULL'}}
+{'chrisesguapo': {'STRING': '5'}, 'variable2': {'STRING': '2'}, 'a': {'STRING': '10'}, 'arreglo1': {'STRING': '10'}, 'andres': {'ESTRUCTURA': 'NULL'}, 'guapura': {'INT': ''}, 'guap': {'INT': '100'}, 'chris': {'INT': '"hola"'}, 'boleanoss': {'BOOL': 'TRUE'}, 'andres1': {'andres': 'NUEVAESTRUCTURA'}, 'aa': {'INT': '0'}, 'variableEnmain': {'INT': '10'}, 'b': {'INT': '20'}}
+{'funcion2': {'STRING': 'DECLARACIONFUNCION'}, 'tupodeDato1': {'INT': 'NULL'}, 'tupodeDato': {'INT': 'NULL'}, 'funcion1': {'VOID': 'DECLARACIONFUNCION'}, 'tupodeDato3': {'INT': 'NULL'}, 'funcion3': {'VOID': 'DECLARACIONFUNCION'}, 'tupodeDato4': {'INT': 'NULL'}, 'tipodeDato5': {'INT': 'NULL'}, 'tipodeDato6': {'INT': 'NULL'}}
 tipo de datos
 variable unica
 tipo de datos
@@ -289,6 +322,16 @@ variable unica
 Se encontro el IF
 se encontro el ELSE
 Se encontro el IF
+tipo de datos
+tipo de datos
+encuentra Parametro
+tipo de datos
+encuentra Parametro
+tipo de datos
+encuentra Parametro
+encuentra multiparametros
+encuentra multiparametros
+encuentra Funcion
 encuentra Funcion
 encuentra Funcion
 tipo de datos
