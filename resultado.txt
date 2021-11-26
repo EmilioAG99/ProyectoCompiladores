@@ -3,18 +3,21 @@ dentro STRING
 STRING
 ID
 ASIG
+valor simple 5
 NUMERO
 C
-dentro STRING
-STRING
+dentro CHAR
+CHAR
 ID
 ASIG
-NUMERO
+valor simple "A"
+STRING_VALOR
 C
-dentro STRING
-STRING
+dentro INT
+INT
 ID
 ASIG
+valor simple TRUE
 TRUE
 C
 ABIRRAY
@@ -28,23 +31,27 @@ PC
 ABISTRUCT
 ID
 LLAVEA
-dentro INT
-INT
+dentro STRING
+STRING
 ID
 ASIG
-NUMERO
+valor simple FALSE
+FALSE
 C
 dentro INT
 INT
 ID
 ASIG
+valor simple 100
 NUMERO
 C
-dentro INT
-INT
+dentro CHAR
+CHAR
 ID
 ASIG
+valor simple "hola"
 STRING_VALOR
+C
 LLAVEC
 PC
 dentro STRING
@@ -84,10 +91,14 @@ ASIG
 NUMERO
 MULT
 NUMERO
+yo no lo di a  400 * 3 INT
+1  400 * 3
 PC
 ID
 ASIG
-STRING_VALOR
+NUMERO
+yo no lo di a  2 INT
+1  2
 PC
 LLAVEC
 ELSE
@@ -109,10 +120,19 @@ ASIG
 NUMERO
 MULT
 NUMERO
+yo no lo di a  4 * 3 INT
+1  4 * 3
 PC
+dentro STRING
+STRING
 ID
 ASIG
+valor simple "juan"
 STRING_VALOR
+ID
+ASIG
+ID
+yo no lo di chrisesguapo  juan1 STRING
 PC
 LLAVEC
 RETURN
@@ -131,7 +151,13 @@ dentro BOOL
 BOOL
 ID
 ASIG
+valor simple TRUE
 TRUE
+ID
+ASIG
+FALSE
+yo no lo di boleanoss  FALSE BOOL
+PC
 ABIF
 PARENTA
 ID
@@ -149,32 +175,66 @@ ID
 ID
 PC
 ID
+ASIG
+ID
 P
 ID
+yo no lo di variable2  andres . chris CHAR
+char dentro
+{'chrisesguapo': {'STRING': '"juan"'}, 'variable2': {'CHAR': '"hola"'}, 'a': {'INT': ' 4 * 3'}, 'arreglo1': {'STRING': '10'}, 'andres': {'ESTRUCTURA': 'NULL'}, 'h': {'STRING': {'FALSE': 3}}, 'guap': {'INT': {'100': 4}}, 'chris': {'CHAR': {'"hola"': 5}}, 'juan1': {'STRING': {'"juan"': 19}}, 'boleanoss': {'BOOL': ' FALSE'}, 'andres1': {'andres': 'NUEVAESTRUCTURA'}}
 PC
 ID
 ASIG
 ID
 P
 ID
+yo no lo di chrisesguapo  andres1 . h STRING
+PC
+ID
+P
+ID
+yo no lo di andres1  . h andres
 PC
 ID
 ASIG
 ID
-CORA
-NUMERO
-CORC
+P
+ID
+yo no lo di a  andres1 . guap INT
 PC
 dentro INT
 INT
 ID
 ASIG
+valor simple 0
 NUMERO
+dentro FLOAT
+FLOAT
+ID
+ASIG
+valor simple 3.0
+FLOAT_VALOR
+C
+dentro FLOAT
+FLOAT
+ID
+ASIG
+valor simple 100
+NUMERO
+ID
+ASIG
+ID
+yo no lo di abuela  abuela2 FLOAT
+ abuela2
+asigna variable FLOAT FLOAT
+PC
 ID
 ASIG
 NUMERO
 MULT
 NUMERO
+yo no lo di a  4 * 3 INT
+1  4 * 3
 PC
 ABIF
 PARENTA
@@ -191,8 +251,9 @@ PC
 ID
 ASIG
 ID
-AGREGA
+P
 ID
+yo no lo di a  andres . guap INT
 PC
 ABOUT
 PARENTA
@@ -208,9 +269,17 @@ PC
 LLAVEC
 ELSE
 LLAVEA
+dentro INT
+INT
 ID
 ASIG
-STRING_VALOR
+valor simple 1555
+NUMERO
+ID
+ASIG
+ID
+yo no lo di a  varieble3 INT
+asigna variable INT INT
 PC
 LLAVEC
 RETURN
@@ -247,7 +316,7 @@ ID
 ASIG
 ID
 PARENTA
-NUMERO
+ID
 C
 ID
 CORA
@@ -268,20 +337,24 @@ dentro INT
 INT
 ID
 ASIG
+valor simple 10
 NUMERO
 C
 dentro INT
 INT
 ID
 ASIG
+valor simple 20
 NUMERO
 ID
 ASIG
-NUMERO
+ID
+yo no lo di variableEnmain  b INT
+asigna variable INT INT
 PC
 LLAVEC
-{'chrisesguapo': {'STRING': '5'}, 'variable2': {'STRING': '2'}, 'a': {'STRING': '10'}, 'arreglo1': {'STRING': '10'}, 'andres': {'ESTRUCTURA': 'NULL'}, 'guapura': {'INT': ''}, 'guap': {'INT': '100'}, 'chris': {'INT': '"hola"'}, 'boleanoss': {'BOOL': 'TRUE'}, 'andres1': {'andres': 'NUEVAESTRUCTURA'}, 'aa': {'INT': '0'}, 'variableEnmain': {'INT': '10'}, 'b': {'INT': '20'}}
-{'funcion2': {'STRING': 'DECLARACIONFUNCION'}, 'tupodeDato1': {'INT': 'NULL'}, 'tupodeDato': {'INT': 'NULL'}, 'funcion1': {'VOID': 'DECLARACIONFUNCION'}, 'tupodeDato3': {'INT': 'NULL'}, 'funcion3': {'VOID': 'DECLARACIONFUNCION'}, 'tupodeDato4': {'INT': 'NULL'}, 'tipodeDato5': {'INT': 'NULL'}, 'tipodeDato6': {'INT': 'NULL'}}
+{'chrisesguapo': {'STRING': 'FALSE'}, 'variable2': {'CHAR': '"hola"'}, 'a': {'INT': '1555'}, 'arreglo1': {'STRING': '10'}, 'andres': {'ESTRUCTURA': 'NULL'}, 'h': {'STRING': {'FALSE': 3}}, 'guap': {'INT': {'100': 4}}, 'chris': {'CHAR': {'"hola"': 5}}, 'juan1': {'STRING': {'"juan"': 19}}, 'boleanoss': {'BOOL': ' FALSE'}, 'andres1': {'andres': 'NUEVAESTRUCTURA'}, 'aa': {'INT': {'0': 37}}, 'abuela': {'FLOAT': '100'}, 'abuela2': {'FLOAT': {'100': 38}}, 'varieble3': {'INT': {'1555': 49}}, 'variableEnmain': {'INT': '20'}, 'b': {'INT': {'20': 62}}}
+{'funcion2': {'STRING': {'DECLARACIONFUNCION': 8}}, 'tupodeDato1': {'INT': 'NULL'}, 'tupodeDato': {'INT': 'NULL'}, 'funcion1': {'VOID': {'DECLARACIONFUNCION': 28}}, 'tupodeDato3': {'INT': 'NULL'}, 'funcion3': {'VOID': {'DECLARACIONFUNCION': 54}}, 'tupodeDato4': {'INT': 'NULL'}, 'tipodeDato5': {'INT': 'NULL'}, 'tipodeDato6': {'INT': 'NULL'}}
 tipo de datos
 variable unica
 tipo de datos
@@ -303,6 +376,7 @@ tipo de datos
 variable unica
 Multiples variables
 Multiples variables
+Multiples variables
 abistruct
 tipo de datos
 tipo de datos
@@ -310,6 +384,8 @@ encuentra Parametro
 tipo de datos
 encuentra Parametro
 encuentra multiparametros
+tipo de datos
+variable unica
 se encontro el ELSE
 Se encontro el IF
 tipo de datos
@@ -319,7 +395,14 @@ tipo de datos
 variable unica
 tipo de datos
 variable unica
+tipo de datos
+variable unica
+tipo de datos
+variable unica
+Multiples variables
 Se encontro el IF
+tipo de datos
+variable unica
 se encontro el ELSE
 Se encontro el IF
 tipo de datos

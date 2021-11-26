@@ -1,44 +1,53 @@
-abiworld string chrisesguapo = 5, string variable2 = 2 , string  a= true , abirray string arreglo1 = [10];
+abiworld string chrisesguapo = 5, char variable2 = "A" , int  a= true , abirray string arreglo1 = [10];
 abistruct andres {
-    int guapura = 100,
+    string h = false,
     int guap = 100,
-    int chris = "hola"
+    char chris = "hola",
 };
 
 string funcion2 (int tupodeDato1, int tupodeDato){
      abif( a<10){
         abin(abijora);
         about("gamer" , abijora);
-        a = 4 * 3;
-        a = "Hola";
+        a = 400 * 3;
+        a = 2;
     }
     else{
         abin(abijora);
         about("gamer" , abijora);
         a = 4 * 3;
-        a = "Hola";
+        string juan1 = "juan"
+        chrisesguapo = juan1;
+        
+        
     }
     return a;
 }
 
+
 void funcion1 (int tupodeDato3){
      bool boleanoss = TRUE
+     boleanoss = false;
      abif( a<10 AND NOT(boleanoss)){
         abideclara andres andres1;
-        andres1.guapura;
-        a = andres1.guapura;
-        a = b[10];
+        variable2 = andres.chris;
+        chrisesguapo = andres1.h;
+        andres1.h;
+        a = andres1.guap;
         int aa =0
+        float abuela = 3.0, float abuela2=100
+        abuela =abuela2;
         a = 4 * 3;
         abif(a<10){
             abin(abijora);
-            a = a + b;
+            a = andres.guap;
             about("afuera");
         }
         about("afuera");
     }
     else{   
-        a = "Hola";
+        int varieble3 = 1555
+        a = varieble3;
     }
     return a;
 }
@@ -48,9 +57,9 @@ void funcion3 (int tupodeDato4, int tipodeDato5, int tipodeDato6){
 abimain{
     
        abin(abijora);
-       resultado = funcion2(1,cora[1],2);
+        resultado = funcion2(bruno,cora[1],2);
        about("gamer",abijora);
-        int variableEnmain =10, int b=20
-        a = 10; 
+       int variableEnmain =10, int b=20
+       variableEnmain = b;
          
 }

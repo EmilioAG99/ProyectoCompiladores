@@ -5,7 +5,8 @@ import re
 from lexico import tokens
 import sys 
 from lexico import numeroLinea
-
+from lexico import diccionario
+from lexico import diccionarioFunciones
 def p_programa(p):
     ''' start : variablesGlobales declaracionEstructuras declaracionFuncion declaraMain '''
     print("inicio")
@@ -157,6 +158,7 @@ def p_operacionesBasicas1(p):
 def p_listaValores(p): 
     '''listaValores : tipoValores
                     | ID CORA NUMERO CORC
+                    | ID
                     | listaValores C listaValores'''
 def p_listaValores1(p): 
     '''listaValores : empty'''                   
@@ -185,7 +187,7 @@ def p_empty(p):
 	pass
  
 def p_error(p):
-    sys.exit("Error de sintaxis en la linea {0}".format(int((p.lineno - (numeroLinea - 1))/2 -1) ))
+    sys.exit("Error de sintaxis en la linea {0}".format(int((p.lineno - (numeroLinea - 1))/2 ) ))
 
 
 fp = codecs.open("pruebas2.txt","r","utf-8")
