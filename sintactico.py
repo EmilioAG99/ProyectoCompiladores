@@ -7,6 +7,14 @@ import sys
 from lexico import numeroLinea
 from lexico import diccionario
 from lexico import diccionarioFunciones
+global banderaFuncion 
+banderaFuncion = 0
+global lineaFuncion 
+lineaFuncion = 0
+global contadorReturn 
+contadorReturn = 0
+global regresoFuncion 
+regresoFuncion =""
 def p_programa(p):
     ''' start : variablesGlobales declaracionEstructuras declaracionFuncion declaraMain '''
     print("inicio")
@@ -32,8 +40,6 @@ def p_tipoDatos(p):
                  | FLOAT
                  | VOID
                  '''
-    print("tipo de datos")
-
 def p_tipoValores(p):
     '''tipoValores : NUMERO
                    | FLOAT_VALOR
@@ -41,6 +47,7 @@ def p_tipoValores(p):
                    | STRING_VALOR
                    | TRUE
                    | FALSE'''
+        
 def p_declaracionArreglo(p):
     ''' declaracionArreglo : ABIRRAY tipoDatos ID ASIG CORA NUMERO CORC
                            | ABIRRAY tipoDatos ID '''  
@@ -52,7 +59,10 @@ def p_declaracionEstructuras1(p):
     ''' declaracionEstructuras : empty'''
 def p_declaracionFuncion(p):
     '''declaracionFuncion : tipoDatos ID PARENTA declaracionParametros PARENTC LLAVEA listaInst return LLAVEC declaracionFuncion'''
-    print("encuentra Funcion")
+    print("SE ENCONTRO FUNCION")
+    global banderaFuncion 
+    banderaFuncion = 1
+    print("citaaaaaaaaa",p[1])
 def p_declaracionFuncion1(p):
     '''declaracionFuncion : empty'''
 def p_declaracionParametros(p):
@@ -139,6 +149,7 @@ def p_salidaDatos1(p):
 def p_listaSalida(p):
     '''listaSalida : ID C listaSalida
                    | ID'''
+
 def p_operacionesBasicas(p):
     ''' operacionesBasicas : ID ASIG ID operadoresBasicos ID PC operacionesBasicas
                            | ID ASIG tipoValores operadoresBasicos ID PC operacionesBasicas
@@ -153,11 +164,26 @@ def p_operacionesBasicas(p):
                            | ID CORA NUMERO CORC ASIG tipoValores PC operacionesBasicas
                            | ID PARENTA listaValores PARENTC  PC operacionesBasicas
                            | ID ASIG ID PARENTA listaValores PARENTC  PC operacionesBasicas'''
+    
+    if(p[4]=="("):
+        global banderaFuncion
+        banderaFuncion = 1
+        global lineaFuncion
+        lineaFuncion = int((p.linespan(4)[0]  - (numeroLinea - 1))/2)
+        if(diccionarioFunciones.get(p[3]) is None):
+                sys.exit("No existe la funcion de la linea {0}".format(int((p.linespan(4)[0]  - (numeroLinea - 1))/2)))
+        else:
+            global regresoFuncion 
+            regresoFuncion = list(diccionarioFunciones[p[3]].keys())[0]
+            variableDeRegreso = list(diccionario[p[1]].keys())[0]
+            if(regresoFuncion == variableDeRegreso):
+                pass
+            else:        sys.exit("Error semantico en linea {0}".format(int((p.linespan(4)[0]  - (numeroLinea - 1))/2)))
+           
 def p_operacionesBasicas1(p):
     ''' operacionesBasicas : empty'''
 def p_listaValores(p): 
     '''listaValores : tipoValores
-                    | ID CORA NUMERO CORC
                     | ID
                     | listaValores C listaValores'''
 def p_listaValores1(p): 
@@ -178,10 +204,35 @@ def p_listaInst(p):
                  | listaInstrucciones listaInst '''
 def p_listaInst1(p):
     '''listaInst : empty'''
+global listaFinal
+listaFinal =  []
 def p_return(p):
-    '''return : RETURN tipoValores PC
-              | RETURN ID PC
+    '''return : RETURN ID PC
               | RETURN PC'''
+    global contadorReturn
+    
+    if(contadorReturn == 0):
+        listaReturnFunciones = list(diccionarioFunciones.values())
+        print("antessss", listaReturnFunciones)
+        global listaFinal
+        for elements in listaReturnFunciones:
+            if(type(list(elements.values())[0]) == dict  ):
+               listaFinal.append(elements)
+            else: pass
+    global regresoFuncion 
+    if(p[2] ==";"):
+        regresoFuncion =""
+    else:regresoFuncion =p[2]
+    
+    if(list(listaFinal[contadorReturn].keys())[0] == "VOID"):
+        if(regresoFuncion == ""):
+            pass
+        else: sys.exit("Error semantico en linea {0}".format(int((p.linespan(1)[0]  - (numeroLinea - 1))/2)))
+    else: 
+        if(list(diccionario[regresoFuncion].keys())[0]==list(listaFinal[contadorReturn].keys())[0]):
+            pass
+        else: sys.exit("Error semantico en linea {0}".format(int((p.linespan(1)[0]  - (numeroLinea - 1))/2)))
+    contadorReturn +=1
 def p_empty(p):
 	'''empty :'''
 	pass

@@ -59,8 +59,8 @@ t_LLAVEA = r'\{'
 t_LLAVEC = r'\}'
 t_C = r','
 t_PC= r';'
-t_CHAR_VALOR = r"\"([^\\\"]|\\.)?\""
-t_STRING_VALOR = r"\"([^\\\"]|\\.)+\" "
+t_CHAR_VALOR = r'\'[a-zA-Z]\''
+t_STRING_VALOR = r'\"([^\\\"]|\\.)+\"'
 def t_ID(t):
 	r'[a-zA-Z][a-zA-Z0-9]*'
 	if t.value.upper() in reservadas.values():
@@ -118,7 +118,6 @@ while True:
         if (tok.type == "INT" or tok.type == "CHAR"  or tok.type == "STRING"  or tok.type == "FLOAT"  or tok.type == "BOOL")and asignacionSimple == 0 and  asignacionArreglo == 0:
             asignacionSimple = 1
             tipoAuxiliar = str(tok.type)
-            print("dentro", tipoAuxiliar)
         elif tok.type == "ABIRRAY":
             asignacionArreglo = 1
         elif tok.type == "ABIDECLARA":
@@ -133,11 +132,42 @@ while True:
             llaveAuxiliar = str(tok.value)
         if tok.type == "NUMERO" or  tok.type == "FLOAT_VALOR" or tok.type == "CHAR_VALOR" or tok.type == "STRING_VALOR" or tok.type == "TRUE" or tok.type == "FALSE":
             valorAuxiliar = str(tok.value)
-            if(diccionario.get(llaveAuxiliar) is None):
-                print("valor simple",valorAuxiliar)
-                diccionario[llaveAuxiliar]={tipoAuxiliar:{valorAuxiliar:int((numeroLinea/2)+1)}}
-                asignacionSimple = 0
-            else:  sys.exit("Repeticion de declaracion con nombre {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))
+            if(tipoAuxiliar == "INT"):
+                if(tok.type=="NUMERO"):
+                    if(diccionario.get(llaveAuxiliar) is None):
+                        diccionario[llaveAuxiliar]={tipoAuxiliar:{valorAuxiliar:int((numeroLinea/2)+1)}}
+                        asignacionSimple = 0
+                    else:  sys.exit("Repeticion de declaracion con nombre {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))
+                else: sys.exit("Error semantico en variable {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))
+            if(tipoAuxiliar == "CHAR"):
+                if(tok.type=="CHAR_VALOR"):
+                    if(diccionario.get(llaveAuxiliar) is None):
+                        diccionario[llaveAuxiliar]={tipoAuxiliar:{valorAuxiliar:int((numeroLinea/2)+1)}}
+                        asignacionSimple = 0
+                    else:  sys.exit("Repeticion de declaracion con nombre {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))
+                else: 
+                    sys.exit("Error semantico en variable {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))
+            if(tipoAuxiliar == "FLOAT"):
+                if(tok.type=="FLOAT_VALOR"):
+                    if(diccionario.get(llaveAuxiliar) is None):
+                        diccionario[llaveAuxiliar]={tipoAuxiliar:{valorAuxiliar:int((numeroLinea/2)+1)}}
+                        asignacionSimple = 0
+                    else:  sys.exit("Repeticion de declaracion con nombre {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))
+                else: sys.exit("Error semantico en variable {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))
+            if(tipoAuxiliar == "STRING"):
+                if(tok.type=="STRING_VALOR"):
+                    if(diccionario.get(llaveAuxiliar) is None):
+                        diccionario[llaveAuxiliar]={tipoAuxiliar:{valorAuxiliar:int((numeroLinea/2)+1)}}
+                        asignacionSimple = 0
+                    else:  sys.exit("Repeticion de declaracion con nombre {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))
+                else: sys.exit("Error semantico en variable {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))
+            if(tipoAuxiliar == "BOOL"):
+                if(tok.type=="TRUE" or tok.type=="FALSE"):
+                    if(diccionario.get(llaveAuxiliar) is None):
+                        diccionario[llaveAuxiliar]={tipoAuxiliar:{valorAuxiliar:int((numeroLinea/2)+1)}}
+                        asignacionSimple = 0
+                    else:  sys.exit("Repeticion de declaracion con nombre {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))
+                else: sys.exit("Error semantico en variable {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))
         if tok.type == "C" or  tok.type == "PARENTC":
             if(diccionarioFunciones.get(llaveAuxiliar) is None):
                 diccionarioFunciones[llaveAuxiliar]={tipoAuxiliar:"NULL"} 
@@ -154,11 +184,9 @@ while True:
         if tok.type == "PC" :
           lista = list(diccionario[llaveAuxiliar].keys())     
           if  valorReasignar!= "":
-            print("yo no lo di",llaveAuxiliar, valorReasignar, lista[0] )  
             if(lista[0]== "INT"):
                 numbers = [int(word) for word in valorReasignar.split() if word.isdigit()]
                 if(len(numbers) !=0):
-                    print(len(valorReasignar.split("\*")), valorReasignar)
                     if(len(valorReasignar.split("*"))!=1 or len(valorReasignar.split("-"))!=1 or len(valorReasignar.split("+"))!=1 or len(valorReasignar.split("/"))!=1):
                         if (len(numbers)!=2):
                             sys.exit("Error semantico en variable {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))
@@ -174,7 +202,6 @@ while True:
                             sys.exit("Error semantico en variable {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))       
                     else:
                        if(valorReasignar.strip() in diccionario):
-                                print("asigna variable",list(diccionario[valorReasignar.strip()].keys())[0],list(diccionario[llaveAuxiliar].keys())[0])
                                 if(list(diccionario[valorReasignar.strip()].keys())[0] == list(diccionario[llaveAuxiliar].keys())[0]):
                                     diccionario[llaveAuxiliar]={lista[0]:list(list(diccionario[valorReasignar.split(".")[len(valorReasignar.split("."))-1].strip()].values())[0].keys())[0]}
                                 else:sys.exit("Error semantico en variable {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))              
@@ -200,7 +227,6 @@ while True:
                             else:
                                 sys.exit("Error semantico en variable {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))              
             elif (lista[0]== "CHAR"):
-                print("char dentro")
                 if(re.search('\"([^\\\"]|\\.)?\"', valorReasignar)):
                     diccionario[llaveAuxiliar]={lista[0]:valorReasignar}
                 else:
@@ -209,7 +235,6 @@ while True:
                         valorR = list(diccionario[valorReasignar.split(".")[len(valorReasignar.split("."))-1].strip()])
                         if(tipoVariableR ==valorR[0]):
                             diccionario[llaveAuxiliar]={lista[0]:list(list(diccionario[valorReasignar.split(".")[len(valorReasignar.split("."))-1].strip()].values())[0].keys())[0]}
-                            print(diccionario)
                         else: 
                             sys.exit("Error semantico en variable {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))                     
                      else: 
@@ -225,9 +250,7 @@ while True:
                         if(word!='*'and word!='+'and word!='-' and word!='/'):
                             if(isinstance(float(word),float)):
                                 numbers.append(float(word))
-                print(valorReasignar)
                 if(len(numbers) !=0):
-                    print(len(valorReasignar.split("\*")), valorReasignar)
                     if(len(valorReasignar.split("*"))!=1 or len(valorReasignar.split("-"))!=1 or len(valorReasignar.split("+"))!=1 or len(valorReasignar.split("/"))!=1):
                         if (len(numbers)!=2):
                             sys.exit("Error semantico en variable {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))
@@ -243,7 +266,6 @@ while True:
                             sys.exit("Error semantico en variable {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))       
                     else:
                        if(diccionario[valorReasignar.strip()]):
-                                print("asigna variable",list(diccionario[valorReasignar.strip()].keys())[0],list(diccionario[llaveAuxiliar].keys())[0])
                                 if(list(diccionario[valorReasignar.strip()].keys())[0] == list(diccionario[llaveAuxiliar].keys())[0]):
                                     diccionario[llaveAuxiliar]={lista[0]:list(list(diccionario[valorReasignar.split(".")[len(valorReasignar.split("."))-1].strip()].values())[0].keys())[0]}
                                 else:sys.exit("Error semantico en variable {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))              

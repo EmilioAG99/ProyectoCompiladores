@@ -1,24 +1,18 @@
 ABIWORLD
-dentro STRING
 STRING
 ID
 ASIG
-valor simple 5
-NUMERO
+STRING_VALOR
 C
-dentro CHAR
 CHAR
 ID
 ASIG
-valor simple "A"
-STRING_VALOR
+CHAR_VALOR
 C
-dentro INT
 INT
 ID
 ASIG
-valor simple TRUE
-TRUE
+NUMERO
 C
 ABIRRAY
 STRING
@@ -31,38 +25,29 @@ PC
 ABISTRUCT
 ID
 LLAVEA
-dentro STRING
 STRING
 ID
 ASIG
-valor simple FALSE
-FALSE
+STRING_VALOR
 C
-dentro INT
 INT
 ID
 ASIG
-valor simple 100
 NUMERO
 C
-dentro CHAR
 CHAR
 ID
 ASIG
-valor simple "hola"
-STRING_VALOR
+CHAR_VALOR
 C
 LLAVEC
 PC
-dentro STRING
 STRING
 ID
 PARENTA
-dentro INT
 INT
 ID
 C
-dentro INT
 INT
 ID
 PARENTC
@@ -91,14 +76,10 @@ ASIG
 NUMERO
 MULT
 NUMERO
-yo no lo di a  400 * 3 INT
-1  400 * 3
 PC
 ID
 ASIG
 NUMERO
-yo no lo di a  2 INT
-1  2
 PC
 LLAVEC
 ELSE
@@ -120,19 +101,18 @@ ASIG
 NUMERO
 MULT
 NUMERO
-yo no lo di a  4 * 3 INT
-1  4 * 3
 PC
-dentro STRING
+INT
+ID
+ASIG
+NUMERO
 STRING
 ID
 ASIG
-valor simple "juan"
 STRING_VALOR
 ID
 ASIG
 ID
-yo no lo di chrisesguapo  juan1 STRING
 PC
 LLAVEC
 RETURN
@@ -142,21 +122,17 @@ LLAVEC
 VOID
 ID
 PARENTA
-dentro INT
 INT
 ID
 PARENTC
 LLAVEA
-dentro BOOL
 BOOL
 ID
 ASIG
-valor simple TRUE
 TRUE
 ID
 ASIG
 FALSE
-yo no lo di boleanoss  FALSE BOOL
 PC
 ABIF
 PARENTA
@@ -179,62 +155,45 @@ ASIG
 ID
 P
 ID
-yo no lo di variable2  andres . chris CHAR
-char dentro
-{'chrisesguapo': {'STRING': '"juan"'}, 'variable2': {'CHAR': '"hola"'}, 'a': {'INT': ' 4 * 3'}, 'arreglo1': {'STRING': '10'}, 'andres': {'ESTRUCTURA': 'NULL'}, 'h': {'STRING': {'FALSE': 3}}, 'guap': {'INT': {'100': 4}}, 'chris': {'CHAR': {'"hola"': 5}}, 'juan1': {'STRING': {'"juan"': 19}}, 'boleanoss': {'BOOL': ' FALSE'}, 'andres1': {'andres': 'NUEVAESTRUCTURA'}}
 PC
 ID
 ASIG
 ID
 P
 ID
-yo no lo di chrisesguapo  andres1 . h STRING
 PC
 ID
 P
 ID
-yo no lo di andres1  . h andres
 PC
 ID
 ASIG
 ID
 P
 ID
-yo no lo di a  andres1 . guap INT
 PC
-dentro INT
 INT
 ID
 ASIG
-valor simple 0
 NUMERO
-dentro FLOAT
 FLOAT
 ID
 ASIG
-valor simple 3.0
 FLOAT_VALOR
 C
-dentro FLOAT
 FLOAT
 ID
 ASIG
-valor simple 100
-NUMERO
+FLOAT_VALOR
 ID
 ASIG
 ID
-yo no lo di abuela  abuela2 FLOAT
- abuela2
-asigna variable FLOAT FLOAT
 PC
 ID
 ASIG
 NUMERO
 MULT
 NUMERO
-yo no lo di a  4 * 3 INT
-1  4 * 3
 PC
 ABIF
 PARENTA
@@ -253,7 +212,6 @@ ASIG
 ID
 P
 ID
-yo no lo di a  andres . guap INT
 PC
 ABOUT
 PARENTA
@@ -269,35 +227,27 @@ PC
 LLAVEC
 ELSE
 LLAVEA
-dentro INT
 INT
 ID
 ASIG
-valor simple 1555
 NUMERO
 ID
 ASIG
 ID
-yo no lo di a  varieble3 INT
-asigna variable INT INT
 PC
 LLAVEC
 RETURN
-ID
 PC
 LLAVEC
 VOID
 ID
 PARENTA
-dentro INT
 INT
 ID
 C
-dentro INT
 INT
 ID
 C
-dentro INT
 INT
 ID
 PARENTC
@@ -312,20 +262,6 @@ PARENTA
 ID
 PARENTC
 PC
-ID
-ASIG
-ID
-PARENTA
-ID
-C
-ID
-CORA
-NUMERO
-CORC
-C
-NUMERO
-PARENTC
-PC
 ABOUT
 PARENTA
 STRING_VALOR
@@ -333,93 +269,68 @@ C
 ID
 PARENTC
 PC
-dentro INT
 INT
 ID
 ASIG
-valor simple 10
 NUMERO
 C
-dentro INT
 INT
 ID
 ASIG
-valor simple 20
 NUMERO
 ID
 ASIG
 ID
-yo no lo di variableEnmain  b INT
-asigna variable INT INT
 PC
 LLAVEC
-{'chrisesguapo': {'STRING': 'FALSE'}, 'variable2': {'CHAR': '"hola"'}, 'a': {'INT': '1555'}, 'arreglo1': {'STRING': '10'}, 'andres': {'ESTRUCTURA': 'NULL'}, 'h': {'STRING': {'FALSE': 3}}, 'guap': {'INT': {'100': 4}}, 'chris': {'CHAR': {'"hola"': 5}}, 'juan1': {'STRING': {'"juan"': 19}}, 'boleanoss': {'BOOL': ' FALSE'}, 'andres1': {'andres': 'NUEVAESTRUCTURA'}, 'aa': {'INT': {'0': 37}}, 'abuela': {'FLOAT': '100'}, 'abuela2': {'FLOAT': {'100': 38}}, 'varieble3': {'INT': {'1555': 49}}, 'variableEnmain': {'INT': '20'}, 'b': {'INT': {'20': 62}}}
-{'funcion2': {'STRING': {'DECLARACIONFUNCION': 8}}, 'tupodeDato1': {'INT': 'NULL'}, 'tupodeDato': {'INT': 'NULL'}, 'funcion1': {'VOID': {'DECLARACIONFUNCION': 28}}, 'tupodeDato3': {'INT': 'NULL'}, 'funcion3': {'VOID': {'DECLARACIONFUNCION': 54}}, 'tupodeDato4': {'INT': 'NULL'}, 'tipodeDato5': {'INT': 'NULL'}, 'tipodeDato6': {'INT': 'NULL'}}
-tipo de datos
+{'chrisesguapo': {'STRING': '"false"'}, 'variable2': {'CHAR': "'a'"}, 'a': {'INT': '1555'}, 'arreglo1': {'STRING': '10'}, 'andres': {'ESTRUCTURA': 'NULL'}, 'h': {'STRING': {'"false"': 3}}, 'guap': {'INT': {'100': 4}}, 'chris': {'CHAR': {"'a'": 5}}, 'adios': {'INT': {'5': 19}}, 'juan1': {'STRING': {'"juan"': 20}}, 'boleanoss': {'BOOL': ' FALSE'}, 'andres1': {'andres': 'NUEVAESTRUCTURA'}, 'aa': {'INT': {'0': 38}}, 'abuela': {'FLOAT': '100.0'}, 'abuela2': {'FLOAT': {'100.0': 39}}, 'varieble3': {'INT': {'1555': 50}}, 'variableEnmain': {'INT': '20'}, 'b': {'INT': {'20': 63}}}
+{'funcion2': {'STRING': {'DECLARACIONFUNCION': 8}}, 'tupodeDato1': {'INT': 'NULL'}, 'tupodeDato': {'INT': 'NULL'}, 'funcion1': {'VOID': {'DECLARACIONFUNCION': 29}}, 'tupodeDato3': {'INT': 'NULL'}, 'funcion3': {'VOID': {'DECLARACIONFUNCION': 55}}, 'tupodeDato4': {'INT': 'NULL'}, 'tipodeDato5': {'INT': 'NULL'}, 'tipodeDato6': {'INT': 'NULL'}}
 variable unica
-tipo de datos
 variable unica
-tipo de datos
 variable unica
-tipo de datos
 ABIRRAY DETECTADO
 variable unica
 Multiples variables
 Multiples variables
 Multiples variables
 abiworld
-tipo de datos
 variable unica
-tipo de datos
 variable unica
-tipo de datos
 variable unica
 Multiples variables
 Multiples variables
 Multiples variables
 abistruct
-tipo de datos
-tipo de datos
 encuentra Parametro
-tipo de datos
 encuentra Parametro
 encuentra multiparametros
-tipo de datos
+variable unica
 variable unica
 se encontro el ELSE
 Se encontro el IF
-tipo de datos
-tipo de datos
+antessss [{'STRING': {'DECLARACIONFUNCION': 8}}, {'INT': 'NULL'}, {'INT': 'NULL'}, {'VOID': {'DECLARACIONFUNCION': 29}}, {'INT': 'NULL'}, {'VOID': {'DECLARACIONFUNCION': 55}}, {'INT': 'NULL'}, {'INT': 'NULL'}, {'INT': 'NULL'}]
 encuentra Parametro
-tipo de datos
 variable unica
-tipo de datos
 variable unica
-tipo de datos
 variable unica
-tipo de datos
 variable unica
 Multiples variables
 Se encontro el IF
-tipo de datos
 variable unica
 se encontro el ELSE
 Se encontro el IF
-tipo de datos
-tipo de datos
 encuentra Parametro
-tipo de datos
 encuentra Parametro
-tipo de datos
 encuentra Parametro
 encuentra multiparametros
 encuentra multiparametros
-encuentra Funcion
-encuentra Funcion
-encuentra Funcion
-tipo de datos
+SE ENCONTRO FUNCION
+citaaaaaaaaa None
+SE ENCONTRO FUNCION
+citaaaaaaaaa None
+SE ENCONTRO FUNCION
+citaaaaaaaaa None
 variable unica
-tipo de datos
 variable unica
 Multiples variables
 se encontro main

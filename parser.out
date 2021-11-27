@@ -98,28 +98,26 @@ Rule 92    operacionesBasicas -> ID PARENTA listaValores PARENTC PC operacionesB
 Rule 93    operacionesBasicas -> ID ASIG ID PARENTA listaValores PARENTC PC operacionesBasicas
 Rule 94    operacionesBasicas -> empty
 Rule 95    listaValores -> tipoValores
-Rule 96    listaValores -> ID CORA NUMERO CORC
-Rule 97    listaValores -> ID
-Rule 98    listaValores -> listaValores C listaValores
-Rule 99    listaValores -> empty
-Rule 100   operadoresBasicos -> AGREGA
-Rule 101   operadoresBasicos -> RESTA
-Rule 102   operadoresBasicos -> MULT
-Rule 103   operadoresBasicos -> DIV
-Rule 104   declaraStruct -> ABIDECLARA ID ID PC declaraStruct
-Rule 105   declaraStruct -> empty
-Rule 106   listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo
-Rule 107   listaInst -> listaInstrucciones
-Rule 108   listaInst -> listaInstrucciones listaInst
-Rule 109   listaInst -> empty
-Rule 110   return -> RETURN tipoValores PC
-Rule 111   return -> RETURN ID PC
-Rule 112   return -> RETURN PC
-Rule 113   empty -> <empty>
+Rule 96    listaValores -> ID
+Rule 97    listaValores -> listaValores C listaValores
+Rule 98    listaValores -> empty
+Rule 99    operadoresBasicos -> AGREGA
+Rule 100   operadoresBasicos -> RESTA
+Rule 101   operadoresBasicos -> MULT
+Rule 102   operadoresBasicos -> DIV
+Rule 103   declaraStruct -> ABIDECLARA ID ID PC declaraStruct
+Rule 104   declaraStruct -> empty
+Rule 105   listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo
+Rule 106   listaInst -> listaInstrucciones
+Rule 107   listaInst -> listaInstrucciones listaInst
+Rule 108   listaInst -> empty
+Rule 109   return -> RETURN ID PC
+Rule 110   return -> RETURN PC
+Rule 111   empty -> <empty>
 
 Terminals, with rules where they appear
 
-ABIDECLARA           : 104
+ABIDECLARA           : 103
 ABIF                 : 46 47
 ABIJOR               : 30
 ABIMAIN              : 29
@@ -128,42 +126,42 @@ ABIRRAY              : 20 21
 ABISTRUCT            : 22
 ABIWORLD             : 2
 ABOUT                : 75 76 77
-AGREGA               : 40 42 100
+AGREGA               : 40 42 99
 AND                  : 65
 ASIG                 : 4 20 32 33 40 41 42 43 81 82 83 84 85 86 87 89 90 91 93
 BOOL                 : 11
-C                    : 6 27 77 79 98
+C                    : 6 27 77 79 97
 CHAR                 : 9
 CHAR_VALOR           : 16
 COMP                 : 72
-CORA                 : 20 89 90 90 91 96
-CORC                 : 20 89 90 90 91 96
+CORA                 : 20 89 90 90 91
+CORC                 : 20 89 90 90 91
 DECREMENTO           : 45
-DIV                  : 103
+DIV                  : 102
 ELSE                 : 49
 FALSE                : 19
 FLOAT                : 12
 FLOAT_VALOR          : 15
 GT                   : 39 69
 GTE                  : 38 70
-ID                   : 4 20 21 22 24 26 32 33 34 34 35 40 40 40 41 41 41 42 42 43 43 44 45 50 50 51 51 52 54 55 56 56 57 57 58 59 60 60 61 61 62 63 73 79 80 81 81 81 82 82 83 84 84 85 86 86 86 87 87 88 88 89 89 90 90 91 92 93 93 96 97 104 104 111
+ID                   : 4 20 21 22 24 26 32 33 34 34 35 40 40 40 41 41 41 42 42 43 43 44 45 50 50 51 51 52 54 55 56 56 57 57 58 59 60 60 61 61 62 63 73 79 80 81 81 81 82 82 83 84 84 85 86 86 86 87 87 88 88 89 89 90 90 91 92 93 93 96 103 103 109
 INCREMENTO           : 44
 INT                  : 8 32
 LLAVEA               : 22 24 29 30 46 47 49
 LLAVEC               : 22 24 29 30 46 47 49
 LT                   : 36 67
 LTE                  : 37 68
-MULT                 : 102
+MULT                 : 101
 NE                   : 71
 NOT                  : 56 57 58 59 60 61 62 63 64
-NUMERO               : 14 20 32 33 35 42 43 89 90 90 91 96
+NUMERO               : 14 20 32 33 35 42 43 89 90 90 91
 OR                   : 66
 P                    : 86 88
 PARENTA              : 24 30 46 47 64 73 75 76 77 92 93
 PARENTC              : 24 30 46 47 64 73 75 76 77 92 93
-PC                   : 2 22 30 30 73 75 76 77 81 82 83 84 85 86 87 88 89 90 91 92 93 104 110 111 112
-RESTA                : 41 43 101
-RETURN               : 110 111 112
+PC                   : 2 22 30 30 73 75 76 77 81 82 83 84 85 86 87 88 89 90 91 92 93 103 109 110
+RESTA                : 41 43 100
+RETURN               : 109 110
 STRING               : 10
 STRING_VALOR         : 17 75 77
 TRUE                 : 18
@@ -176,32 +174,32 @@ cambio               : 30
 cond                 : 30
 condicion            : 46 47 50 54 56 58 60 62 64
 declaraMain          : 1
-declaraStruct        : 104 106
+declaraStruct        : 103 105
 declaracionArreglo   : 5
-declaracionCiclo     : 30 106
+declaracionCiclo     : 30 105
 declaracionElse      : 46
 declaracionEstructuras : 1 22
 declaracionFuncion   : 1 24
-declaracionIf        : 46 47 106
+declaracionIf        : 46 47 105
 declaracionParametros : 24 27 27
-declaracionVariable  : 2 6 6 22 106
-empty                : 3 7 23 25 28 31 48 74 78 94 99 105 109
-entradaDatos         : 73 106
+declaracionVariable  : 2 6 6 22 105
+empty                : 3 7 23 25 28 31 48 74 78 94 98 104 108
+entradaDatos         : 73 105
 inicializacion       : 30
-listaInst            : 24 29 30 46 47 49 108
-listaInstrucciones   : 107 108
+listaInst            : 24 29 30 46 47 49 107
+listaInstrucciones   : 106 107
 listaSalida          : 76 77 79
-listaValores         : 92 93 98 98
-operacionesBasicas   : 81 82 83 84 85 86 87 88 89 90 91 92 93 106
+listaValores         : 92 93 97 97
+operacionesBasicas   : 81 82 83 84 85 86 87 88 89 90 91 92 93 105
 operadores           : 34 35
 operadoresBasicos    : 81 82 83 84
 operadoresLogicos    : 50 54 56 58 60 62
 operadoresRel        : 50 51 54 55 56 57 58 59 60 61 62 63
 return               : 24
-salidaDatos          : 75 76 77 106
+salidaDatos          : 75 76 77 105
 start                : 0
 tipoDatos            : 4 20 21 24 26
-tipoValores          : 4 53 54 55 58 59 62 63 82 83 83 84 85 91 95 110
+tipoValores          : 4 53 54 55 58 59 62 63 82 83 83 84 85 91 95
 variablesGlobales    : 1 2
 
 Parsing method: LALR
@@ -212,17 +210,17 @@ state 0
     (1) start -> . variablesGlobales declaracionEstructuras declaracionFuncion declaraMain
     (2) variablesGlobales -> . ABIWORLD declaracionVariable PC variablesGlobales
     (3) variablesGlobales -> . empty
-    (113) empty -> .
+    (111) empty -> .
 
     ABIWORLD        shift and go to state 3
-    ABISTRUCT       reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIMAIN         reduce using rule 113 (empty -> .)
+    ABISTRUCT       reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIMAIN         reduce using rule 111 (empty -> .)
 
     start                          shift and go to state 1
     variablesGlobales              shift and go to state 2
@@ -239,16 +237,16 @@ state 2
     (1) start -> variablesGlobales . declaracionEstructuras declaracionFuncion declaraMain
     (22) declaracionEstructuras -> . ABISTRUCT ID LLAVEA declaracionVariable LLAVEC PC declaracionEstructuras
     (23) declaracionEstructuras -> . empty
-    (113) empty -> .
+    (111) empty -> .
 
     ABISTRUCT       shift and go to state 6
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIMAIN         reduce using rule 113 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIMAIN         reduce using rule 111 (empty -> .)
 
     declaracionEstructuras         shift and go to state 5
     empty                          shift and go to state 7
@@ -268,7 +266,7 @@ state 3
     (13) tipoDatos -> . VOID
     (20) declaracionArreglo -> . ABIRRAY tipoDatos ID ASIG CORA NUMERO CORC
     (21) declaracionArreglo -> . ABIRRAY tipoDatos ID
-    (113) empty -> .
+    (111) empty -> .
 
     INT             shift and go to state 12
     CHAR            shift and go to state 13
@@ -277,8 +275,8 @@ state 3
     FLOAT           shift and go to state 16
     VOID            shift and go to state 17
     ABIRRAY         shift and go to state 18
-    PC              reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
+    PC              reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
 
     declaracionVariable            shift and go to state 8
     tipoDatos                      shift and go to state 9
@@ -310,7 +308,7 @@ state 5
     (11) tipoDatos -> . BOOL
     (12) tipoDatos -> . FLOAT
     (13) tipoDatos -> . VOID
-    (113) empty -> .
+    (111) empty -> .
 
     INT             shift and go to state 12
     CHAR            shift and go to state 13
@@ -318,7 +316,7 @@ state 5
     BOOL            shift and go to state 15
     FLOAT           shift and go to state 16
     VOID            shift and go to state 17
-    ABIMAIN         reduce using rule 113 (empty -> .)
+    ABIMAIN         reduce using rule 111 (empty -> .)
 
     declaracionFuncion             shift and go to state 19
     tipoDatos                      shift and go to state 20
@@ -503,17 +501,17 @@ state 23
     (2) variablesGlobales -> ABIWORLD declaracionVariable PC . variablesGlobales
     (2) variablesGlobales -> . ABIWORLD declaracionVariable PC variablesGlobales
     (3) variablesGlobales -> . empty
-    (113) empty -> .
+    (111) empty -> .
 
     ABIWORLD        shift and go to state 3
-    ABISTRUCT       reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIMAIN         reduce using rule 113 (empty -> .)
+    ABISTRUCT       reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIMAIN         reduce using rule 111 (empty -> .)
 
     variablesGlobales              shift and go to state 31
     empty                          shift and go to state 4
@@ -533,7 +531,7 @@ state 24
     (13) tipoDatos -> . VOID
     (20) declaracionArreglo -> . ABIRRAY tipoDatos ID ASIG CORA NUMERO CORC
     (21) declaracionArreglo -> . ABIRRAY tipoDatos ID
-    (113) empty -> .
+    (111) empty -> .
 
   ! shift/reduce conflict for INT resolved as shift
   ! shift/reduce conflict for CHAR resolved as shift
@@ -549,24 +547,24 @@ state 24
     FLOAT           shift and go to state 16
     VOID            shift and go to state 17
     ABIRRAY         shift and go to state 18
-    C               reduce using rule 113 (empty -> .)
-    PC              reduce using rule 113 (empty -> .)
-    LLAVEC          reduce using rule 113 (empty -> .)
-    ID              reduce using rule 113 (empty -> .)
-    ABIF            reduce using rule 113 (empty -> .)
-    ABIJOR          reduce using rule 113 (empty -> .)
-    ABIN            reduce using rule 113 (empty -> .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    RETURN          reduce using rule 113 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    PC              reduce using rule 111 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    ID              reduce using rule 111 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
+    ABIN            reduce using rule 111 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    RETURN          reduce using rule 111 (empty -> .)
 
-  ! INT             [ reduce using rule 113 (empty -> .) ]
-  ! CHAR            [ reduce using rule 113 (empty -> .) ]
-  ! STRING          [ reduce using rule 113 (empty -> .) ]
-  ! BOOL            [ reduce using rule 113 (empty -> .) ]
-  ! FLOAT           [ reduce using rule 113 (empty -> .) ]
-  ! VOID            [ reduce using rule 113 (empty -> .) ]
-  ! ABIRRAY         [ reduce using rule 113 (empty -> .) ]
+  ! INT             [ reduce using rule 111 (empty -> .) ]
+  ! CHAR            [ reduce using rule 111 (empty -> .) ]
+  ! STRING          [ reduce using rule 111 (empty -> .) ]
+  ! BOOL            [ reduce using rule 111 (empty -> .) ]
+  ! FLOAT           [ reduce using rule 111 (empty -> .) ]
+  ! VOID            [ reduce using rule 111 (empty -> .) ]
+  ! ABIRRAY         [ reduce using rule 111 (empty -> .) ]
 
     declaracionVariable            shift and go to state 32
     tipoDatos                      shift and go to state 9
@@ -624,7 +622,7 @@ state 30
     (13) tipoDatos -> . VOID
     (20) declaracionArreglo -> . ABIRRAY tipoDatos ID ASIG CORA NUMERO CORC
     (21) declaracionArreglo -> . ABIRRAY tipoDatos ID
-    (113) empty -> .
+    (111) empty -> .
 
     INT             shift and go to state 12
     CHAR            shift and go to state 13
@@ -633,8 +631,8 @@ state 30
     FLOAT           shift and go to state 16
     VOID            shift and go to state 17
     ABIRRAY         shift and go to state 18
-    LLAVEC          reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
 
     declaracionVariable            shift and go to state 37
     tipoDatos                      shift and go to state 9
@@ -729,32 +727,32 @@ state 34
 state 35
 
     (29) declaraMain -> ABIMAIN LLAVEA . listaInst LLAVEC
-    (107) listaInst -> . listaInstrucciones
-    (108) listaInst -> . listaInstrucciones listaInst
-    (109) listaInst -> . empty
-    (106) listaInstrucciones -> . entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo
-    (113) empty -> .
+    (106) listaInst -> . listaInstrucciones
+    (107) listaInst -> . listaInstrucciones listaInst
+    (108) listaInst -> . empty
+    (105) listaInstrucciones -> . entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo
+    (111) empty -> .
     (73) entradaDatos -> . ABIN PARENTA ID PARENTC PC entradaDatos
     (74) entradaDatos -> . empty
 
   ! shift/reduce conflict for ABIN resolved as shift
-    LLAVEC          reduce using rule 113 (empty -> .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    ID              reduce using rule 113 (empty -> .)
-    ABIF            reduce using rule 113 (empty -> .)
-    ABIJOR          reduce using rule 113 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    ID              reduce using rule 111 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
     ABIN            shift and go to state 50
 
-  ! ABIN            [ reduce using rule 113 (empty -> .) ]
+  ! ABIN            [ reduce using rule 111 (empty -> .) ]
 
     listaInst                      shift and go to state 46
     listaInstrucciones             shift and go to state 47
@@ -773,7 +771,7 @@ state 36
     (11) tipoDatos -> . BOOL
     (12) tipoDatos -> . FLOAT
     (13) tipoDatos -> . VOID
-    (113) empty -> .
+    (111) empty -> .
 
     INT             shift and go to state 12
     CHAR            shift and go to state 13
@@ -781,8 +779,8 @@ state 36
     BOOL            shift and go to state 15
     FLOAT           shift and go to state 16
     VOID            shift and go to state 17
-    PARENTC         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
+    PARENTC         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
 
     tipoDatos                      shift and go to state 51
     declaracionParametros          shift and go to state 52
@@ -1016,39 +1014,39 @@ state 46
 
 state 47
 
-    (107) listaInst -> listaInstrucciones .
-    (108) listaInst -> listaInstrucciones . listaInst
-    (107) listaInst -> . listaInstrucciones
-    (108) listaInst -> . listaInstrucciones listaInst
-    (109) listaInst -> . empty
-    (106) listaInstrucciones -> . entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo
-    (113) empty -> .
+    (106) listaInst -> listaInstrucciones .
+    (107) listaInst -> listaInstrucciones . listaInst
+    (106) listaInst -> . listaInstrucciones
+    (107) listaInst -> . listaInstrucciones listaInst
+    (108) listaInst -> . empty
+    (105) listaInstrucciones -> . entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo
+    (111) empty -> .
     (73) entradaDatos -> . ABIN PARENTA ID PARENTC PC entradaDatos
     (74) entradaDatos -> . empty
 
-  ! reduce/reduce conflict for LLAVEC resolved using rule 107 (listaInst -> listaInstrucciones .)
-  ! reduce/reduce conflict for RETURN resolved using rule 107 (listaInst -> listaInstrucciones .)
+  ! reduce/reduce conflict for LLAVEC resolved using rule 106 (listaInst -> listaInstrucciones .)
+  ! reduce/reduce conflict for RETURN resolved using rule 106 (listaInst -> listaInstrucciones .)
   ! shift/reduce conflict for ABIN resolved as shift
-    LLAVEC          reduce using rule 107 (listaInst -> listaInstrucciones .)
-    RETURN          reduce using rule 107 (listaInst -> listaInstrucciones .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    ID              reduce using rule 113 (empty -> .)
-    ABIF            reduce using rule 113 (empty -> .)
-    ABIJOR          reduce using rule 113 (empty -> .)
+    LLAVEC          reduce using rule 106 (listaInst -> listaInstrucciones .)
+    RETURN          reduce using rule 106 (listaInst -> listaInstrucciones .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    ID              reduce using rule 111 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
     ABIN            shift and go to state 50
 
-  ! LLAVEC          [ reduce using rule 113 (empty -> .) ]
-  ! RETURN          [ reduce using rule 113 (empty -> .) ]
-  ! ABIN            [ reduce using rule 113 (empty -> .) ]
+  ! LLAVEC          [ reduce using rule 111 (empty -> .) ]
+  ! RETURN          [ reduce using rule 111 (empty -> .) ]
+  ! ABIN            [ reduce using rule 111 (empty -> .) ]
 
     listaInstrucciones             shift and go to state 47
     listaInst                      shift and go to state 57
@@ -1057,7 +1055,7 @@ state 47
 
 state 48
 
-    (109) listaInst -> empty .
+    (108) listaInst -> empty .
     (74) entradaDatos -> empty .
 
   ! reduce/reduce conflict for LLAVEC resolved using rule 74 (entradaDatos -> empty .)
@@ -1079,38 +1077,38 @@ state 48
     LLAVEC          reduce using rule 74 (entradaDatos -> empty .)
     RETURN          reduce using rule 74 (entradaDatos -> empty .)
 
-  ! LLAVEC          [ reduce using rule 109 (listaInst -> empty .) ]
-  ! RETURN          [ reduce using rule 109 (listaInst -> empty .) ]
+  ! LLAVEC          [ reduce using rule 108 (listaInst -> empty .) ]
+  ! RETURN          [ reduce using rule 108 (listaInst -> empty .) ]
 
 
 state 49
 
-    (106) listaInstrucciones -> entradaDatos . salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo
+    (105) listaInstrucciones -> entradaDatos . salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo
     (75) salidaDatos -> . ABOUT PARENTA STRING_VALOR PARENTC salidaDatos PC
     (76) salidaDatos -> . ABOUT PARENTA listaSalida PARENTC salidaDatos PC
     (77) salidaDatos -> . ABOUT PARENTA STRING_VALOR C listaSalida PARENTC PC salidaDatos
     (78) salidaDatos -> . empty
-    (113) empty -> .
+    (111) empty -> .
 
   ! shift/reduce conflict for ABOUT resolved as shift
     ABOUT           shift and go to state 59
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    ID              reduce using rule 113 (empty -> .)
-    ABIF            reduce using rule 113 (empty -> .)
-    ABIJOR          reduce using rule 113 (empty -> .)
-    ABIN            reduce using rule 113 (empty -> .)
-    LLAVEC          reduce using rule 113 (empty -> .)
-    RETURN          reduce using rule 113 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    ID              reduce using rule 111 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
+    ABIN            reduce using rule 111 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    RETURN          reduce using rule 111 (empty -> .)
 
-  ! ABOUT           [ reduce using rule 113 (empty -> .) ]
+  ! ABOUT           [ reduce using rule 111 (empty -> .) ]
 
     salidaDatos                    shift and go to state 58
     empty                          shift and go to state 60
@@ -1169,38 +1167,38 @@ state 56
 
 state 57
 
-    (108) listaInst -> listaInstrucciones listaInst .
+    (107) listaInst -> listaInstrucciones listaInst .
 
-    LLAVEC          reduce using rule 108 (listaInst -> listaInstrucciones listaInst .)
-    RETURN          reduce using rule 108 (listaInst -> listaInstrucciones listaInst .)
+    LLAVEC          reduce using rule 107 (listaInst -> listaInstrucciones listaInst .)
+    RETURN          reduce using rule 107 (listaInst -> listaInstrucciones listaInst .)
 
 
 state 58
 
-    (106) listaInstrucciones -> entradaDatos salidaDatos . declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo
-    (104) declaraStruct -> . ABIDECLARA ID ID PC declaraStruct
-    (105) declaraStruct -> . empty
-    (113) empty -> .
+    (105) listaInstrucciones -> entradaDatos salidaDatos . declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo
+    (103) declaraStruct -> . ABIDECLARA ID ID PC declaraStruct
+    (104) declaraStruct -> . empty
+    (111) empty -> .
 
   ! shift/reduce conflict for ABIDECLARA resolved as shift
     ABIDECLARA      shift and go to state 68
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    ID              reduce using rule 113 (empty -> .)
-    ABIF            reduce using rule 113 (empty -> .)
-    ABIJOR          reduce using rule 113 (empty -> .)
-    ABIN            reduce using rule 113 (empty -> .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    LLAVEC          reduce using rule 113 (empty -> .)
-    RETURN          reduce using rule 113 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    ID              reduce using rule 111 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
+    ABIN            reduce using rule 111 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    RETURN          reduce using rule 111 (empty -> .)
 
-  ! ABIDECLARA      [ reduce using rule 113 (empty -> .) ]
+  ! ABIDECLARA      [ reduce using rule 111 (empty -> .) ]
 
     declaraStruct                  shift and go to state 67
     empty                          shift and go to state 69
@@ -1271,7 +1269,7 @@ state 64
     (11) tipoDatos -> . BOOL
     (12) tipoDatos -> . FLOAT
     (13) tipoDatos -> . VOID
-    (113) empty -> .
+    (111) empty -> .
 
     INT             shift and go to state 12
     CHAR            shift and go to state 13
@@ -1279,8 +1277,8 @@ state 64
     BOOL            shift and go to state 15
     FLOAT           shift and go to state 16
     VOID            shift and go to state 17
-    C               reduce using rule 113 (empty -> .)
-    PARENTC         reduce using rule 113 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    PARENTC         reduce using rule 111 (empty -> .)
 
     declaracionParametros          shift and go to state 73
     tipoDatos                      shift and go to state 51
@@ -1291,16 +1289,16 @@ state 65
     (22) declaracionEstructuras -> ABISTRUCT ID LLAVEA declaracionVariable LLAVEC PC . declaracionEstructuras
     (22) declaracionEstructuras -> . ABISTRUCT ID LLAVEA declaracionVariable LLAVEC PC declaracionEstructuras
     (23) declaracionEstructuras -> . empty
-    (113) empty -> .
+    (111) empty -> .
 
     ABISTRUCT       shift and go to state 6
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIMAIN         reduce using rule 113 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIMAIN         reduce using rule 111 (empty -> .)
 
     declaracionEstructuras         shift and go to state 74
     empty                          shift and go to state 7
@@ -1314,7 +1312,7 @@ state 66
 
 state 67
 
-    (106) listaInstrucciones -> entradaDatos salidaDatos declaraStruct . declaracionVariable operacionesBasicas declaracionIf declaracionCiclo
+    (105) listaInstrucciones -> entradaDatos salidaDatos declaraStruct . declaracionVariable operacionesBasicas declaracionIf declaracionCiclo
     (4) declaracionVariable -> . tipoDatos ID ASIG tipoValores
     (5) declaracionVariable -> . declaracionArreglo
     (6) declaracionVariable -> . declaracionVariable C declaracionVariable
@@ -1327,7 +1325,7 @@ state 67
     (13) tipoDatos -> . VOID
     (20) declaracionArreglo -> . ABIRRAY tipoDatos ID ASIG CORA NUMERO CORC
     (21) declaracionArreglo -> . ABIRRAY tipoDatos ID
-    (113) empty -> .
+    (111) empty -> .
 
   ! shift/reduce conflict for INT resolved as shift
   ! shift/reduce conflict for CHAR resolved as shift
@@ -1343,23 +1341,23 @@ state 67
     FLOAT           shift and go to state 16
     VOID            shift and go to state 17
     ABIRRAY         shift and go to state 18
-    C               reduce using rule 113 (empty -> .)
-    ID              reduce using rule 113 (empty -> .)
-    ABIF            reduce using rule 113 (empty -> .)
-    ABIJOR          reduce using rule 113 (empty -> .)
-    ABIN            reduce using rule 113 (empty -> .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    LLAVEC          reduce using rule 113 (empty -> .)
-    RETURN          reduce using rule 113 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    ID              reduce using rule 111 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
+    ABIN            reduce using rule 111 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    RETURN          reduce using rule 111 (empty -> .)
 
-  ! INT             [ reduce using rule 113 (empty -> .) ]
-  ! CHAR            [ reduce using rule 113 (empty -> .) ]
-  ! STRING          [ reduce using rule 113 (empty -> .) ]
-  ! BOOL            [ reduce using rule 113 (empty -> .) ]
-  ! FLOAT           [ reduce using rule 113 (empty -> .) ]
-  ! VOID            [ reduce using rule 113 (empty -> .) ]
-  ! ABIRRAY         [ reduce using rule 113 (empty -> .) ]
+  ! INT             [ reduce using rule 111 (empty -> .) ]
+  ! CHAR            [ reduce using rule 111 (empty -> .) ]
+  ! STRING          [ reduce using rule 111 (empty -> .) ]
+  ! BOOL            [ reduce using rule 111 (empty -> .) ]
+  ! FLOAT           [ reduce using rule 111 (empty -> .) ]
+  ! VOID            [ reduce using rule 111 (empty -> .) ]
+  ! ABIRRAY         [ reduce using rule 111 (empty -> .) ]
 
     declaracionVariable            shift and go to state 76
     tipoDatos                      shift and go to state 9
@@ -1368,31 +1366,31 @@ state 67
 
 state 68
 
-    (104) declaraStruct -> ABIDECLARA . ID ID PC declaraStruct
+    (103) declaraStruct -> ABIDECLARA . ID ID PC declaraStruct
 
     ID              shift and go to state 77
 
 
 state 69
 
-    (105) declaraStruct -> empty .
+    (104) declaraStruct -> empty .
 
-    INT             reduce using rule 105 (declaraStruct -> empty .)
-    CHAR            reduce using rule 105 (declaraStruct -> empty .)
-    STRING          reduce using rule 105 (declaraStruct -> empty .)
-    BOOL            reduce using rule 105 (declaraStruct -> empty .)
-    FLOAT           reduce using rule 105 (declaraStruct -> empty .)
-    VOID            reduce using rule 105 (declaraStruct -> empty .)
-    ABIRRAY         reduce using rule 105 (declaraStruct -> empty .)
-    C               reduce using rule 105 (declaraStruct -> empty .)
-    ID              reduce using rule 105 (declaraStruct -> empty .)
-    ABIF            reduce using rule 105 (declaraStruct -> empty .)
-    ABIJOR          reduce using rule 105 (declaraStruct -> empty .)
-    ABIN            reduce using rule 105 (declaraStruct -> empty .)
-    ABOUT           reduce using rule 105 (declaraStruct -> empty .)
-    ABIDECLARA      reduce using rule 105 (declaraStruct -> empty .)
-    LLAVEC          reduce using rule 105 (declaraStruct -> empty .)
-    RETURN          reduce using rule 105 (declaraStruct -> empty .)
+    INT             reduce using rule 104 (declaraStruct -> empty .)
+    CHAR            reduce using rule 104 (declaraStruct -> empty .)
+    STRING          reduce using rule 104 (declaraStruct -> empty .)
+    BOOL            reduce using rule 104 (declaraStruct -> empty .)
+    FLOAT           reduce using rule 104 (declaraStruct -> empty .)
+    VOID            reduce using rule 104 (declaraStruct -> empty .)
+    ABIRRAY         reduce using rule 104 (declaraStruct -> empty .)
+    C               reduce using rule 104 (declaraStruct -> empty .)
+    ID              reduce using rule 104 (declaraStruct -> empty .)
+    ABIF            reduce using rule 104 (declaraStruct -> empty .)
+    ABIJOR          reduce using rule 104 (declaraStruct -> empty .)
+    ABIN            reduce using rule 104 (declaraStruct -> empty .)
+    ABOUT           reduce using rule 104 (declaraStruct -> empty .)
+    ABIDECLARA      reduce using rule 104 (declaraStruct -> empty .)
+    LLAVEC          reduce using rule 104 (declaraStruct -> empty .)
+    RETURN          reduce using rule 104 (declaraStruct -> empty .)
 
 
 state 70
@@ -1418,32 +1416,32 @@ state 71
 state 72
 
     (24) declaracionFuncion -> tipoDatos ID PARENTA declaracionParametros PARENTC LLAVEA . listaInst return LLAVEC declaracionFuncion
-    (107) listaInst -> . listaInstrucciones
-    (108) listaInst -> . listaInstrucciones listaInst
-    (109) listaInst -> . empty
-    (106) listaInstrucciones -> . entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo
-    (113) empty -> .
+    (106) listaInst -> . listaInstrucciones
+    (107) listaInst -> . listaInstrucciones listaInst
+    (108) listaInst -> . empty
+    (105) listaInstrucciones -> . entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo
+    (111) empty -> .
     (73) entradaDatos -> . ABIN PARENTA ID PARENTC PC entradaDatos
     (74) entradaDatos -> . empty
 
   ! shift/reduce conflict for ABIN resolved as shift
-    RETURN          reduce using rule 113 (empty -> .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    ID              reduce using rule 113 (empty -> .)
-    ABIF            reduce using rule 113 (empty -> .)
-    ABIJOR          reduce using rule 113 (empty -> .)
+    RETURN          reduce using rule 111 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    ID              reduce using rule 111 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
     ABIN            shift and go to state 50
 
-  ! ABIN            [ reduce using rule 113 (empty -> .) ]
+  ! ABIN            [ reduce using rule 111 (empty -> .) ]
 
     listaInst                      shift and go to state 82
     listaInstrucciones             shift and go to state 47
@@ -1500,7 +1498,7 @@ state 75
 
 state 76
 
-    (106) listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable . operacionesBasicas declaracionIf declaracionCiclo
+    (105) listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable . operacionesBasicas declaracionIf declaracionCiclo
     (6) declaracionVariable -> declaracionVariable . C declaracionVariable
     (81) operacionesBasicas -> . ID ASIG ID operadoresBasicos ID PC operacionesBasicas
     (82) operacionesBasicas -> . ID ASIG tipoValores operadoresBasicos ID PC operacionesBasicas
@@ -1516,36 +1514,36 @@ state 76
     (92) operacionesBasicas -> . ID PARENTA listaValores PARENTC PC operacionesBasicas
     (93) operacionesBasicas -> . ID ASIG ID PARENTA listaValores PARENTC PC operacionesBasicas
     (94) operacionesBasicas -> . empty
-    (113) empty -> .
+    (111) empty -> .
 
   ! shift/reduce conflict for C resolved as shift
   ! shift/reduce conflict for ID resolved as shift
     C               shift and go to state 24
     ID              shift and go to state 84
-    ABIF            reduce using rule 113 (empty -> .)
-    ABIJOR          reduce using rule 113 (empty -> .)
-    ABIN            reduce using rule 113 (empty -> .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    LLAVEC          reduce using rule 113 (empty -> .)
-    RETURN          reduce using rule 113 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
+    ABIN            reduce using rule 111 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    RETURN          reduce using rule 111 (empty -> .)
 
-  ! C               [ reduce using rule 113 (empty -> .) ]
-  ! ID              [ reduce using rule 113 (empty -> .) ]
+  ! C               [ reduce using rule 111 (empty -> .) ]
+  ! ID              [ reduce using rule 111 (empty -> .) ]
 
     operacionesBasicas             shift and go to state 83
     empty                          shift and go to state 85
 
 state 77
 
-    (104) declaraStruct -> ABIDECLARA ID . ID PC declaraStruct
+    (103) declaraStruct -> ABIDECLARA ID . ID PC declaraStruct
 
     ID              shift and go to state 86
 
@@ -1585,9 +1583,8 @@ state 81
 state 82
 
     (24) declaracionFuncion -> tipoDatos ID PARENTA declaracionParametros PARENTC LLAVEA listaInst . return LLAVEC declaracionFuncion
-    (110) return -> . RETURN tipoValores PC
-    (111) return -> . RETURN ID PC
-    (112) return -> . RETURN PC
+    (109) return -> . RETURN ID PC
+    (110) return -> . RETURN PC
 
     RETURN          shift and go to state 93
 
@@ -1595,31 +1592,31 @@ state 82
 
 state 83
 
-    (106) listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas . declaracionIf declaracionCiclo
+    (105) listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas . declaracionIf declaracionCiclo
     (46) declaracionIf -> . ABIF PARENTA condicion PARENTC LLAVEA listaInst LLAVEC declaracionElse declaracionIf
     (47) declaracionIf -> . ABIF PARENTA condicion PARENTC LLAVEA listaInst LLAVEC declaracionIf
     (48) declaracionIf -> . empty
-    (113) empty -> .
+    (111) empty -> .
 
   ! shift/reduce conflict for ABIF resolved as shift
     ABIF            shift and go to state 95
-    ABIJOR          reduce using rule 113 (empty -> .)
-    ABIN            reduce using rule 113 (empty -> .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    ID              reduce using rule 113 (empty -> .)
-    LLAVEC          reduce using rule 113 (empty -> .)
-    RETURN          reduce using rule 113 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
+    ABIN            reduce using rule 111 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    ID              reduce using rule 111 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    RETURN          reduce using rule 111 (empty -> .)
 
-  ! ABIF            [ reduce using rule 113 (empty -> .) ]
+  ! ABIF            [ reduce using rule 111 (empty -> .) ]
 
     declaracionIf                  shift and go to state 94
     empty                          shift and go to state 96
@@ -1670,7 +1667,7 @@ state 85
 
 state 86
 
-    (104) declaraStruct -> ABIDECLARA ID ID . PC declaraStruct
+    (103) declaraStruct -> ABIDECLARA ID ID . PC declaraStruct
 
     PC              shift and go to state 101
 
@@ -1682,10 +1679,10 @@ state 87
     (76) salidaDatos -> . ABOUT PARENTA listaSalida PARENTC salidaDatos PC
     (77) salidaDatos -> . ABOUT PARENTA STRING_VALOR C listaSalida PARENTC PC salidaDatos
     (78) salidaDatos -> . empty
-    (113) empty -> .
+    (111) empty -> .
 
     ABOUT           shift and go to state 59
-    PC              reduce using rule 113 (empty -> .)
+    PC              reduce using rule 111 (empty -> .)
 
     salidaDatos                    shift and go to state 102
     empty                          shift and go to state 60
@@ -1707,10 +1704,10 @@ state 89
     (76) salidaDatos -> . ABOUT PARENTA listaSalida PARENTC salidaDatos PC
     (77) salidaDatos -> . ABOUT PARENTA STRING_VALOR C listaSalida PARENTC PC salidaDatos
     (78) salidaDatos -> . empty
-    (113) empty -> .
+    (111) empty -> .
 
     ABOUT           shift and go to state 59
-    PC              reduce using rule 113 (empty -> .)
+    PC              reduce using rule 111 (empty -> .)
 
     salidaDatos                    shift and go to state 104
     empty                          shift and go to state 60
@@ -1730,27 +1727,27 @@ state 91
     (73) entradaDatos -> ABIN PARENTA ID PARENTC PC . entradaDatos
     (73) entradaDatos -> . ABIN PARENTA ID PARENTC PC entradaDatos
     (74) entradaDatos -> . empty
-    (113) empty -> .
+    (111) empty -> .
 
   ! shift/reduce conflict for ABIN resolved as shift
     ABIN            shift and go to state 50
-    ABOUT           reduce using rule 113 (empty -> .)
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    ID              reduce using rule 113 (empty -> .)
-    ABIF            reduce using rule 113 (empty -> .)
-    ABIJOR          reduce using rule 113 (empty -> .)
-    LLAVEC          reduce using rule 113 (empty -> .)
-    RETURN          reduce using rule 113 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    ID              reduce using rule 111 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    RETURN          reduce using rule 111 (empty -> .)
 
-  ! ABIN            [ reduce using rule 113 (empty -> .) ]
+  ! ABIN            [ reduce using rule 111 (empty -> .) ]
 
     entradaDatos                   shift and go to state 106
     empty                          shift and go to state 107
@@ -1764,63 +1761,49 @@ state 92
 
 state 93
 
-    (110) return -> RETURN . tipoValores PC
-    (111) return -> RETURN . ID PC
-    (112) return -> RETURN . PC
-    (14) tipoValores -> . NUMERO
-    (15) tipoValores -> . FLOAT_VALOR
-    (16) tipoValores -> . CHAR_VALOR
-    (17) tipoValores -> . STRING_VALOR
-    (18) tipoValores -> . TRUE
-    (19) tipoValores -> . FALSE
+    (109) return -> RETURN . ID PC
+    (110) return -> RETURN . PC
 
-    ID              shift and go to state 111
+    ID              shift and go to state 109
     PC              shift and go to state 110
-    NUMERO          shift and go to state 39
-    FLOAT_VALOR     shift and go to state 40
-    CHAR_VALOR      shift and go to state 41
-    STRING_VALOR    shift and go to state 42
-    TRUE            shift and go to state 43
-    FALSE           shift and go to state 44
 
-    tipoValores                    shift and go to state 109
 
 state 94
 
-    (106) listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf . declaracionCiclo
+    (105) listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf . declaracionCiclo
     (30) declaracionCiclo -> . ABIJOR PARENTA inicializacion PC cond PC cambio PARENTC LLAVEA listaInst LLAVEC declaracionCiclo
     (31) declaracionCiclo -> . empty
-    (113) empty -> .
+    (111) empty -> .
 
   ! shift/reduce conflict for ABIJOR resolved as shift
-    ABIJOR          shift and go to state 113
-    ABIN            reduce using rule 113 (empty -> .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    ID              reduce using rule 113 (empty -> .)
-    ABIF            reduce using rule 113 (empty -> .)
-    LLAVEC          reduce using rule 113 (empty -> .)
-    RETURN          reduce using rule 113 (empty -> .)
+    ABIJOR          shift and go to state 112
+    ABIN            reduce using rule 111 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    ID              reduce using rule 111 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    RETURN          reduce using rule 111 (empty -> .)
 
-  ! ABIJOR          [ reduce using rule 113 (empty -> .) ]
+  ! ABIJOR          [ reduce using rule 111 (empty -> .) ]
 
-    declaracionCiclo               shift and go to state 112
-    empty                          shift and go to state 114
+    declaracionCiclo               shift and go to state 111
+    empty                          shift and go to state 113
 
 state 95
 
     (46) declaracionIf -> ABIF . PARENTA condicion PARENTC LLAVEA listaInst LLAVEC declaracionElse declaracionIf
     (47) declaracionIf -> ABIF . PARENTA condicion PARENTC LLAVEA listaInst LLAVEC declaracionIf
 
-    PARENTA         shift and go to state 115
+    PARENTA         shift and go to state 114
 
 
 state 96
@@ -1863,7 +1846,7 @@ state 97
     (18) tipoValores -> . TRUE
     (19) tipoValores -> . FALSE
 
-    ID              shift and go to state 116
+    ID              shift and go to state 115
     NUMERO          shift and go to state 39
     FLOAT_VALOR     shift and go to state 40
     CHAR_VALOR      shift and go to state 41
@@ -1871,13 +1854,13 @@ state 97
     TRUE            shift and go to state 43
     FALSE           shift and go to state 44
 
-    tipoValores                    shift and go to state 117
+    tipoValores                    shift and go to state 116
 
 state 98
 
     (88) operacionesBasicas -> ID P . ID PC operacionesBasicas
 
-    ID              shift and go to state 118
+    ID              shift and go to state 117
 
 
 state 99
@@ -1885,88 +1868,87 @@ state 99
     (90) operacionesBasicas -> ID CORA . NUMERO CORC ASIG ID CORA NUMERO CORC PC operacionesBasicas
     (91) operacionesBasicas -> ID CORA . NUMERO CORC ASIG tipoValores PC operacionesBasicas
 
-    NUMERO          shift and go to state 119
+    NUMERO          shift and go to state 118
 
 
 state 100
 
     (92) operacionesBasicas -> ID PARENTA . listaValores PARENTC PC operacionesBasicas
     (95) listaValores -> . tipoValores
-    (96) listaValores -> . ID CORA NUMERO CORC
-    (97) listaValores -> . ID
-    (98) listaValores -> . listaValores C listaValores
-    (99) listaValores -> . empty
+    (96) listaValores -> . ID
+    (97) listaValores -> . listaValores C listaValores
+    (98) listaValores -> . empty
     (14) tipoValores -> . NUMERO
     (15) tipoValores -> . FLOAT_VALOR
     (16) tipoValores -> . CHAR_VALOR
     (17) tipoValores -> . STRING_VALOR
     (18) tipoValores -> . TRUE
     (19) tipoValores -> . FALSE
-    (113) empty -> .
+    (111) empty -> .
 
-    ID              shift and go to state 120
+    ID              shift and go to state 119
     NUMERO          shift and go to state 39
     FLOAT_VALOR     shift and go to state 40
     CHAR_VALOR      shift and go to state 41
     STRING_VALOR    shift and go to state 42
     TRUE            shift and go to state 43
     FALSE           shift and go to state 44
-    PARENTC         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
+    PARENTC         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
 
-    listaValores                   shift and go to state 121
-    tipoValores                    shift and go to state 122
-    empty                          shift and go to state 123
+    listaValores                   shift and go to state 120
+    tipoValores                    shift and go to state 121
+    empty                          shift and go to state 122
 
 state 101
 
-    (104) declaraStruct -> ABIDECLARA ID ID PC . declaraStruct
-    (104) declaraStruct -> . ABIDECLARA ID ID PC declaraStruct
-    (105) declaraStruct -> . empty
-    (113) empty -> .
+    (103) declaraStruct -> ABIDECLARA ID ID PC . declaraStruct
+    (103) declaraStruct -> . ABIDECLARA ID ID PC declaraStruct
+    (104) declaraStruct -> . empty
+    (111) empty -> .
 
   ! shift/reduce conflict for ABIDECLARA resolved as shift
     ABIDECLARA      shift and go to state 68
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    ID              reduce using rule 113 (empty -> .)
-    ABIF            reduce using rule 113 (empty -> .)
-    ABIJOR          reduce using rule 113 (empty -> .)
-    ABIN            reduce using rule 113 (empty -> .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    LLAVEC          reduce using rule 113 (empty -> .)
-    RETURN          reduce using rule 113 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    ID              reduce using rule 111 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
+    ABIN            reduce using rule 111 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    RETURN          reduce using rule 111 (empty -> .)
 
-  ! ABIDECLARA      [ reduce using rule 113 (empty -> .) ]
+  ! ABIDECLARA      [ reduce using rule 111 (empty -> .) ]
 
-    declaraStruct                  shift and go to state 124
+    declaraStruct                  shift and go to state 123
     empty                          shift and go to state 69
 
 state 102
 
     (75) salidaDatos -> ABOUT PARENTA STRING_VALOR PARENTC salidaDatos . PC
 
-    PC              shift and go to state 125
+    PC              shift and go to state 124
 
 
 state 103
 
     (77) salidaDatos -> ABOUT PARENTA STRING_VALOR C listaSalida . PARENTC PC salidaDatos
 
-    PARENTC         shift and go to state 126
+    PARENTC         shift and go to state 125
 
 
 state 104
 
     (76) salidaDatos -> ABOUT PARENTA listaSalida PARENTC salidaDatos . PC
 
-    PC              shift and go to state 127
+    PC              shift and go to state 126
 
 
 state 105
@@ -2031,7 +2013,7 @@ state 108
     (11) tipoDatos -> . BOOL
     (12) tipoDatos -> . FLOAT
     (13) tipoDatos -> . VOID
-    (113) empty -> .
+    (111) empty -> .
 
     INT             shift and go to state 12
     CHAR            shift and go to state 13
@@ -2039,63 +2021,56 @@ state 108
     BOOL            shift and go to state 15
     FLOAT           shift and go to state 16
     VOID            shift and go to state 17
-    ABIMAIN         reduce using rule 113 (empty -> .)
+    ABIMAIN         reduce using rule 111 (empty -> .)
 
     tipoDatos                      shift and go to state 20
-    declaracionFuncion             shift and go to state 128
+    declaracionFuncion             shift and go to state 127
     empty                          shift and go to state 21
 
 state 109
 
-    (110) return -> RETURN tipoValores . PC
+    (109) return -> RETURN ID . PC
 
-    PC              shift and go to state 129
+    PC              shift and go to state 128
 
 
 state 110
 
-    (112) return -> RETURN PC .
+    (110) return -> RETURN PC .
 
-    LLAVEC          reduce using rule 112 (return -> RETURN PC .)
+    LLAVEC          reduce using rule 110 (return -> RETURN PC .)
 
 
 state 111
 
-    (111) return -> RETURN ID . PC
+    (105) listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .
 
-    PC              shift and go to state 130
+    ABIN            reduce using rule 105 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
+    ABOUT           reduce using rule 105 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
+    ABIDECLARA      reduce using rule 105 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
+    INT             reduce using rule 105 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
+    CHAR            reduce using rule 105 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
+    STRING          reduce using rule 105 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
+    BOOL            reduce using rule 105 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
+    FLOAT           reduce using rule 105 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
+    VOID            reduce using rule 105 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
+    ABIRRAY         reduce using rule 105 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
+    C               reduce using rule 105 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
+    ID              reduce using rule 105 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
+    ABIF            reduce using rule 105 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
+    ABIJOR          reduce using rule 105 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
+    LLAVEC          reduce using rule 105 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
+    RETURN          reduce using rule 105 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
 
 
 state 112
 
-    (106) listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .
+    (30) declaracionCiclo -> ABIJOR . PARENTA inicializacion PC cond PC cambio PARENTC LLAVEA listaInst LLAVEC declaracionCiclo
 
-    ABIN            reduce using rule 106 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
-    ABOUT           reduce using rule 106 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
-    ABIDECLARA      reduce using rule 106 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
-    INT             reduce using rule 106 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
-    CHAR            reduce using rule 106 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
-    STRING          reduce using rule 106 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
-    BOOL            reduce using rule 106 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
-    FLOAT           reduce using rule 106 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
-    VOID            reduce using rule 106 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
-    ABIRRAY         reduce using rule 106 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
-    C               reduce using rule 106 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
-    ID              reduce using rule 106 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
-    ABIF            reduce using rule 106 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
-    ABIJOR          reduce using rule 106 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
-    LLAVEC          reduce using rule 106 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
-    RETURN          reduce using rule 106 (listaInstrucciones -> entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo .)
+    PARENTA         shift and go to state 129
 
 
 state 113
-
-    (30) declaracionCiclo -> ABIJOR . PARENTA inicializacion PC cond PC cambio PARENTC LLAVEA listaInst LLAVEC declaracionCiclo
-
-    PARENTA         shift and go to state 131
-
-
-state 114
 
     (31) declaracionCiclo -> empty .
 
@@ -2117,7 +2092,7 @@ state 114
     RETURN          reduce using rule 31 (declaracionCiclo -> empty .)
 
 
-state 115
+state 114
 
     (46) declaracionIf -> ABIF PARENTA . condicion PARENTC LLAVEA listaInst LLAVEC declaracionElse declaracionIf
     (47) declaracionIf -> ABIF PARENTA . condicion PARENTC LLAVEA listaInst LLAVEC declaracionIf
@@ -2143,8 +2118,8 @@ state 115
     (18) tipoValores -> . TRUE
     (19) tipoValores -> . FALSE
 
-    ID              shift and go to state 133
-    NOT             shift and go to state 135
+    ID              shift and go to state 131
+    NOT             shift and go to state 133
     NUMERO          shift and go to state 39
     FLOAT_VALOR     shift and go to state 40
     CHAR_VALOR      shift and go to state 41
@@ -2152,10 +2127,10 @@ state 115
     TRUE            shift and go to state 43
     FALSE           shift and go to state 44
 
-    condicion                      shift and go to state 132
-    tipoValores                    shift and go to state 134
+    condicion                      shift and go to state 130
+    tipoValores                    shift and go to state 132
 
-state 116
+state 115
 
     (81) operacionesBasicas -> ID ASIG ID . operadoresBasicos ID PC operacionesBasicas
     (84) operacionesBasicas -> ID ASIG ID . operadoresBasicos tipoValores PC operacionesBasicas
@@ -2163,75 +2138,73 @@ state 116
     (87) operacionesBasicas -> ID ASIG ID . PC operacionesBasicas
     (89) operacionesBasicas -> ID ASIG ID . CORA NUMERO CORC PC operacionesBasicas
     (93) operacionesBasicas -> ID ASIG ID . PARENTA listaValores PARENTC PC operacionesBasicas
-    (100) operadoresBasicos -> . AGREGA
-    (101) operadoresBasicos -> . RESTA
-    (102) operadoresBasicos -> . MULT
-    (103) operadoresBasicos -> . DIV
+    (99) operadoresBasicos -> . AGREGA
+    (100) operadoresBasicos -> . RESTA
+    (101) operadoresBasicos -> . MULT
+    (102) operadoresBasicos -> . DIV
 
-    P               shift and go to state 138
-    PC              shift and go to state 137
-    CORA            shift and go to state 139
-    PARENTA         shift and go to state 140
-    AGREGA          shift and go to state 141
-    RESTA           shift and go to state 142
-    MULT            shift and go to state 143
-    DIV             shift and go to state 144
+    P               shift and go to state 136
+    PC              shift and go to state 135
+    CORA            shift and go to state 137
+    PARENTA         shift and go to state 138
+    AGREGA          shift and go to state 139
+    RESTA           shift and go to state 140
+    MULT            shift and go to state 141
+    DIV             shift and go to state 142
 
-    operadoresBasicos              shift and go to state 136
+    operadoresBasicos              shift and go to state 134
 
-state 117
+state 116
 
     (82) operacionesBasicas -> ID ASIG tipoValores . operadoresBasicos ID PC operacionesBasicas
     (83) operacionesBasicas -> ID ASIG tipoValores . operadoresBasicos tipoValores PC operacionesBasicas
     (85) operacionesBasicas -> ID ASIG tipoValores . PC operacionesBasicas
-    (100) operadoresBasicos -> . AGREGA
-    (101) operadoresBasicos -> . RESTA
-    (102) operadoresBasicos -> . MULT
-    (103) operadoresBasicos -> . DIV
+    (99) operadoresBasicos -> . AGREGA
+    (100) operadoresBasicos -> . RESTA
+    (101) operadoresBasicos -> . MULT
+    (102) operadoresBasicos -> . DIV
 
-    PC              shift and go to state 146
-    AGREGA          shift and go to state 141
-    RESTA           shift and go to state 142
-    MULT            shift and go to state 143
-    DIV             shift and go to state 144
+    PC              shift and go to state 144
+    AGREGA          shift and go to state 139
+    RESTA           shift and go to state 140
+    MULT            shift and go to state 141
+    DIV             shift and go to state 142
 
-    operadoresBasicos              shift and go to state 145
+    operadoresBasicos              shift and go to state 143
 
-state 118
+state 117
 
     (88) operacionesBasicas -> ID P ID . PC operacionesBasicas
 
-    PC              shift and go to state 147
+    PC              shift and go to state 145
 
 
-state 119
+state 118
 
     (90) operacionesBasicas -> ID CORA NUMERO . CORC ASIG ID CORA NUMERO CORC PC operacionesBasicas
     (91) operacionesBasicas -> ID CORA NUMERO . CORC ASIG tipoValores PC operacionesBasicas
 
-    CORC            shift and go to state 148
+    CORC            shift and go to state 146
+
+
+state 119
+
+    (96) listaValores -> ID .
+
+    PARENTC         reduce using rule 96 (listaValores -> ID .)
+    C               reduce using rule 96 (listaValores -> ID .)
 
 
 state 120
 
-    (96) listaValores -> ID . CORA NUMERO CORC
-    (97) listaValores -> ID .
+    (92) operacionesBasicas -> ID PARENTA listaValores . PARENTC PC operacionesBasicas
+    (97) listaValores -> listaValores . C listaValores
 
-    CORA            shift and go to state 149
-    PARENTC         reduce using rule 97 (listaValores -> ID .)
-    C               reduce using rule 97 (listaValores -> ID .)
+    PARENTC         shift and go to state 147
+    C               shift and go to state 148
 
 
 state 121
-
-    (92) operacionesBasicas -> ID PARENTA listaValores . PARENTC PC operacionesBasicas
-    (98) listaValores -> listaValores . C listaValores
-
-    PARENTC         shift and go to state 150
-    C               shift and go to state 151
-
-
-state 122
 
     (95) listaValores -> tipoValores .
 
@@ -2239,37 +2212,37 @@ state 122
     C               reduce using rule 95 (listaValores -> tipoValores .)
 
 
+state 122
+
+    (98) listaValores -> empty .
+
+    PARENTC         reduce using rule 98 (listaValores -> empty .)
+    C               reduce using rule 98 (listaValores -> empty .)
+
+
 state 123
 
-    (99) listaValores -> empty .
+    (103) declaraStruct -> ABIDECLARA ID ID PC declaraStruct .
 
-    PARENTC         reduce using rule 99 (listaValores -> empty .)
-    C               reduce using rule 99 (listaValores -> empty .)
+    INT             reduce using rule 103 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
+    CHAR            reduce using rule 103 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
+    STRING          reduce using rule 103 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
+    BOOL            reduce using rule 103 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
+    FLOAT           reduce using rule 103 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
+    VOID            reduce using rule 103 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
+    ABIRRAY         reduce using rule 103 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
+    C               reduce using rule 103 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
+    ID              reduce using rule 103 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
+    ABIF            reduce using rule 103 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
+    ABIJOR          reduce using rule 103 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
+    ABIN            reduce using rule 103 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
+    ABOUT           reduce using rule 103 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
+    ABIDECLARA      reduce using rule 103 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
+    LLAVEC          reduce using rule 103 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
+    RETURN          reduce using rule 103 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
 
 
 state 124
-
-    (104) declaraStruct -> ABIDECLARA ID ID PC declaraStruct .
-
-    INT             reduce using rule 104 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
-    CHAR            reduce using rule 104 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
-    STRING          reduce using rule 104 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
-    BOOL            reduce using rule 104 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
-    FLOAT           reduce using rule 104 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
-    VOID            reduce using rule 104 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
-    ABIRRAY         reduce using rule 104 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
-    C               reduce using rule 104 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
-    ID              reduce using rule 104 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
-    ABIF            reduce using rule 104 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
-    ABIJOR          reduce using rule 104 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
-    ABIN            reduce using rule 104 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
-    ABOUT           reduce using rule 104 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
-    ABIDECLARA      reduce using rule 104 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
-    LLAVEC          reduce using rule 104 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
-    RETURN          reduce using rule 104 (declaraStruct -> ABIDECLARA ID ID PC declaraStruct .)
-
-
-state 125
 
     (75) salidaDatos -> ABOUT PARENTA STRING_VALOR PARENTC salidaDatos PC .
 
@@ -2292,14 +2265,14 @@ state 125
     PC              reduce using rule 75 (salidaDatos -> ABOUT PARENTA STRING_VALOR PARENTC salidaDatos PC .)
 
 
-state 126
+state 125
 
     (77) salidaDatos -> ABOUT PARENTA STRING_VALOR C listaSalida PARENTC . PC salidaDatos
 
-    PC              shift and go to state 152
+    PC              shift and go to state 149
 
 
-state 127
+state 126
 
     (76) salidaDatos -> ABOUT PARENTA listaSalida PARENTC salidaDatos PC .
 
@@ -2322,47 +2295,40 @@ state 127
     PC              reduce using rule 76 (salidaDatos -> ABOUT PARENTA listaSalida PARENTC salidaDatos PC .)
 
 
-state 128
+state 127
 
     (24) declaracionFuncion -> tipoDatos ID PARENTA declaracionParametros PARENTC LLAVEA listaInst return LLAVEC declaracionFuncion .
 
     ABIMAIN         reduce using rule 24 (declaracionFuncion -> tipoDatos ID PARENTA declaracionParametros PARENTC LLAVEA listaInst return LLAVEC declaracionFuncion .)
 
 
+state 128
+
+    (109) return -> RETURN ID PC .
+
+    LLAVEC          reduce using rule 109 (return -> RETURN ID PC .)
+
+
 state 129
-
-    (110) return -> RETURN tipoValores PC .
-
-    LLAVEC          reduce using rule 110 (return -> RETURN tipoValores PC .)
-
-
-state 130
-
-    (111) return -> RETURN ID PC .
-
-    LLAVEC          reduce using rule 111 (return -> RETURN ID PC .)
-
-
-state 131
 
     (30) declaracionCiclo -> ABIJOR PARENTA . inicializacion PC cond PC cambio PARENTC LLAVEA listaInst LLAVEC declaracionCiclo
     (32) inicializacion -> . INT ID ASIG NUMERO
     (33) inicializacion -> . ID ASIG NUMERO
 
-    INT             shift and go to state 154
-    ID              shift and go to state 155
+    INT             shift and go to state 151
+    ID              shift and go to state 152
 
-    inicializacion                 shift and go to state 153
+    inicializacion                 shift and go to state 150
 
-state 132
+state 130
 
     (46) declaracionIf -> ABIF PARENTA condicion . PARENTC LLAVEA listaInst LLAVEC declaracionElse declaracionIf
     (47) declaracionIf -> ABIF PARENTA condicion . PARENTC LLAVEA listaInst LLAVEC declaracionIf
 
-    PARENTC         shift and go to state 156
+    PARENTC         shift and go to state 153
 
 
-state 133
+state 131
 
     (50) condicion -> ID . operadoresRel ID operadoresLogicos condicion
     (51) condicion -> ID . operadoresRel ID
@@ -2381,23 +2347,23 @@ state 133
     (72) operadoresRel -> . COMP
 
     PARENTC         reduce using rule 52 (condicion -> ID .)
-    LT              shift and go to state 158
-    LTE             shift and go to state 159
-    GT              shift and go to state 160
-    GTE             shift and go to state 161
-    NE              shift and go to state 162
-    COMP            shift and go to state 163
+    LT              shift and go to state 155
+    LTE             shift and go to state 156
+    GT              shift and go to state 157
+    GTE             shift and go to state 158
+    NE              shift and go to state 159
+    COMP            shift and go to state 160
 
-    operadoresRel                  shift and go to state 157
+    operadoresRel                  shift and go to state 154
 
-state 134
+state 132
 
     (53) condicion -> tipoValores .
 
     PARENTC         reduce using rule 53 (condicion -> tipoValores .)
 
 
-state 135
+state 133
 
     (56) condicion -> NOT . ID operadoresRel ID operadoresLogicos condicion
     (57) condicion -> NOT . ID operadoresRel ID
@@ -2405,11 +2371,11 @@ state 135
     (59) condicion -> NOT . ID operadoresRel tipoValores
     (64) condicion -> NOT . PARENTA condicion PARENTC
 
-    ID              shift and go to state 164
-    PARENTA         shift and go to state 165
+    ID              shift and go to state 161
+    PARENTA         shift and go to state 162
 
 
-state 136
+state 134
 
     (81) operacionesBasicas -> ID ASIG ID operadoresBasicos . ID PC operacionesBasicas
     (84) operacionesBasicas -> ID ASIG ID operadoresBasicos . tipoValores PC operacionesBasicas
@@ -2420,7 +2386,7 @@ state 136
     (18) tipoValores -> . TRUE
     (19) tipoValores -> . FALSE
 
-    ID              shift and go to state 166
+    ID              shift and go to state 163
     NUMERO          shift and go to state 39
     FLOAT_VALOR     shift and go to state 40
     CHAR_VALOR      shift and go to state 41
@@ -2428,9 +2394,9 @@ state 136
     TRUE            shift and go to state 43
     FALSE           shift and go to state 44
 
-    tipoValores                    shift and go to state 167
+    tipoValores                    shift and go to state 164
 
-state 137
+state 135
 
     (87) operacionesBasicas -> ID ASIG ID PC . operacionesBasicas
     (81) operacionesBasicas -> . ID ASIG ID operadoresBasicos ID PC operacionesBasicas
@@ -2447,128 +2413,127 @@ state 137
     (92) operacionesBasicas -> . ID PARENTA listaValores PARENTC PC operacionesBasicas
     (93) operacionesBasicas -> . ID ASIG ID PARENTA listaValores PARENTC PC operacionesBasicas
     (94) operacionesBasicas -> . empty
-    (113) empty -> .
+    (111) empty -> .
 
   ! shift/reduce conflict for ID resolved as shift
     ID              shift and go to state 84
-    ABIF            reduce using rule 113 (empty -> .)
-    ABIJOR          reduce using rule 113 (empty -> .)
-    ABIN            reduce using rule 113 (empty -> .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    LLAVEC          reduce using rule 113 (empty -> .)
-    RETURN          reduce using rule 113 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
+    ABIN            reduce using rule 111 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    RETURN          reduce using rule 111 (empty -> .)
 
-  ! ID              [ reduce using rule 113 (empty -> .) ]
+  ! ID              [ reduce using rule 111 (empty -> .) ]
 
-    operacionesBasicas             shift and go to state 168
+    operacionesBasicas             shift and go to state 165
     empty                          shift and go to state 85
 
-state 138
+state 136
 
     (86) operacionesBasicas -> ID ASIG ID P . ID PC operacionesBasicas
 
-    ID              shift and go to state 169
+    ID              shift and go to state 166
 
 
-state 139
+state 137
 
     (89) operacionesBasicas -> ID ASIG ID CORA . NUMERO CORC PC operacionesBasicas
 
-    NUMERO          shift and go to state 170
+    NUMERO          shift and go to state 167
 
 
-state 140
+state 138
 
     (93) operacionesBasicas -> ID ASIG ID PARENTA . listaValores PARENTC PC operacionesBasicas
     (95) listaValores -> . tipoValores
-    (96) listaValores -> . ID CORA NUMERO CORC
-    (97) listaValores -> . ID
-    (98) listaValores -> . listaValores C listaValores
-    (99) listaValores -> . empty
+    (96) listaValores -> . ID
+    (97) listaValores -> . listaValores C listaValores
+    (98) listaValores -> . empty
     (14) tipoValores -> . NUMERO
     (15) tipoValores -> . FLOAT_VALOR
     (16) tipoValores -> . CHAR_VALOR
     (17) tipoValores -> . STRING_VALOR
     (18) tipoValores -> . TRUE
     (19) tipoValores -> . FALSE
-    (113) empty -> .
+    (111) empty -> .
 
-    ID              shift and go to state 120
+    ID              shift and go to state 119
     NUMERO          shift and go to state 39
     FLOAT_VALOR     shift and go to state 40
     CHAR_VALOR      shift and go to state 41
     STRING_VALOR    shift and go to state 42
     TRUE            shift and go to state 43
     FALSE           shift and go to state 44
-    PARENTC         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
+    PARENTC         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
 
-    listaValores                   shift and go to state 171
-    tipoValores                    shift and go to state 122
-    empty                          shift and go to state 123
+    listaValores                   shift and go to state 168
+    tipoValores                    shift and go to state 121
+    empty                          shift and go to state 122
+
+state 139
+
+    (99) operadoresBasicos -> AGREGA .
+
+    ID              reduce using rule 99 (operadoresBasicos -> AGREGA .)
+    NUMERO          reduce using rule 99 (operadoresBasicos -> AGREGA .)
+    FLOAT_VALOR     reduce using rule 99 (operadoresBasicos -> AGREGA .)
+    CHAR_VALOR      reduce using rule 99 (operadoresBasicos -> AGREGA .)
+    STRING_VALOR    reduce using rule 99 (operadoresBasicos -> AGREGA .)
+    TRUE            reduce using rule 99 (operadoresBasicos -> AGREGA .)
+    FALSE           reduce using rule 99 (operadoresBasicos -> AGREGA .)
+
+
+state 140
+
+    (100) operadoresBasicos -> RESTA .
+
+    ID              reduce using rule 100 (operadoresBasicos -> RESTA .)
+    NUMERO          reduce using rule 100 (operadoresBasicos -> RESTA .)
+    FLOAT_VALOR     reduce using rule 100 (operadoresBasicos -> RESTA .)
+    CHAR_VALOR      reduce using rule 100 (operadoresBasicos -> RESTA .)
+    STRING_VALOR    reduce using rule 100 (operadoresBasicos -> RESTA .)
+    TRUE            reduce using rule 100 (operadoresBasicos -> RESTA .)
+    FALSE           reduce using rule 100 (operadoresBasicos -> RESTA .)
+
 
 state 141
 
-    (100) operadoresBasicos -> AGREGA .
+    (101) operadoresBasicos -> MULT .
 
-    ID              reduce using rule 100 (operadoresBasicos -> AGREGA .)
-    NUMERO          reduce using rule 100 (operadoresBasicos -> AGREGA .)
-    FLOAT_VALOR     reduce using rule 100 (operadoresBasicos -> AGREGA .)
-    CHAR_VALOR      reduce using rule 100 (operadoresBasicos -> AGREGA .)
-    STRING_VALOR    reduce using rule 100 (operadoresBasicos -> AGREGA .)
-    TRUE            reduce using rule 100 (operadoresBasicos -> AGREGA .)
-    FALSE           reduce using rule 100 (operadoresBasicos -> AGREGA .)
+    ID              reduce using rule 101 (operadoresBasicos -> MULT .)
+    NUMERO          reduce using rule 101 (operadoresBasicos -> MULT .)
+    FLOAT_VALOR     reduce using rule 101 (operadoresBasicos -> MULT .)
+    CHAR_VALOR      reduce using rule 101 (operadoresBasicos -> MULT .)
+    STRING_VALOR    reduce using rule 101 (operadoresBasicos -> MULT .)
+    TRUE            reduce using rule 101 (operadoresBasicos -> MULT .)
+    FALSE           reduce using rule 101 (operadoresBasicos -> MULT .)
 
 
 state 142
 
-    (101) operadoresBasicos -> RESTA .
+    (102) operadoresBasicos -> DIV .
 
-    ID              reduce using rule 101 (operadoresBasicos -> RESTA .)
-    NUMERO          reduce using rule 101 (operadoresBasicos -> RESTA .)
-    FLOAT_VALOR     reduce using rule 101 (operadoresBasicos -> RESTA .)
-    CHAR_VALOR      reduce using rule 101 (operadoresBasicos -> RESTA .)
-    STRING_VALOR    reduce using rule 101 (operadoresBasicos -> RESTA .)
-    TRUE            reduce using rule 101 (operadoresBasicos -> RESTA .)
-    FALSE           reduce using rule 101 (operadoresBasicos -> RESTA .)
+    ID              reduce using rule 102 (operadoresBasicos -> DIV .)
+    NUMERO          reduce using rule 102 (operadoresBasicos -> DIV .)
+    FLOAT_VALOR     reduce using rule 102 (operadoresBasicos -> DIV .)
+    CHAR_VALOR      reduce using rule 102 (operadoresBasicos -> DIV .)
+    STRING_VALOR    reduce using rule 102 (operadoresBasicos -> DIV .)
+    TRUE            reduce using rule 102 (operadoresBasicos -> DIV .)
+    FALSE           reduce using rule 102 (operadoresBasicos -> DIV .)
 
 
 state 143
-
-    (102) operadoresBasicos -> MULT .
-
-    ID              reduce using rule 102 (operadoresBasicos -> MULT .)
-    NUMERO          reduce using rule 102 (operadoresBasicos -> MULT .)
-    FLOAT_VALOR     reduce using rule 102 (operadoresBasicos -> MULT .)
-    CHAR_VALOR      reduce using rule 102 (operadoresBasicos -> MULT .)
-    STRING_VALOR    reduce using rule 102 (operadoresBasicos -> MULT .)
-    TRUE            reduce using rule 102 (operadoresBasicos -> MULT .)
-    FALSE           reduce using rule 102 (operadoresBasicos -> MULT .)
-
-
-state 144
-
-    (103) operadoresBasicos -> DIV .
-
-    ID              reduce using rule 103 (operadoresBasicos -> DIV .)
-    NUMERO          reduce using rule 103 (operadoresBasicos -> DIV .)
-    FLOAT_VALOR     reduce using rule 103 (operadoresBasicos -> DIV .)
-    CHAR_VALOR      reduce using rule 103 (operadoresBasicos -> DIV .)
-    STRING_VALOR    reduce using rule 103 (operadoresBasicos -> DIV .)
-    TRUE            reduce using rule 103 (operadoresBasicos -> DIV .)
-    FALSE           reduce using rule 103 (operadoresBasicos -> DIV .)
-
-
-state 145
 
     (82) operacionesBasicas -> ID ASIG tipoValores operadoresBasicos . ID PC operacionesBasicas
     (83) operacionesBasicas -> ID ASIG tipoValores operadoresBasicos . tipoValores PC operacionesBasicas
@@ -2579,7 +2544,7 @@ state 145
     (18) tipoValores -> . TRUE
     (19) tipoValores -> . FALSE
 
-    ID              shift and go to state 172
+    ID              shift and go to state 169
     NUMERO          shift and go to state 39
     FLOAT_VALOR     shift and go to state 40
     CHAR_VALOR      shift and go to state 41
@@ -2587,9 +2552,9 @@ state 145
     TRUE            shift and go to state 43
     FALSE           shift and go to state 44
 
-    tipoValores                    shift and go to state 173
+    tipoValores                    shift and go to state 170
 
-state 146
+state 144
 
     (85) operacionesBasicas -> ID ASIG tipoValores PC . operacionesBasicas
     (81) operacionesBasicas -> . ID ASIG ID operadoresBasicos ID PC operacionesBasicas
@@ -2606,32 +2571,32 @@ state 146
     (92) operacionesBasicas -> . ID PARENTA listaValores PARENTC PC operacionesBasicas
     (93) operacionesBasicas -> . ID ASIG ID PARENTA listaValores PARENTC PC operacionesBasicas
     (94) operacionesBasicas -> . empty
-    (113) empty -> .
+    (111) empty -> .
 
   ! shift/reduce conflict for ID resolved as shift
     ID              shift and go to state 84
-    ABIF            reduce using rule 113 (empty -> .)
-    ABIJOR          reduce using rule 113 (empty -> .)
-    ABIN            reduce using rule 113 (empty -> .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    LLAVEC          reduce using rule 113 (empty -> .)
-    RETURN          reduce using rule 113 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
+    ABIN            reduce using rule 111 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    RETURN          reduce using rule 111 (empty -> .)
 
-  ! ID              [ reduce using rule 113 (empty -> .) ]
+  ! ID              [ reduce using rule 111 (empty -> .) ]
 
-    operacionesBasicas             shift and go to state 174
+    operacionesBasicas             shift and go to state 171
     empty                          shift and go to state 85
 
-state 147
+state 145
 
     (88) operacionesBasicas -> ID P ID PC . operacionesBasicas
     (81) operacionesBasicas -> . ID ASIG ID operadoresBasicos ID PC operacionesBasicas
@@ -2648,146 +2613,138 @@ state 147
     (92) operacionesBasicas -> . ID PARENTA listaValores PARENTC PC operacionesBasicas
     (93) operacionesBasicas -> . ID ASIG ID PARENTA listaValores PARENTC PC operacionesBasicas
     (94) operacionesBasicas -> . empty
-    (113) empty -> .
+    (111) empty -> .
 
   ! shift/reduce conflict for ID resolved as shift
     ID              shift and go to state 84
-    ABIF            reduce using rule 113 (empty -> .)
-    ABIJOR          reduce using rule 113 (empty -> .)
-    ABIN            reduce using rule 113 (empty -> .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    LLAVEC          reduce using rule 113 (empty -> .)
-    RETURN          reduce using rule 113 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
+    ABIN            reduce using rule 111 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    RETURN          reduce using rule 111 (empty -> .)
 
-  ! ID              [ reduce using rule 113 (empty -> .) ]
+  ! ID              [ reduce using rule 111 (empty -> .) ]
 
-    operacionesBasicas             shift and go to state 175
+    operacionesBasicas             shift and go to state 172
     empty                          shift and go to state 85
 
-state 148
+state 146
 
     (90) operacionesBasicas -> ID CORA NUMERO CORC . ASIG ID CORA NUMERO CORC PC operacionesBasicas
     (91) operacionesBasicas -> ID CORA NUMERO CORC . ASIG tipoValores PC operacionesBasicas
 
-    ASIG            shift and go to state 176
+    ASIG            shift and go to state 173
 
 
-state 149
-
-    (96) listaValores -> ID CORA . NUMERO CORC
-
-    NUMERO          shift and go to state 177
-
-
-state 150
+state 147
 
     (92) operacionesBasicas -> ID PARENTA listaValores PARENTC . PC operacionesBasicas
 
-    PC              shift and go to state 178
+    PC              shift and go to state 174
 
 
-state 151
+state 148
 
-    (98) listaValores -> listaValores C . listaValores
+    (97) listaValores -> listaValores C . listaValores
     (95) listaValores -> . tipoValores
-    (96) listaValores -> . ID CORA NUMERO CORC
-    (97) listaValores -> . ID
-    (98) listaValores -> . listaValores C listaValores
-    (99) listaValores -> . empty
+    (96) listaValores -> . ID
+    (97) listaValores -> . listaValores C listaValores
+    (98) listaValores -> . empty
     (14) tipoValores -> . NUMERO
     (15) tipoValores -> . FLOAT_VALOR
     (16) tipoValores -> . CHAR_VALOR
     (17) tipoValores -> . STRING_VALOR
     (18) tipoValores -> . TRUE
     (19) tipoValores -> . FALSE
-    (113) empty -> .
+    (111) empty -> .
 
-    ID              shift and go to state 120
+    ID              shift and go to state 119
     NUMERO          shift and go to state 39
     FLOAT_VALOR     shift and go to state 40
     CHAR_VALOR      shift and go to state 41
     STRING_VALOR    shift and go to state 42
     TRUE            shift and go to state 43
     FALSE           shift and go to state 44
-    C               reduce using rule 113 (empty -> .)
-    PARENTC         reduce using rule 113 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    PARENTC         reduce using rule 111 (empty -> .)
 
-    listaValores                   shift and go to state 179
-    tipoValores                    shift and go to state 122
-    empty                          shift and go to state 123
+    listaValores                   shift and go to state 175
+    tipoValores                    shift and go to state 121
+    empty                          shift and go to state 122
 
-state 152
+state 149
 
     (77) salidaDatos -> ABOUT PARENTA STRING_VALOR C listaSalida PARENTC PC . salidaDatos
     (75) salidaDatos -> . ABOUT PARENTA STRING_VALOR PARENTC salidaDatos PC
     (76) salidaDatos -> . ABOUT PARENTA listaSalida PARENTC salidaDatos PC
     (77) salidaDatos -> . ABOUT PARENTA STRING_VALOR C listaSalida PARENTC PC salidaDatos
     (78) salidaDatos -> . empty
-    (113) empty -> .
+    (111) empty -> .
 
   ! shift/reduce conflict for ABOUT resolved as shift
     ABOUT           shift and go to state 59
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    ID              reduce using rule 113 (empty -> .)
-    ABIF            reduce using rule 113 (empty -> .)
-    ABIJOR          reduce using rule 113 (empty -> .)
-    ABIN            reduce using rule 113 (empty -> .)
-    LLAVEC          reduce using rule 113 (empty -> .)
-    RETURN          reduce using rule 113 (empty -> .)
-    PC              reduce using rule 113 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    ID              reduce using rule 111 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
+    ABIN            reduce using rule 111 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    RETURN          reduce using rule 111 (empty -> .)
+    PC              reduce using rule 111 (empty -> .)
 
-  ! ABOUT           [ reduce using rule 113 (empty -> .) ]
+  ! ABOUT           [ reduce using rule 111 (empty -> .) ]
 
-    salidaDatos                    shift and go to state 180
+    salidaDatos                    shift and go to state 176
     empty                          shift and go to state 60
 
-state 153
+state 150
 
     (30) declaracionCiclo -> ABIJOR PARENTA inicializacion . PC cond PC cambio PARENTC LLAVEA listaInst LLAVEC declaracionCiclo
 
-    PC              shift and go to state 181
+    PC              shift and go to state 177
 
 
-state 154
+state 151
 
     (32) inicializacion -> INT . ID ASIG NUMERO
 
-    ID              shift and go to state 182
+    ID              shift and go to state 178
 
 
-state 155
+state 152
 
     (33) inicializacion -> ID . ASIG NUMERO
 
-    ASIG            shift and go to state 183
+    ASIG            shift and go to state 179
 
 
-state 156
+state 153
 
     (46) declaracionIf -> ABIF PARENTA condicion PARENTC . LLAVEA listaInst LLAVEC declaracionElse declaracionIf
     (47) declaracionIf -> ABIF PARENTA condicion PARENTC . LLAVEA listaInst LLAVEC declaracionIf
 
-    LLAVEA          shift and go to state 184
+    LLAVEA          shift and go to state 180
 
 
-state 157
+state 154
 
     (50) condicion -> ID operadoresRel . ID operadoresLogicos condicion
     (51) condicion -> ID operadoresRel . ID
@@ -2804,8 +2761,8 @@ state 157
     (18) tipoValores -> . TRUE
     (19) tipoValores -> . FALSE
 
-    ID              shift and go to state 185
-    NOT             shift and go to state 187
+    ID              shift and go to state 181
+    NOT             shift and go to state 183
     NUMERO          shift and go to state 39
     FLOAT_VALOR     shift and go to state 40
     CHAR_VALOR      shift and go to state 41
@@ -2813,9 +2770,9 @@ state 157
     TRUE            shift and go to state 43
     FALSE           shift and go to state 44
 
-    tipoValores                    shift and go to state 186
+    tipoValores                    shift and go to state 182
 
-state 158
+state 155
 
     (67) operadoresRel -> LT .
 
@@ -2829,7 +2786,7 @@ state 158
     FALSE           reduce using rule 67 (operadoresRel -> LT .)
 
 
-state 159
+state 156
 
     (68) operadoresRel -> LTE .
 
@@ -2843,7 +2800,7 @@ state 159
     FALSE           reduce using rule 68 (operadoresRel -> LTE .)
 
 
-state 160
+state 157
 
     (69) operadoresRel -> GT .
 
@@ -2857,7 +2814,7 @@ state 160
     FALSE           reduce using rule 69 (operadoresRel -> GT .)
 
 
-state 161
+state 158
 
     (70) operadoresRel -> GTE .
 
@@ -2871,7 +2828,7 @@ state 161
     FALSE           reduce using rule 70 (operadoresRel -> GTE .)
 
 
-state 162
+state 159
 
     (71) operadoresRel -> NE .
 
@@ -2885,7 +2842,7 @@ state 162
     FALSE           reduce using rule 71 (operadoresRel -> NE .)
 
 
-state 163
+state 160
 
     (72) operadoresRel -> COMP .
 
@@ -2899,7 +2856,7 @@ state 163
     FALSE           reduce using rule 72 (operadoresRel -> COMP .)
 
 
-state 164
+state 161
 
     (56) condicion -> NOT ID . operadoresRel ID operadoresLogicos condicion
     (57) condicion -> NOT ID . operadoresRel ID
@@ -2912,16 +2869,16 @@ state 164
     (71) operadoresRel -> . NE
     (72) operadoresRel -> . COMP
 
-    LT              shift and go to state 158
-    LTE             shift and go to state 159
-    GT              shift and go to state 160
-    GTE             shift and go to state 161
-    NE              shift and go to state 162
-    COMP            shift and go to state 163
+    LT              shift and go to state 155
+    LTE             shift and go to state 156
+    GT              shift and go to state 157
+    GTE             shift and go to state 158
+    NE              shift and go to state 159
+    COMP            shift and go to state 160
 
-    operadoresRel                  shift and go to state 188
+    operadoresRel                  shift and go to state 184
 
-state 165
+state 162
 
     (64) condicion -> NOT PARENTA . condicion PARENTC
     (50) condicion -> . ID operadoresRel ID operadoresLogicos condicion
@@ -2946,8 +2903,8 @@ state 165
     (18) tipoValores -> . TRUE
     (19) tipoValores -> . FALSE
 
-    ID              shift and go to state 133
-    NOT             shift and go to state 135
+    ID              shift and go to state 131
+    NOT             shift and go to state 133
     NUMERO          shift and go to state 39
     FLOAT_VALOR     shift and go to state 40
     CHAR_VALOR      shift and go to state 41
@@ -2955,24 +2912,24 @@ state 165
     TRUE            shift and go to state 43
     FALSE           shift and go to state 44
 
-    condicion                      shift and go to state 189
-    tipoValores                    shift and go to state 134
+    condicion                      shift and go to state 185
+    tipoValores                    shift and go to state 132
 
-state 166
+state 163
 
     (81) operacionesBasicas -> ID ASIG ID operadoresBasicos ID . PC operacionesBasicas
 
-    PC              shift and go to state 190
+    PC              shift and go to state 186
 
 
-state 167
+state 164
 
     (84) operacionesBasicas -> ID ASIG ID operadoresBasicos tipoValores . PC operacionesBasicas
 
-    PC              shift and go to state 191
+    PC              shift and go to state 187
 
 
-state 168
+state 165
 
     (87) operacionesBasicas -> ID ASIG ID PC operacionesBasicas .
 
@@ -2994,44 +2951,44 @@ state 168
     RETURN          reduce using rule 87 (operacionesBasicas -> ID ASIG ID PC operacionesBasicas .)
 
 
-state 169
+state 166
 
     (86) operacionesBasicas -> ID ASIG ID P ID . PC operacionesBasicas
 
-    PC              shift and go to state 192
+    PC              shift and go to state 188
+
+
+state 167
+
+    (89) operacionesBasicas -> ID ASIG ID CORA NUMERO . CORC PC operacionesBasicas
+
+    CORC            shift and go to state 189
+
+
+state 168
+
+    (93) operacionesBasicas -> ID ASIG ID PARENTA listaValores . PARENTC PC operacionesBasicas
+    (97) listaValores -> listaValores . C listaValores
+
+    PARENTC         shift and go to state 190
+    C               shift and go to state 148
+
+
+state 169
+
+    (82) operacionesBasicas -> ID ASIG tipoValores operadoresBasicos ID . PC operacionesBasicas
+
+    PC              shift and go to state 191
 
 
 state 170
 
-    (89) operacionesBasicas -> ID ASIG ID CORA NUMERO . CORC PC operacionesBasicas
+    (83) operacionesBasicas -> ID ASIG tipoValores operadoresBasicos tipoValores . PC operacionesBasicas
 
-    CORC            shift and go to state 193
+    PC              shift and go to state 192
 
 
 state 171
-
-    (93) operacionesBasicas -> ID ASIG ID PARENTA listaValores . PARENTC PC operacionesBasicas
-    (98) listaValores -> listaValores . C listaValores
-
-    PARENTC         shift and go to state 194
-    C               shift and go to state 151
-
-
-state 172
-
-    (82) operacionesBasicas -> ID ASIG tipoValores operadoresBasicos ID . PC operacionesBasicas
-
-    PC              shift and go to state 195
-
-
-state 173
-
-    (83) operacionesBasicas -> ID ASIG tipoValores operadoresBasicos tipoValores . PC operacionesBasicas
-
-    PC              shift and go to state 196
-
-
-state 174
 
     (85) operacionesBasicas -> ID ASIG tipoValores PC operacionesBasicas .
 
@@ -3053,7 +3010,7 @@ state 174
     RETURN          reduce using rule 85 (operacionesBasicas -> ID ASIG tipoValores PC operacionesBasicas .)
 
 
-state 175
+state 172
 
     (88) operacionesBasicas -> ID P ID PC operacionesBasicas .
 
@@ -3075,7 +3032,7 @@ state 175
     RETURN          reduce using rule 88 (operacionesBasicas -> ID P ID PC operacionesBasicas .)
 
 
-state 176
+state 173
 
     (90) operacionesBasicas -> ID CORA NUMERO CORC ASIG . ID CORA NUMERO CORC PC operacionesBasicas
     (91) operacionesBasicas -> ID CORA NUMERO CORC ASIG . tipoValores PC operacionesBasicas
@@ -3086,7 +3043,7 @@ state 176
     (18) tipoValores -> . TRUE
     (19) tipoValores -> . FALSE
 
-    ID              shift and go to state 197
+    ID              shift and go to state 193
     NUMERO          shift and go to state 39
     FLOAT_VALOR     shift and go to state 40
     CHAR_VALOR      shift and go to state 41
@@ -3094,16 +3051,9 @@ state 176
     TRUE            shift and go to state 43
     FALSE           shift and go to state 44
 
-    tipoValores                    shift and go to state 198
+    tipoValores                    shift and go to state 194
 
-state 177
-
-    (96) listaValores -> ID CORA NUMERO . CORC
-
-    CORC            shift and go to state 199
-
-
-state 178
+state 174
 
     (92) operacionesBasicas -> ID PARENTA listaValores PARENTC PC . operacionesBasicas
     (81) operacionesBasicas -> . ID ASIG ID operadoresBasicos ID PC operacionesBasicas
@@ -3120,44 +3070,44 @@ state 178
     (92) operacionesBasicas -> . ID PARENTA listaValores PARENTC PC operacionesBasicas
     (93) operacionesBasicas -> . ID ASIG ID PARENTA listaValores PARENTC PC operacionesBasicas
     (94) operacionesBasicas -> . empty
-    (113) empty -> .
+    (111) empty -> .
 
   ! shift/reduce conflict for ID resolved as shift
     ID              shift and go to state 84
-    ABIF            reduce using rule 113 (empty -> .)
-    ABIJOR          reduce using rule 113 (empty -> .)
-    ABIN            reduce using rule 113 (empty -> .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    LLAVEC          reduce using rule 113 (empty -> .)
-    RETURN          reduce using rule 113 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
+    ABIN            reduce using rule 111 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    RETURN          reduce using rule 111 (empty -> .)
 
-  ! ID              [ reduce using rule 113 (empty -> .) ]
+  ! ID              [ reduce using rule 111 (empty -> .) ]
 
-    operacionesBasicas             shift and go to state 200
+    operacionesBasicas             shift and go to state 195
     empty                          shift and go to state 85
 
-state 179
+state 175
 
-    (98) listaValores -> listaValores C listaValores .
-    (98) listaValores -> listaValores . C listaValores
+    (97) listaValores -> listaValores C listaValores .
+    (97) listaValores -> listaValores . C listaValores
 
   ! shift/reduce conflict for C resolved as shift
-    PARENTC         reduce using rule 98 (listaValores -> listaValores C listaValores .)
-    C               shift and go to state 151
+    PARENTC         reduce using rule 97 (listaValores -> listaValores C listaValores .)
+    C               shift and go to state 148
 
-  ! C               [ reduce using rule 98 (listaValores -> listaValores C listaValores .) ]
+  ! C               [ reduce using rule 97 (listaValores -> listaValores C listaValores .) ]
 
 
-state 180
+state 176
 
     (77) salidaDatos -> ABOUT PARENTA STRING_VALOR C listaSalida PARENTC PC salidaDatos .
 
@@ -3180,67 +3130,67 @@ state 180
     PC              reduce using rule 77 (salidaDatos -> ABOUT PARENTA STRING_VALOR C listaSalida PARENTC PC salidaDatos .)
 
 
-state 181
+state 177
 
     (30) declaracionCiclo -> ABIJOR PARENTA inicializacion PC . cond PC cambio PARENTC LLAVEA listaInst LLAVEC declaracionCiclo
     (34) cond -> . ID operadores ID
     (35) cond -> . ID operadores NUMERO
 
-    ID              shift and go to state 202
+    ID              shift and go to state 197
 
-    cond                           shift and go to state 201
+    cond                           shift and go to state 196
 
-state 182
+state 178
 
     (32) inicializacion -> INT ID . ASIG NUMERO
 
-    ASIG            shift and go to state 203
+    ASIG            shift and go to state 198
 
 
-state 183
+state 179
 
     (33) inicializacion -> ID ASIG . NUMERO
 
-    NUMERO          shift and go to state 204
+    NUMERO          shift and go to state 199
 
 
-state 184
+state 180
 
     (46) declaracionIf -> ABIF PARENTA condicion PARENTC LLAVEA . listaInst LLAVEC declaracionElse declaracionIf
     (47) declaracionIf -> ABIF PARENTA condicion PARENTC LLAVEA . listaInst LLAVEC declaracionIf
-    (107) listaInst -> . listaInstrucciones
-    (108) listaInst -> . listaInstrucciones listaInst
-    (109) listaInst -> . empty
-    (106) listaInstrucciones -> . entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo
-    (113) empty -> .
+    (106) listaInst -> . listaInstrucciones
+    (107) listaInst -> . listaInstrucciones listaInst
+    (108) listaInst -> . empty
+    (105) listaInstrucciones -> . entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo
+    (111) empty -> .
     (73) entradaDatos -> . ABIN PARENTA ID PARENTC PC entradaDatos
     (74) entradaDatos -> . empty
 
   ! shift/reduce conflict for ABIN resolved as shift
-    LLAVEC          reduce using rule 113 (empty -> .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    ID              reduce using rule 113 (empty -> .)
-    ABIF            reduce using rule 113 (empty -> .)
-    ABIJOR          reduce using rule 113 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    ID              reduce using rule 111 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
     ABIN            shift and go to state 50
 
-  ! ABIN            [ reduce using rule 113 (empty -> .) ]
+  ! ABIN            [ reduce using rule 111 (empty -> .) ]
 
-    listaInst                      shift and go to state 205
+    listaInst                      shift and go to state 200
     listaInstrucciones             shift and go to state 47
     empty                          shift and go to state 48
     entradaDatos                   shift and go to state 49
 
-state 185
+state 181
 
     (50) condicion -> ID operadoresRel ID . operadoresLogicos condicion
     (51) condicion -> ID operadoresRel ID .
@@ -3248,12 +3198,12 @@ state 185
     (66) operadoresLogicos -> . OR
 
     PARENTC         reduce using rule 51 (condicion -> ID operadoresRel ID .)
-    AND             shift and go to state 207
-    OR              shift and go to state 208
+    AND             shift and go to state 202
+    OR              shift and go to state 203
 
-    operadoresLogicos              shift and go to state 206
+    operadoresLogicos              shift and go to state 201
 
-state 186
+state 182
 
     (54) condicion -> ID operadoresRel tipoValores . operadoresLogicos condicion
     (55) condicion -> ID operadoresRel tipoValores .
@@ -3261,12 +3211,12 @@ state 186
     (66) operadoresLogicos -> . OR
 
     PARENTC         reduce using rule 55 (condicion -> ID operadoresRel tipoValores .)
-    AND             shift and go to state 207
-    OR              shift and go to state 208
+    AND             shift and go to state 202
+    OR              shift and go to state 203
 
-    operadoresLogicos              shift and go to state 209
+    operadoresLogicos              shift and go to state 204
 
-state 187
+state 183
 
     (60) condicion -> ID operadoresRel NOT . ID operadoresLogicos condicion
     (61) condicion -> ID operadoresRel NOT . ID
@@ -3279,7 +3229,7 @@ state 187
     (18) tipoValores -> . TRUE
     (19) tipoValores -> . FALSE
 
-    ID              shift and go to state 210
+    ID              shift and go to state 205
     NUMERO          shift and go to state 39
     FLOAT_VALOR     shift and go to state 40
     CHAR_VALOR      shift and go to state 41
@@ -3287,9 +3237,9 @@ state 187
     TRUE            shift and go to state 43
     FALSE           shift and go to state 44
 
-    tipoValores                    shift and go to state 211
+    tipoValores                    shift and go to state 206
 
-state 188
+state 184
 
     (56) condicion -> NOT ID operadoresRel . ID operadoresLogicos condicion
     (57) condicion -> NOT ID operadoresRel . ID
@@ -3302,7 +3252,7 @@ state 188
     (18) tipoValores -> . TRUE
     (19) tipoValores -> . FALSE
 
-    ID              shift and go to state 212
+    ID              shift and go to state 207
     NUMERO          shift and go to state 39
     FLOAT_VALOR     shift and go to state 40
     CHAR_VALOR      shift and go to state 41
@@ -3310,16 +3260,16 @@ state 188
     TRUE            shift and go to state 43
     FALSE           shift and go to state 44
 
-    tipoValores                    shift and go to state 213
+    tipoValores                    shift and go to state 208
 
-state 189
+state 185
 
     (64) condicion -> NOT PARENTA condicion . PARENTC
 
-    PARENTC         shift and go to state 214
+    PARENTC         shift and go to state 209
 
 
-state 190
+state 186
 
     (81) operacionesBasicas -> ID ASIG ID operadoresBasicos ID PC . operacionesBasicas
     (81) operacionesBasicas -> . ID ASIG ID operadoresBasicos ID PC operacionesBasicas
@@ -3336,32 +3286,32 @@ state 190
     (92) operacionesBasicas -> . ID PARENTA listaValores PARENTC PC operacionesBasicas
     (93) operacionesBasicas -> . ID ASIG ID PARENTA listaValores PARENTC PC operacionesBasicas
     (94) operacionesBasicas -> . empty
-    (113) empty -> .
+    (111) empty -> .
 
   ! shift/reduce conflict for ID resolved as shift
     ID              shift and go to state 84
-    ABIF            reduce using rule 113 (empty -> .)
-    ABIJOR          reduce using rule 113 (empty -> .)
-    ABIN            reduce using rule 113 (empty -> .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    LLAVEC          reduce using rule 113 (empty -> .)
-    RETURN          reduce using rule 113 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
+    ABIN            reduce using rule 111 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    RETURN          reduce using rule 111 (empty -> .)
 
-  ! ID              [ reduce using rule 113 (empty -> .) ]
+  ! ID              [ reduce using rule 111 (empty -> .) ]
 
-    operacionesBasicas             shift and go to state 215
+    operacionesBasicas             shift and go to state 210
     empty                          shift and go to state 85
 
-state 191
+state 187
 
     (84) operacionesBasicas -> ID ASIG ID operadoresBasicos tipoValores PC . operacionesBasicas
     (81) operacionesBasicas -> . ID ASIG ID operadoresBasicos ID PC operacionesBasicas
@@ -3378,32 +3328,32 @@ state 191
     (92) operacionesBasicas -> . ID PARENTA listaValores PARENTC PC operacionesBasicas
     (93) operacionesBasicas -> . ID ASIG ID PARENTA listaValores PARENTC PC operacionesBasicas
     (94) operacionesBasicas -> . empty
-    (113) empty -> .
+    (111) empty -> .
 
   ! shift/reduce conflict for ID resolved as shift
     ID              shift and go to state 84
-    ABIF            reduce using rule 113 (empty -> .)
-    ABIJOR          reduce using rule 113 (empty -> .)
-    ABIN            reduce using rule 113 (empty -> .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    LLAVEC          reduce using rule 113 (empty -> .)
-    RETURN          reduce using rule 113 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
+    ABIN            reduce using rule 111 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    RETURN          reduce using rule 111 (empty -> .)
 
-  ! ID              [ reduce using rule 113 (empty -> .) ]
+  ! ID              [ reduce using rule 111 (empty -> .) ]
 
-    operacionesBasicas             shift and go to state 216
+    operacionesBasicas             shift and go to state 211
     empty                          shift and go to state 85
 
-state 192
+state 188
 
     (86) operacionesBasicas -> ID ASIG ID P ID PC . operacionesBasicas
     (81) operacionesBasicas -> . ID ASIG ID operadoresBasicos ID PC operacionesBasicas
@@ -3420,46 +3370,46 @@ state 192
     (92) operacionesBasicas -> . ID PARENTA listaValores PARENTC PC operacionesBasicas
     (93) operacionesBasicas -> . ID ASIG ID PARENTA listaValores PARENTC PC operacionesBasicas
     (94) operacionesBasicas -> . empty
-    (113) empty -> .
+    (111) empty -> .
 
   ! shift/reduce conflict for ID resolved as shift
     ID              shift and go to state 84
-    ABIF            reduce using rule 113 (empty -> .)
-    ABIJOR          reduce using rule 113 (empty -> .)
-    ABIN            reduce using rule 113 (empty -> .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    LLAVEC          reduce using rule 113 (empty -> .)
-    RETURN          reduce using rule 113 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
+    ABIN            reduce using rule 111 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    RETURN          reduce using rule 111 (empty -> .)
 
-  ! ID              [ reduce using rule 113 (empty -> .) ]
+  ! ID              [ reduce using rule 111 (empty -> .) ]
 
-    operacionesBasicas             shift and go to state 217
+    operacionesBasicas             shift and go to state 212
     empty                          shift and go to state 85
 
-state 193
+state 189
 
     (89) operacionesBasicas -> ID ASIG ID CORA NUMERO CORC . PC operacionesBasicas
 
-    PC              shift and go to state 218
+    PC              shift and go to state 213
 
 
-state 194
+state 190
 
     (93) operacionesBasicas -> ID ASIG ID PARENTA listaValores PARENTC . PC operacionesBasicas
 
-    PC              shift and go to state 219
+    PC              shift and go to state 214
 
 
-state 195
+state 191
 
     (82) operacionesBasicas -> ID ASIG tipoValores operadoresBasicos ID PC . operacionesBasicas
     (81) operacionesBasicas -> . ID ASIG ID operadoresBasicos ID PC operacionesBasicas
@@ -3476,32 +3426,32 @@ state 195
     (92) operacionesBasicas -> . ID PARENTA listaValores PARENTC PC operacionesBasicas
     (93) operacionesBasicas -> . ID ASIG ID PARENTA listaValores PARENTC PC operacionesBasicas
     (94) operacionesBasicas -> . empty
-    (113) empty -> .
+    (111) empty -> .
 
   ! shift/reduce conflict for ID resolved as shift
     ID              shift and go to state 84
-    ABIF            reduce using rule 113 (empty -> .)
-    ABIJOR          reduce using rule 113 (empty -> .)
-    ABIN            reduce using rule 113 (empty -> .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    LLAVEC          reduce using rule 113 (empty -> .)
-    RETURN          reduce using rule 113 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
+    ABIN            reduce using rule 111 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    RETURN          reduce using rule 111 (empty -> .)
 
-  ! ID              [ reduce using rule 113 (empty -> .) ]
+  ! ID              [ reduce using rule 111 (empty -> .) ]
 
-    operacionesBasicas             shift and go to state 220
+    operacionesBasicas             shift and go to state 215
     empty                          shift and go to state 85
 
-state 196
+state 192
 
     (83) operacionesBasicas -> ID ASIG tipoValores operadoresBasicos tipoValores PC . operacionesBasicas
     (81) operacionesBasicas -> . ID ASIG ID operadoresBasicos ID PC operacionesBasicas
@@ -3518,54 +3468,46 @@ state 196
     (92) operacionesBasicas -> . ID PARENTA listaValores PARENTC PC operacionesBasicas
     (93) operacionesBasicas -> . ID ASIG ID PARENTA listaValores PARENTC PC operacionesBasicas
     (94) operacionesBasicas -> . empty
-    (113) empty -> .
+    (111) empty -> .
 
   ! shift/reduce conflict for ID resolved as shift
     ID              shift and go to state 84
-    ABIF            reduce using rule 113 (empty -> .)
-    ABIJOR          reduce using rule 113 (empty -> .)
-    ABIN            reduce using rule 113 (empty -> .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    LLAVEC          reduce using rule 113 (empty -> .)
-    RETURN          reduce using rule 113 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
+    ABIN            reduce using rule 111 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    RETURN          reduce using rule 111 (empty -> .)
 
-  ! ID              [ reduce using rule 113 (empty -> .) ]
+  ! ID              [ reduce using rule 111 (empty -> .) ]
 
-    operacionesBasicas             shift and go to state 221
+    operacionesBasicas             shift and go to state 216
     empty                          shift and go to state 85
 
-state 197
+state 193
 
     (90) operacionesBasicas -> ID CORA NUMERO CORC ASIG ID . CORA NUMERO CORC PC operacionesBasicas
 
-    CORA            shift and go to state 222
+    CORA            shift and go to state 217
 
 
-state 198
+state 194
 
     (91) operacionesBasicas -> ID CORA NUMERO CORC ASIG tipoValores . PC operacionesBasicas
 
-    PC              shift and go to state 223
+    PC              shift and go to state 218
 
 
-state 199
-
-    (96) listaValores -> ID CORA NUMERO CORC .
-
-    PARENTC         reduce using rule 96 (listaValores -> ID CORA NUMERO CORC .)
-    C               reduce using rule 96 (listaValores -> ID CORA NUMERO CORC .)
-
-
-state 200
+state 195
 
     (92) operacionesBasicas -> ID PARENTA listaValores PARENTC PC operacionesBasicas .
 
@@ -3587,14 +3529,14 @@ state 200
     RETURN          reduce using rule 92 (operacionesBasicas -> ID PARENTA listaValores PARENTC PC operacionesBasicas .)
 
 
-state 201
+state 196
 
     (30) declaracionCiclo -> ABIJOR PARENTA inicializacion PC cond . PC cambio PARENTC LLAVEA listaInst LLAVEC declaracionCiclo
 
-    PC              shift and go to state 224
+    PC              shift and go to state 219
 
 
-state 202
+state 197
 
     (34) cond -> ID . operadores ID
     (35) cond -> ID . operadores NUMERO
@@ -3603,36 +3545,36 @@ state 202
     (38) operadores -> . GTE
     (39) operadores -> . GT
 
-    LT              shift and go to state 226
-    LTE             shift and go to state 227
-    GTE             shift and go to state 228
-    GT              shift and go to state 229
+    LT              shift and go to state 221
+    LTE             shift and go to state 222
+    GTE             shift and go to state 223
+    GT              shift and go to state 224
 
-    operadores                     shift and go to state 225
+    operadores                     shift and go to state 220
 
-state 203
+state 198
 
     (32) inicializacion -> INT ID ASIG . NUMERO
 
-    NUMERO          shift and go to state 230
+    NUMERO          shift and go to state 225
 
 
-state 204
+state 199
 
     (33) inicializacion -> ID ASIG NUMERO .
 
     PC              reduce using rule 33 (inicializacion -> ID ASIG NUMERO .)
 
 
-state 205
+state 200
 
     (46) declaracionIf -> ABIF PARENTA condicion PARENTC LLAVEA listaInst . LLAVEC declaracionElse declaracionIf
     (47) declaracionIf -> ABIF PARENTA condicion PARENTC LLAVEA listaInst . LLAVEC declaracionIf
 
-    LLAVEC          shift and go to state 231
+    LLAVEC          shift and go to state 226
 
 
-state 206
+state 201
 
     (50) condicion -> ID operadoresRel ID operadoresLogicos . condicion
     (50) condicion -> . ID operadoresRel ID operadoresLogicos condicion
@@ -3657,8 +3599,8 @@ state 206
     (18) tipoValores -> . TRUE
     (19) tipoValores -> . FALSE
 
-    ID              shift and go to state 133
-    NOT             shift and go to state 135
+    ID              shift and go to state 131
+    NOT             shift and go to state 133
     NUMERO          shift and go to state 39
     FLOAT_VALOR     shift and go to state 40
     CHAR_VALOR      shift and go to state 41
@@ -3666,10 +3608,10 @@ state 206
     TRUE            shift and go to state 43
     FALSE           shift and go to state 44
 
-    condicion                      shift and go to state 232
-    tipoValores                    shift and go to state 134
+    condicion                      shift and go to state 227
+    tipoValores                    shift and go to state 132
 
-state 207
+state 202
 
     (65) operadoresLogicos -> AND .
 
@@ -3683,7 +3625,7 @@ state 207
     FALSE           reduce using rule 65 (operadoresLogicos -> AND .)
 
 
-state 208
+state 203
 
     (66) operadoresLogicos -> OR .
 
@@ -3697,7 +3639,7 @@ state 208
     FALSE           reduce using rule 66 (operadoresLogicos -> OR .)
 
 
-state 209
+state 204
 
     (54) condicion -> ID operadoresRel tipoValores operadoresLogicos . condicion
     (50) condicion -> . ID operadoresRel ID operadoresLogicos condicion
@@ -3722,8 +3664,8 @@ state 209
     (18) tipoValores -> . TRUE
     (19) tipoValores -> . FALSE
 
-    ID              shift and go to state 133
-    NOT             shift and go to state 135
+    ID              shift and go to state 131
+    NOT             shift and go to state 133
     NUMERO          shift and go to state 39
     FLOAT_VALOR     shift and go to state 40
     CHAR_VALOR      shift and go to state 41
@@ -3731,10 +3673,10 @@ state 209
     TRUE            shift and go to state 43
     FALSE           shift and go to state 44
 
-    tipoValores                    shift and go to state 134
-    condicion                      shift and go to state 233
+    tipoValores                    shift and go to state 132
+    condicion                      shift and go to state 228
 
-state 210
+state 205
 
     (60) condicion -> ID operadoresRel NOT ID . operadoresLogicos condicion
     (61) condicion -> ID operadoresRel NOT ID .
@@ -3742,12 +3684,12 @@ state 210
     (66) operadoresLogicos -> . OR
 
     PARENTC         reduce using rule 61 (condicion -> ID operadoresRel NOT ID .)
-    AND             shift and go to state 207
-    OR              shift and go to state 208
+    AND             shift and go to state 202
+    OR              shift and go to state 203
 
-    operadoresLogicos              shift and go to state 234
+    operadoresLogicos              shift and go to state 229
 
-state 211
+state 206
 
     (62) condicion -> ID operadoresRel NOT tipoValores . operadoresLogicos condicion
     (63) condicion -> ID operadoresRel NOT tipoValores .
@@ -3755,12 +3697,12 @@ state 211
     (66) operadoresLogicos -> . OR
 
     PARENTC         reduce using rule 63 (condicion -> ID operadoresRel NOT tipoValores .)
-    AND             shift and go to state 207
-    OR              shift and go to state 208
+    AND             shift and go to state 202
+    OR              shift and go to state 203
 
-    operadoresLogicos              shift and go to state 235
+    operadoresLogicos              shift and go to state 230
 
-state 212
+state 207
 
     (56) condicion -> NOT ID operadoresRel ID . operadoresLogicos condicion
     (57) condicion -> NOT ID operadoresRel ID .
@@ -3768,12 +3710,12 @@ state 212
     (66) operadoresLogicos -> . OR
 
     PARENTC         reduce using rule 57 (condicion -> NOT ID operadoresRel ID .)
-    AND             shift and go to state 207
-    OR              shift and go to state 208
+    AND             shift and go to state 202
+    OR              shift and go to state 203
 
-    operadoresLogicos              shift and go to state 236
+    operadoresLogicos              shift and go to state 231
 
-state 213
+state 208
 
     (58) condicion -> NOT ID operadoresRel tipoValores . operadoresLogicos condicion
     (59) condicion -> NOT ID operadoresRel tipoValores .
@@ -3781,19 +3723,19 @@ state 213
     (66) operadoresLogicos -> . OR
 
     PARENTC         reduce using rule 59 (condicion -> NOT ID operadoresRel tipoValores .)
-    AND             shift and go to state 207
-    OR              shift and go to state 208
+    AND             shift and go to state 202
+    OR              shift and go to state 203
 
-    operadoresLogicos              shift and go to state 237
+    operadoresLogicos              shift and go to state 232
 
-state 214
+state 209
 
     (64) condicion -> NOT PARENTA condicion PARENTC .
 
     PARENTC         reduce using rule 64 (condicion -> NOT PARENTA condicion PARENTC .)
 
 
-state 215
+state 210
 
     (81) operacionesBasicas -> ID ASIG ID operadoresBasicos ID PC operacionesBasicas .
 
@@ -3815,7 +3757,7 @@ state 215
     RETURN          reduce using rule 81 (operacionesBasicas -> ID ASIG ID operadoresBasicos ID PC operacionesBasicas .)
 
 
-state 216
+state 211
 
     (84) operacionesBasicas -> ID ASIG ID operadoresBasicos tipoValores PC operacionesBasicas .
 
@@ -3837,7 +3779,7 @@ state 216
     RETURN          reduce using rule 84 (operacionesBasicas -> ID ASIG ID operadoresBasicos tipoValores PC operacionesBasicas .)
 
 
-state 217
+state 212
 
     (86) operacionesBasicas -> ID ASIG ID P ID PC operacionesBasicas .
 
@@ -3859,7 +3801,7 @@ state 217
     RETURN          reduce using rule 86 (operacionesBasicas -> ID ASIG ID P ID PC operacionesBasicas .)
 
 
-state 218
+state 213
 
     (89) operacionesBasicas -> ID ASIG ID CORA NUMERO CORC PC . operacionesBasicas
     (81) operacionesBasicas -> . ID ASIG ID operadoresBasicos ID PC operacionesBasicas
@@ -3876,32 +3818,32 @@ state 218
     (92) operacionesBasicas -> . ID PARENTA listaValores PARENTC PC operacionesBasicas
     (93) operacionesBasicas -> . ID ASIG ID PARENTA listaValores PARENTC PC operacionesBasicas
     (94) operacionesBasicas -> . empty
-    (113) empty -> .
+    (111) empty -> .
 
   ! shift/reduce conflict for ID resolved as shift
     ID              shift and go to state 84
-    ABIF            reduce using rule 113 (empty -> .)
-    ABIJOR          reduce using rule 113 (empty -> .)
-    ABIN            reduce using rule 113 (empty -> .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    LLAVEC          reduce using rule 113 (empty -> .)
-    RETURN          reduce using rule 113 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
+    ABIN            reduce using rule 111 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    RETURN          reduce using rule 111 (empty -> .)
 
-  ! ID              [ reduce using rule 113 (empty -> .) ]
+  ! ID              [ reduce using rule 111 (empty -> .) ]
 
-    operacionesBasicas             shift and go to state 238
+    operacionesBasicas             shift and go to state 233
     empty                          shift and go to state 85
 
-state 219
+state 214
 
     (93) operacionesBasicas -> ID ASIG ID PARENTA listaValores PARENTC PC . operacionesBasicas
     (81) operacionesBasicas -> . ID ASIG ID operadoresBasicos ID PC operacionesBasicas
@@ -3918,32 +3860,32 @@ state 219
     (92) operacionesBasicas -> . ID PARENTA listaValores PARENTC PC operacionesBasicas
     (93) operacionesBasicas -> . ID ASIG ID PARENTA listaValores PARENTC PC operacionesBasicas
     (94) operacionesBasicas -> . empty
-    (113) empty -> .
+    (111) empty -> .
 
   ! shift/reduce conflict for ID resolved as shift
     ID              shift and go to state 84
-    ABIF            reduce using rule 113 (empty -> .)
-    ABIJOR          reduce using rule 113 (empty -> .)
-    ABIN            reduce using rule 113 (empty -> .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    LLAVEC          reduce using rule 113 (empty -> .)
-    RETURN          reduce using rule 113 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
+    ABIN            reduce using rule 111 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    RETURN          reduce using rule 111 (empty -> .)
 
-  ! ID              [ reduce using rule 113 (empty -> .) ]
+  ! ID              [ reduce using rule 111 (empty -> .) ]
 
-    operacionesBasicas             shift and go to state 239
+    operacionesBasicas             shift and go to state 234
     empty                          shift and go to state 85
 
-state 220
+state 215
 
     (82) operacionesBasicas -> ID ASIG tipoValores operadoresBasicos ID PC operacionesBasicas .
 
@@ -3965,7 +3907,7 @@ state 220
     RETURN          reduce using rule 82 (operacionesBasicas -> ID ASIG tipoValores operadoresBasicos ID PC operacionesBasicas .)
 
 
-state 221
+state 216
 
     (83) operacionesBasicas -> ID ASIG tipoValores operadoresBasicos tipoValores PC operacionesBasicas .
 
@@ -3987,14 +3929,14 @@ state 221
     RETURN          reduce using rule 83 (operacionesBasicas -> ID ASIG tipoValores operadoresBasicos tipoValores PC operacionesBasicas .)
 
 
-state 222
+state 217
 
     (90) operacionesBasicas -> ID CORA NUMERO CORC ASIG ID CORA . NUMERO CORC PC operacionesBasicas
 
-    NUMERO          shift and go to state 240
+    NUMERO          shift and go to state 235
 
 
-state 223
+state 218
 
     (91) operacionesBasicas -> ID CORA NUMERO CORC ASIG tipoValores PC . operacionesBasicas
     (81) operacionesBasicas -> . ID ASIG ID operadoresBasicos ID PC operacionesBasicas
@@ -4011,32 +3953,32 @@ state 223
     (92) operacionesBasicas -> . ID PARENTA listaValores PARENTC PC operacionesBasicas
     (93) operacionesBasicas -> . ID ASIG ID PARENTA listaValores PARENTC PC operacionesBasicas
     (94) operacionesBasicas -> . empty
-    (113) empty -> .
+    (111) empty -> .
 
   ! shift/reduce conflict for ID resolved as shift
     ID              shift and go to state 84
-    ABIF            reduce using rule 113 (empty -> .)
-    ABIJOR          reduce using rule 113 (empty -> .)
-    ABIN            reduce using rule 113 (empty -> .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    LLAVEC          reduce using rule 113 (empty -> .)
-    RETURN          reduce using rule 113 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
+    ABIN            reduce using rule 111 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    RETURN          reduce using rule 111 (empty -> .)
 
-  ! ID              [ reduce using rule 113 (empty -> .) ]
+  ! ID              [ reduce using rule 111 (empty -> .) ]
 
-    operacionesBasicas             shift and go to state 241
+    operacionesBasicas             shift and go to state 236
     empty                          shift and go to state 85
 
-state 224
+state 219
 
     (30) declaracionCiclo -> ABIJOR PARENTA inicializacion PC cond PC . cambio PARENTC LLAVEA listaInst LLAVEC declaracionCiclo
     (40) cambio -> . ID ASIG ID AGREGA ID
@@ -4046,20 +3988,20 @@ state 224
     (44) cambio -> . ID INCREMENTO
     (45) cambio -> . ID DECREMENTO
 
-    ID              shift and go to state 243
+    ID              shift and go to state 238
 
-    cambio                         shift and go to state 242
+    cambio                         shift and go to state 237
 
-state 225
+state 220
 
     (34) cond -> ID operadores . ID
     (35) cond -> ID operadores . NUMERO
 
-    ID              shift and go to state 244
-    NUMERO          shift and go to state 245
+    ID              shift and go to state 239
+    NUMERO          shift and go to state 240
 
 
-state 226
+state 221
 
     (36) operadores -> LT .
 
@@ -4067,7 +4009,7 @@ state 226
     NUMERO          reduce using rule 36 (operadores -> LT .)
 
 
-state 227
+state 222
 
     (37) operadores -> LTE .
 
@@ -4075,7 +4017,7 @@ state 227
     NUMERO          reduce using rule 37 (operadores -> LTE .)
 
 
-state 228
+state 223
 
     (38) operadores -> GTE .
 
@@ -4083,7 +4025,7 @@ state 228
     NUMERO          reduce using rule 38 (operadores -> GTE .)
 
 
-state 229
+state 224
 
     (39) operadores -> GT .
 
@@ -4091,14 +4033,14 @@ state 229
     NUMERO          reduce using rule 39 (operadores -> GT .)
 
 
-state 230
+state 225
 
     (32) inicializacion -> INT ID ASIG NUMERO .
 
     PC              reduce using rule 32 (inicializacion -> INT ID ASIG NUMERO .)
 
 
-state 231
+state 226
 
     (46) declaracionIf -> ABIF PARENTA condicion PARENTC LLAVEA listaInst LLAVEC . declaracionElse declaracionIf
     (47) declaracionIf -> ABIF PARENTA condicion PARENTC LLAVEA listaInst LLAVEC . declaracionIf
@@ -4106,48 +4048,48 @@ state 231
     (46) declaracionIf -> . ABIF PARENTA condicion PARENTC LLAVEA listaInst LLAVEC declaracionElse declaracionIf
     (47) declaracionIf -> . ABIF PARENTA condicion PARENTC LLAVEA listaInst LLAVEC declaracionIf
     (48) declaracionIf -> . empty
-    (113) empty -> .
+    (111) empty -> .
 
   ! shift/reduce conflict for ABIF resolved as shift
-    ELSE            shift and go to state 248
+    ELSE            shift and go to state 243
     ABIF            shift and go to state 95
-    ABIJOR          reduce using rule 113 (empty -> .)
-    ABIN            reduce using rule 113 (empty -> .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    ID              reduce using rule 113 (empty -> .)
-    LLAVEC          reduce using rule 113 (empty -> .)
-    RETURN          reduce using rule 113 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
+    ABIN            reduce using rule 111 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    ID              reduce using rule 111 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    RETURN          reduce using rule 111 (empty -> .)
 
-  ! ABIF            [ reduce using rule 113 (empty -> .) ]
+  ! ABIF            [ reduce using rule 111 (empty -> .) ]
 
-    declaracionElse                shift and go to state 246
-    declaracionIf                  shift and go to state 247
+    declaracionElse                shift and go to state 241
+    declaracionIf                  shift and go to state 242
     empty                          shift and go to state 96
 
-state 232
+state 227
 
     (50) condicion -> ID operadoresRel ID operadoresLogicos condicion .
 
     PARENTC         reduce using rule 50 (condicion -> ID operadoresRel ID operadoresLogicos condicion .)
 
 
-state 233
+state 228
 
     (54) condicion -> ID operadoresRel tipoValores operadoresLogicos condicion .
 
     PARENTC         reduce using rule 54 (condicion -> ID operadoresRel tipoValores operadoresLogicos condicion .)
 
 
-state 234
+state 229
 
     (60) condicion -> ID operadoresRel NOT ID operadoresLogicos . condicion
     (50) condicion -> . ID operadoresRel ID operadoresLogicos condicion
@@ -4172,8 +4114,8 @@ state 234
     (18) tipoValores -> . TRUE
     (19) tipoValores -> . FALSE
 
-    ID              shift and go to state 133
-    NOT             shift and go to state 135
+    ID              shift and go to state 131
+    NOT             shift and go to state 133
     NUMERO          shift and go to state 39
     FLOAT_VALOR     shift and go to state 40
     CHAR_VALOR      shift and go to state 41
@@ -4181,10 +4123,10 @@ state 234
     TRUE            shift and go to state 43
     FALSE           shift and go to state 44
 
-    condicion                      shift and go to state 249
-    tipoValores                    shift and go to state 134
+    condicion                      shift and go to state 244
+    tipoValores                    shift and go to state 132
 
-state 235
+state 230
 
     (62) condicion -> ID operadoresRel NOT tipoValores operadoresLogicos . condicion
     (50) condicion -> . ID operadoresRel ID operadoresLogicos condicion
@@ -4209,8 +4151,8 @@ state 235
     (18) tipoValores -> . TRUE
     (19) tipoValores -> . FALSE
 
-    ID              shift and go to state 133
-    NOT             shift and go to state 135
+    ID              shift and go to state 131
+    NOT             shift and go to state 133
     NUMERO          shift and go to state 39
     FLOAT_VALOR     shift and go to state 40
     CHAR_VALOR      shift and go to state 41
@@ -4218,10 +4160,10 @@ state 235
     TRUE            shift and go to state 43
     FALSE           shift and go to state 44
 
-    tipoValores                    shift and go to state 134
-    condicion                      shift and go to state 250
+    tipoValores                    shift and go to state 132
+    condicion                      shift and go to state 245
 
-state 236
+state 231
 
     (56) condicion -> NOT ID operadoresRel ID operadoresLogicos . condicion
     (50) condicion -> . ID operadoresRel ID operadoresLogicos condicion
@@ -4246,8 +4188,8 @@ state 236
     (18) tipoValores -> . TRUE
     (19) tipoValores -> . FALSE
 
-    ID              shift and go to state 133
-    NOT             shift and go to state 135
+    ID              shift and go to state 131
+    NOT             shift and go to state 133
     NUMERO          shift and go to state 39
     FLOAT_VALOR     shift and go to state 40
     CHAR_VALOR      shift and go to state 41
@@ -4255,10 +4197,10 @@ state 236
     TRUE            shift and go to state 43
     FALSE           shift and go to state 44
 
-    condicion                      shift and go to state 251
-    tipoValores                    shift and go to state 134
+    condicion                      shift and go to state 246
+    tipoValores                    shift and go to state 132
 
-state 237
+state 232
 
     (58) condicion -> NOT ID operadoresRel tipoValores operadoresLogicos . condicion
     (50) condicion -> . ID operadoresRel ID operadoresLogicos condicion
@@ -4283,8 +4225,8 @@ state 237
     (18) tipoValores -> . TRUE
     (19) tipoValores -> . FALSE
 
-    ID              shift and go to state 133
-    NOT             shift and go to state 135
+    ID              shift and go to state 131
+    NOT             shift and go to state 133
     NUMERO          shift and go to state 39
     FLOAT_VALOR     shift and go to state 40
     CHAR_VALOR      shift and go to state 41
@@ -4292,10 +4234,10 @@ state 237
     TRUE            shift and go to state 43
     FALSE           shift and go to state 44
 
-    tipoValores                    shift and go to state 134
-    condicion                      shift and go to state 252
+    tipoValores                    shift and go to state 132
+    condicion                      shift and go to state 247
 
-state 238
+state 233
 
     (89) operacionesBasicas -> ID ASIG ID CORA NUMERO CORC PC operacionesBasicas .
 
@@ -4317,7 +4259,7 @@ state 238
     RETURN          reduce using rule 89 (operacionesBasicas -> ID ASIG ID CORA NUMERO CORC PC operacionesBasicas .)
 
 
-state 239
+state 234
 
     (93) operacionesBasicas -> ID ASIG ID PARENTA listaValores PARENTC PC operacionesBasicas .
 
@@ -4339,14 +4281,14 @@ state 239
     RETURN          reduce using rule 93 (operacionesBasicas -> ID ASIG ID PARENTA listaValores PARENTC PC operacionesBasicas .)
 
 
-state 240
+state 235
 
     (90) operacionesBasicas -> ID CORA NUMERO CORC ASIG ID CORA NUMERO . CORC PC operacionesBasicas
 
-    CORC            shift and go to state 253
+    CORC            shift and go to state 248
 
 
-state 241
+state 236
 
     (91) operacionesBasicas -> ID CORA NUMERO CORC ASIG tipoValores PC operacionesBasicas .
 
@@ -4368,14 +4310,14 @@ state 241
     RETURN          reduce using rule 91 (operacionesBasicas -> ID CORA NUMERO CORC ASIG tipoValores PC operacionesBasicas .)
 
 
-state 242
+state 237
 
     (30) declaracionCiclo -> ABIJOR PARENTA inicializacion PC cond PC cambio . PARENTC LLAVEA listaInst LLAVEC declaracionCiclo
 
-    PARENTC         shift and go to state 254
+    PARENTC         shift and go to state 249
 
 
-state 243
+state 238
 
     (40) cambio -> ID . ASIG ID AGREGA ID
     (41) cambio -> ID . ASIG ID RESTA ID
@@ -4384,57 +4326,57 @@ state 243
     (44) cambio -> ID . INCREMENTO
     (45) cambio -> ID . DECREMENTO
 
-    ASIG            shift and go to state 255
-    INCREMENTO      shift and go to state 256
-    DECREMENTO      shift and go to state 257
+    ASIG            shift and go to state 250
+    INCREMENTO      shift and go to state 251
+    DECREMENTO      shift and go to state 252
 
 
-state 244
+state 239
 
     (34) cond -> ID operadores ID .
 
     PC              reduce using rule 34 (cond -> ID operadores ID .)
 
 
-state 245
+state 240
 
     (35) cond -> ID operadores NUMERO .
 
     PC              reduce using rule 35 (cond -> ID operadores NUMERO .)
 
 
-state 246
+state 241
 
     (46) declaracionIf -> ABIF PARENTA condicion PARENTC LLAVEA listaInst LLAVEC declaracionElse . declaracionIf
     (46) declaracionIf -> . ABIF PARENTA condicion PARENTC LLAVEA listaInst LLAVEC declaracionElse declaracionIf
     (47) declaracionIf -> . ABIF PARENTA condicion PARENTC LLAVEA listaInst LLAVEC declaracionIf
     (48) declaracionIf -> . empty
-    (113) empty -> .
+    (111) empty -> .
 
   ! shift/reduce conflict for ABIF resolved as shift
     ABIF            shift and go to state 95
-    ABIJOR          reduce using rule 113 (empty -> .)
-    ABIN            reduce using rule 113 (empty -> .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    ID              reduce using rule 113 (empty -> .)
-    LLAVEC          reduce using rule 113 (empty -> .)
-    RETURN          reduce using rule 113 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
+    ABIN            reduce using rule 111 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    ID              reduce using rule 111 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    RETURN          reduce using rule 111 (empty -> .)
 
-  ! ABIF            [ reduce using rule 113 (empty -> .) ]
+  ! ABIF            [ reduce using rule 111 (empty -> .) ]
 
-    declaracionIf                  shift and go to state 258
+    declaracionIf                  shift and go to state 253
     empty                          shift and go to state 96
 
-state 247
+state 242
 
     (47) declaracionIf -> ABIF PARENTA condicion PARENTC LLAVEA listaInst LLAVEC declaracionIf .
 
@@ -4456,80 +4398,80 @@ state 247
     RETURN          reduce using rule 47 (declaracionIf -> ABIF PARENTA condicion PARENTC LLAVEA listaInst LLAVEC declaracionIf .)
 
 
-state 248
+state 243
 
     (49) declaracionElse -> ELSE . LLAVEA listaInst LLAVEC
 
-    LLAVEA          shift and go to state 259
+    LLAVEA          shift and go to state 254
 
 
-state 249
+state 244
 
     (60) condicion -> ID operadoresRel NOT ID operadoresLogicos condicion .
 
     PARENTC         reduce using rule 60 (condicion -> ID operadoresRel NOT ID operadoresLogicos condicion .)
 
 
-state 250
+state 245
 
     (62) condicion -> ID operadoresRel NOT tipoValores operadoresLogicos condicion .
 
     PARENTC         reduce using rule 62 (condicion -> ID operadoresRel NOT tipoValores operadoresLogicos condicion .)
 
 
-state 251
+state 246
 
     (56) condicion -> NOT ID operadoresRel ID operadoresLogicos condicion .
 
     PARENTC         reduce using rule 56 (condicion -> NOT ID operadoresRel ID operadoresLogicos condicion .)
 
 
-state 252
+state 247
 
     (58) condicion -> NOT ID operadoresRel tipoValores operadoresLogicos condicion .
 
     PARENTC         reduce using rule 58 (condicion -> NOT ID operadoresRel tipoValores operadoresLogicos condicion .)
 
 
-state 253
+state 248
 
     (90) operacionesBasicas -> ID CORA NUMERO CORC ASIG ID CORA NUMERO CORC . PC operacionesBasicas
 
-    PC              shift and go to state 260
+    PC              shift and go to state 255
 
 
-state 254
+state 249
 
     (30) declaracionCiclo -> ABIJOR PARENTA inicializacion PC cond PC cambio PARENTC . LLAVEA listaInst LLAVEC declaracionCiclo
 
-    LLAVEA          shift and go to state 261
+    LLAVEA          shift and go to state 256
 
 
-state 255
+state 250
 
     (40) cambio -> ID ASIG . ID AGREGA ID
     (41) cambio -> ID ASIG . ID RESTA ID
     (42) cambio -> ID ASIG . ID AGREGA NUMERO
     (43) cambio -> ID ASIG . ID RESTA NUMERO
 
-    ID              shift and go to state 262
+    ID              shift and go to state 257
 
 
-state 256
+state 251
 
     (44) cambio -> ID INCREMENTO .
 
     PARENTC         reduce using rule 44 (cambio -> ID INCREMENTO .)
 
 
-state 257
+state 252
 
     (45) cambio -> ID DECREMENTO .
 
     PARENTC         reduce using rule 45 (cambio -> ID DECREMENTO .)
 
 
-state 258
+state 253
 
     (46) declaracionIf -> ABIF PARENTA condicion PARENTC LLAVEA listaInst LLAVEC declaracionElse declaracionIf .
 
@@ -4551,42 +4493,42 @@ state 258
     RETURN          reduce using rule 46 (declaracionIf -> ABIF PARENTA condicion PARENTC LLAVEA listaInst LLAVEC declaracionElse declaracionIf .)
 
 
-state 259
+state 254
 
     (49) declaracionElse -> ELSE LLAVEA . listaInst LLAVEC
-    (107) listaInst -> . listaInstrucciones
-    (108) listaInst -> . listaInstrucciones listaInst
-    (109) listaInst -> . empty
-    (106) listaInstrucciones -> . entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo
-    (113) empty -> .
+    (106) listaInst -> . listaInstrucciones
+    (107) listaInst -> . listaInstrucciones listaInst
+    (108) listaInst -> . empty
+    (105) listaInstrucciones -> . entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo
+    (111) empty -> .
     (73) entradaDatos -> . ABIN PARENTA ID PARENTC PC entradaDatos
     (74) entradaDatos -> . empty
 
   ! shift/reduce conflict for ABIN resolved as shift
-    LLAVEC          reduce using rule 113 (empty -> .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    ID              reduce using rule 113 (empty -> .)
-    ABIF            reduce using rule 113 (empty -> .)
-    ABIJOR          reduce using rule 113 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    ID              reduce using rule 111 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
     ABIN            shift and go to state 50
 
-  ! ABIN            [ reduce using rule 113 (empty -> .) ]
+  ! ABIN            [ reduce using rule 111 (empty -> .) ]
 
-    listaInst                      shift and go to state 263
+    listaInst                      shift and go to state 258
     listaInstrucciones             shift and go to state 47
     empty                          shift and go to state 48
     entradaDatos                   shift and go to state 49
 
-state 260
+state 255
 
     (90) operacionesBasicas -> ID CORA NUMERO CORC ASIG ID CORA NUMERO CORC PC . operacionesBasicas
     (81) operacionesBasicas -> . ID ASIG ID operadoresBasicos ID PC operacionesBasicas
@@ -4603,85 +4545,85 @@ state 260
     (92) operacionesBasicas -> . ID PARENTA listaValores PARENTC PC operacionesBasicas
     (93) operacionesBasicas -> . ID ASIG ID PARENTA listaValores PARENTC PC operacionesBasicas
     (94) operacionesBasicas -> . empty
-    (113) empty -> .
+    (111) empty -> .
 
   ! shift/reduce conflict for ID resolved as shift
     ID              shift and go to state 84
-    ABIF            reduce using rule 113 (empty -> .)
-    ABIJOR          reduce using rule 113 (empty -> .)
-    ABIN            reduce using rule 113 (empty -> .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    LLAVEC          reduce using rule 113 (empty -> .)
-    RETURN          reduce using rule 113 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
+    ABIN            reduce using rule 111 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    RETURN          reduce using rule 111 (empty -> .)
 
-  ! ID              [ reduce using rule 113 (empty -> .) ]
+  ! ID              [ reduce using rule 111 (empty -> .) ]
 
-    operacionesBasicas             shift and go to state 264
+    operacionesBasicas             shift and go to state 259
     empty                          shift and go to state 85
 
-state 261
+state 256
 
     (30) declaracionCiclo -> ABIJOR PARENTA inicializacion PC cond PC cambio PARENTC LLAVEA . listaInst LLAVEC declaracionCiclo
-    (107) listaInst -> . listaInstrucciones
-    (108) listaInst -> . listaInstrucciones listaInst
-    (109) listaInst -> . empty
-    (106) listaInstrucciones -> . entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo
-    (113) empty -> .
+    (106) listaInst -> . listaInstrucciones
+    (107) listaInst -> . listaInstrucciones listaInst
+    (108) listaInst -> . empty
+    (105) listaInstrucciones -> . entradaDatos salidaDatos declaraStruct declaracionVariable operacionesBasicas declaracionIf declaracionCiclo
+    (111) empty -> .
     (73) entradaDatos -> . ABIN PARENTA ID PARENTC PC entradaDatos
     (74) entradaDatos -> . empty
 
   ! shift/reduce conflict for ABIN resolved as shift
-    LLAVEC          reduce using rule 113 (empty -> .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    ID              reduce using rule 113 (empty -> .)
-    ABIF            reduce using rule 113 (empty -> .)
-    ABIJOR          reduce using rule 113 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    ID              reduce using rule 111 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    ABIJOR          reduce using rule 111 (empty -> .)
     ABIN            shift and go to state 50
 
-  ! ABIN            [ reduce using rule 113 (empty -> .) ]
+  ! ABIN            [ reduce using rule 111 (empty -> .) ]
 
-    listaInst                      shift and go to state 265
+    listaInst                      shift and go to state 260
     listaInstrucciones             shift and go to state 47
     empty                          shift and go to state 48
     entradaDatos                   shift and go to state 49
 
-state 262
+state 257
 
     (40) cambio -> ID ASIG ID . AGREGA ID
     (41) cambio -> ID ASIG ID . RESTA ID
     (42) cambio -> ID ASIG ID . AGREGA NUMERO
     (43) cambio -> ID ASIG ID . RESTA NUMERO
 
-    AGREGA          shift and go to state 266
-    RESTA           shift and go to state 267
+    AGREGA          shift and go to state 261
+    RESTA           shift and go to state 262
 
 
-state 263
+state 258
 
     (49) declaracionElse -> ELSE LLAVEA listaInst . LLAVEC
 
-    LLAVEC          shift and go to state 268
+    LLAVEC          shift and go to state 263
 
 
-state 264
+state 259
 
     (90) operacionesBasicas -> ID CORA NUMERO CORC ASIG ID CORA NUMERO CORC PC operacionesBasicas .
 
@@ -4703,32 +4645,32 @@ state 264
     RETURN          reduce using rule 90 (operacionesBasicas -> ID CORA NUMERO CORC ASIG ID CORA NUMERO CORC PC operacionesBasicas .)
 
 
-state 265
+state 260
 
     (30) declaracionCiclo -> ABIJOR PARENTA inicializacion PC cond PC cambio PARENTC LLAVEA listaInst . LLAVEC declaracionCiclo
 
-    LLAVEC          shift and go to state 269
+    LLAVEC          shift and go to state 264
 
 
-state 266
+state 261
 
     (40) cambio -> ID ASIG ID AGREGA . ID
     (42) cambio -> ID ASIG ID AGREGA . NUMERO
 
-    ID              shift and go to state 270
-    NUMERO          shift and go to state 271
+    ID              shift and go to state 265
+    NUMERO          shift and go to state 266
 
 
-state 267
+state 262
 
     (41) cambio -> ID ASIG ID RESTA . ID
     (43) cambio -> ID ASIG ID RESTA . NUMERO
 
-    ID              shift and go to state 272
-    NUMERO          shift and go to state 273
+    ID              shift and go to state 267
+    NUMERO          shift and go to state 268
 
 
-state 268
+state 263
 
     (49) declaracionElse -> ELSE LLAVEA listaInst LLAVEC .
 
@@ -4750,65 +4692,65 @@ state 268
     RETURN          reduce using rule 49 (declaracionElse -> ELSE LLAVEA listaInst LLAVEC .)
 
 
-state 269
+state 264
 
     (30) declaracionCiclo -> ABIJOR PARENTA inicializacion PC cond PC cambio PARENTC LLAVEA listaInst LLAVEC . declaracionCiclo
     (30) declaracionCiclo -> . ABIJOR PARENTA inicializacion PC cond PC cambio PARENTC LLAVEA listaInst LLAVEC declaracionCiclo
     (31) declaracionCiclo -> . empty
-    (113) empty -> .
+    (111) empty -> .
 
   ! shift/reduce conflict for ABIJOR resolved as shift
-    ABIJOR          shift and go to state 113
-    ABIN            reduce using rule 113 (empty -> .)
-    ABOUT           reduce using rule 113 (empty -> .)
-    ABIDECLARA      reduce using rule 113 (empty -> .)
-    INT             reduce using rule 113 (empty -> .)
-    CHAR            reduce using rule 113 (empty -> .)
-    STRING          reduce using rule 113 (empty -> .)
-    BOOL            reduce using rule 113 (empty -> .)
-    FLOAT           reduce using rule 113 (empty -> .)
-    VOID            reduce using rule 113 (empty -> .)
-    ABIRRAY         reduce using rule 113 (empty -> .)
-    C               reduce using rule 113 (empty -> .)
-    ID              reduce using rule 113 (empty -> .)
-    ABIF            reduce using rule 113 (empty -> .)
-    LLAVEC          reduce using rule 113 (empty -> .)
-    RETURN          reduce using rule 113 (empty -> .)
+    ABIJOR          shift and go to state 112
+    ABIN            reduce using rule 111 (empty -> .)
+    ABOUT           reduce using rule 111 (empty -> .)
+    ABIDECLARA      reduce using rule 111 (empty -> .)
+    INT             reduce using rule 111 (empty -> .)
+    CHAR            reduce using rule 111 (empty -> .)
+    STRING          reduce using rule 111 (empty -> .)
+    BOOL            reduce using rule 111 (empty -> .)
+    FLOAT           reduce using rule 111 (empty -> .)
+    VOID            reduce using rule 111 (empty -> .)
+    ABIRRAY         reduce using rule 111 (empty -> .)
+    C               reduce using rule 111 (empty -> .)
+    ID              reduce using rule 111 (empty -> .)
+    ABIF            reduce using rule 111 (empty -> .)
+    LLAVEC          reduce using rule 111 (empty -> .)
+    RETURN          reduce using rule 111 (empty -> .)
 
-  ! ABIJOR          [ reduce using rule 113 (empty -> .) ]
+  ! ABIJOR          [ reduce using rule 111 (empty -> .) ]
 
-    declaracionCiclo               shift and go to state 274
-    empty                          shift and go to state 114
+    declaracionCiclo               shift and go to state 269
+    empty                          shift and go to state 113
 
-state 270
+state 265
 
     (40) cambio -> ID ASIG ID AGREGA ID .
 
     PARENTC         reduce using rule 40 (cambio -> ID ASIG ID AGREGA ID .)
 
 
-state 271
+state 266
 
     (42) cambio -> ID ASIG ID AGREGA NUMERO .
 
     PARENTC         reduce using rule 42 (cambio -> ID ASIG ID AGREGA NUMERO .)
 
 
-state 272
+state 267
 
     (41) cambio -> ID ASIG ID RESTA ID .
 
     PARENTC         reduce using rule 41 (cambio -> ID ASIG ID RESTA ID .)
 
 
-state 273
+state 268
 
     (43) cambio -> ID ASIG ID RESTA NUMERO .
 
     PARENTC         reduce using rule 43 (cambio -> ID ASIG ID RESTA NUMERO .)
 
 
-state 274
+state 269
 
     (30) declaracionCiclo -> ABIJOR PARENTA inicializacion PC cond PC cambio PARENTC LLAVEA listaInst LLAVEC declaracionCiclo .
 
@@ -4859,27 +4801,27 @@ WARNING: shift/reduce conflict for ABIF in state 83 resolved as shift
 WARNING: shift/reduce conflict for ABIN in state 91 resolved as shift
 WARNING: shift/reduce conflict for ABIJOR in state 94 resolved as shift
 WARNING: shift/reduce conflict for ABIDECLARA in state 101 resolved as shift
-WARNING: shift/reduce conflict for ID in state 137 resolved as shift
-WARNING: shift/reduce conflict for ID in state 146 resolved as shift
-WARNING: shift/reduce conflict for ID in state 147 resolved as shift
-WARNING: shift/reduce conflict for ABOUT in state 152 resolved as shift
-WARNING: shift/reduce conflict for ID in state 178 resolved as shift
-WARNING: shift/reduce conflict for C in state 179 resolved as shift
-WARNING: shift/reduce conflict for ABIN in state 184 resolved as shift
-WARNING: shift/reduce conflict for ID in state 190 resolved as shift
+WARNING: shift/reduce conflict for ID in state 135 resolved as shift
+WARNING: shift/reduce conflict for ID in state 144 resolved as shift
+WARNING: shift/reduce conflict for ID in state 145 resolved as shift
+WARNING: shift/reduce conflict for ABOUT in state 149 resolved as shift
+WARNING: shift/reduce conflict for ID in state 174 resolved as shift
+WARNING: shift/reduce conflict for C in state 175 resolved as shift
+WARNING: shift/reduce conflict for ABIN in state 180 resolved as shift
+WARNING: shift/reduce conflict for ID in state 186 resolved as shift
+WARNING: shift/reduce conflict for ID in state 187 resolved as shift
+WARNING: shift/reduce conflict for ID in state 188 resolved as shift
 WARNING: shift/reduce conflict for ID in state 191 resolved as shift
 WARNING: shift/reduce conflict for ID in state 192 resolved as shift
-WARNING: shift/reduce conflict for ID in state 195 resolved as shift
-WARNING: shift/reduce conflict for ID in state 196 resolved as shift
+WARNING: shift/reduce conflict for ID in state 213 resolved as shift
+WARNING: shift/reduce conflict for ID in state 214 resolved as shift
 WARNING: shift/reduce conflict for ID in state 218 resolved as shift
-WARNING: shift/reduce conflict for ID in state 219 resolved as shift
-WARNING: shift/reduce conflict for ID in state 223 resolved as shift
-WARNING: shift/reduce conflict for ABIF in state 231 resolved as shift
-WARNING: shift/reduce conflict for ABIF in state 246 resolved as shift
-WARNING: shift/reduce conflict for ABIN in state 259 resolved as shift
-WARNING: shift/reduce conflict for ID in state 260 resolved as shift
-WARNING: shift/reduce conflict for ABIN in state 261 resolved as shift
-WARNING: shift/reduce conflict for ABIJOR in state 269 resolved as shift
+WARNING: shift/reduce conflict for ABIF in state 226 resolved as shift
+WARNING: shift/reduce conflict for ABIF in state 241 resolved as shift
+WARNING: shift/reduce conflict for ABIN in state 254 resolved as shift
+WARNING: shift/reduce conflict for ID in state 255 resolved as shift
+WARNING: shift/reduce conflict for ABIN in state 256 resolved as shift
+WARNING: shift/reduce conflict for ABIJOR in state 264 resolved as shift
 WARNING: reduce/reduce conflict in state 47 resolved using rule (listaInst -> listaInstrucciones)
 WARNING: rejected rule (empty -> <empty>) in state 47
 WARNING: reduce/reduce conflict in state 48 resolved using rule (entradaDatos -> empty)
