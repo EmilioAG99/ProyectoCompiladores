@@ -182,13 +182,16 @@ while True:
             valorReasignar = valorReasignar + str(tok.value)
     elif reasigna == 1 and tok.type != "ASIG" :
         if tok.type == "PC" :
-          lista = list(diccionario[llaveAuxiliar].keys())     
+          if(diccionario.get(llaveAuxiliar) is not None):
+            lista = list(diccionario[llaveAuxiliar].keys())
+          else:  sys.exit("variable {0} no declarada en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))       
           if  valorReasignar!= "":
             if(lista[0]== "INT"):
                 numbers = [int(word) for word in valorReasignar.split() if word.isdigit()]
                 if(len(numbers) !=0):
                     if(len(valorReasignar.split("*"))!=1 or len(valorReasignar.split("-"))!=1 or len(valorReasignar.split("+"))!=1 or len(valorReasignar.split("/"))!=1):
                         if (len(numbers)!=2):
+                            
                             sys.exit("Error semantico en variable {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))
                         else:diccionario[llaveAuxiliar]={lista[0]:valorReasignar}
                     else: diccionario[llaveAuxiliar]={lista[0]:valorReasignar}
@@ -200,6 +203,67 @@ while True:
                             diccionario[llaveAuxiliar]={lista[0]:list(list(diccionario[valorReasignar.split(".")[len(valorReasignar.split("."))-1].strip()].values())[0].keys())[0]}
                         else: 
                             sys.exit("Error semantico en variable {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))       
+                    elif(len(valorReasignar.split("*"))!=1 or len(valorReasignar.split("-"))!=1 or len(valorReasignar.split("+"))!=1 or len(valorReasignar.split("/"))!=1):
+                        if(len(valorReasignar.split("*"))!=1):
+                            contadorLocal = 0
+                            arregloBusqueda = valorReasignar.split("*")
+                           
+                            for valores in arregloBusqueda:
+                                if(diccionario.get(valores.strip()) is not None):
+                                   
+                                    if(list(diccionario[valores.strip()].keys())[0] == lista[0]):
+                                       
+                                        contadorLocal+=1
+                                    else:  sys.exit("Error semantico variable {0} en linea {1} no esta del mismo tipo".format(valores.strip(), int((numeroLinea/2)+1)))              
+                                else: sys.exit(" variable {0} en linea {1} no esta declarada".format(valores.strip(), int((numeroLinea/2)+1)))              
+                            if(contadorLocal ==2):
+                                diccionario[llaveAuxiliar]={lista[0]:valorReasignar}
+                            contadorLocal = 0
+                        elif(len(valorReasignar.split("-"))!=1):
+                            contadorLocal = 0
+                            arregloBusqueda = valorReasignar.split("-")
+                            
+                            for valores in arregloBusqueda:
+                                if(diccionario.get(valores.strip()) is not None):
+                                  
+                                    if(list(diccionario[valores.strip()].keys())[0] == lista[0]):
+                                        
+                                        contadorLocal+=1
+                                    else:  sys.exit("Error semantico variable {0} en linea {1} no esta del mismo tipo".format(valores.strip(), int((numeroLinea/2)+1)))              
+                                else: sys.exit(" variable {0} en linea {1} no esta declarada".format(valores.strip(), int((numeroLinea/2)+1)))              
+                            if(contadorLocal ==2):
+                                diccionario[llaveAuxiliar]={lista[0]:valorReasignar}
+                            contadorLocal = 0
+                        elif(len(valorReasignar.split("+"))!=1):
+                            contadorLocal = 0
+                            arregloBusqueda = valorReasignar.split("+")
+                           
+                            for valores in arregloBusqueda:
+                                if(diccionario.get(valores.strip()) is not None):
+                                    
+                                    if(list(diccionario[valores.strip()].keys())[0] == lista[0]):
+                                        
+                                        contadorLocal+=1
+                                    else:  sys.exit("Error semantico variable {0} en linea {1} no esta del mismo tipo".format(valores.strip(), int((numeroLinea/2)+1)))              
+                                else: sys.exit(" variable {0} en linea {1} no esta declarada".format(valores.strip(), int((numeroLinea/2)+1)))              
+                            if(contadorLocal ==2):
+                                diccionario[llaveAuxiliar]={lista[0]:valorReasignar}
+                            contadorLocal = 0
+                        elif(len(valorReasignar.split("/"))!=1):
+                            contadorLocal = 0
+                            arregloBusqueda = valorReasignar.split("/")
+                            
+                            for valores in arregloBusqueda:
+                                if(diccionario.get(valores.strip()) is not None):
+                                    
+                                    if(list(diccionario[valores.strip()].keys())[0] == lista[0]):
+                                        
+                                        contadorLocal+=1
+                                    else:  sys.exit("Error semantico variable {0} en linea {1} no esta del mismo tipo".format(valores.strip(), int((numeroLinea/2)+1)))              
+                                else: sys.exit(" variable {0} en linea {1} no esta declarada".format(valores.strip(), int((numeroLinea/2)+1)))              
+                            if(contadorLocal ==2):
+                                diccionario[llaveAuxiliar]={lista[0]:valorReasignar}
+                            contadorLocal = 0
                     else:
                        if(valorReasignar.strip() in diccionario):
                                 if(list(diccionario[valorReasignar.strip()].keys())[0] == list(diccionario[llaveAuxiliar].keys())[0]):
@@ -248,14 +312,25 @@ while True:
                 if(len(valorReasignar.split("*"))!=1 or len(valorReasignar.split("-"))!=1 or len(valorReasignar.split("+"))!=1 or len(valorReasignar.split("/"))!=1):
                     for word in valorReasignar.split():
                         if(word!='*'and word!='+'and word!='-' and word!='/'):
-                            if(isinstance(float(word),float)):
-                                numbers.append(float(word))
+                            if(diccionario.get(word) is not None):
+                                if(list(diccionario[word].keys())[0] == "FLOAT"):
+                                    numbers.append(1)
+                                else:
+                                      print(list(diccionario[word].keys())[0])
+                                      sys.exit("Error semantico en variable {0} en linea {1}".format(word, int((numeroLinea/2)+1)))                                   
+                                    
+                            else:
+                                if re.match('[-]?(\d)+\.(\d+)', word):
+                                    numbers.append(float(word))
+                                else:
+                                     sys.exit("Error, variable {0} en linea {1} no encontrada o tipo de dato incorrecto".format(word, int((numeroLinea/2)+1)))                                   
                 if(len(numbers) !=0):
                     if(len(valorReasignar.split("*"))!=1 or len(valorReasignar.split("-"))!=1 or len(valorReasignar.split("+"))!=1 or len(valorReasignar.split("/"))!=1):
                         if (len(numbers)!=2):
                             sys.exit("Error semantico en variable {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))
                         else:diccionario[llaveAuxiliar]={lista[0]:valorReasignar}
                     else: diccionario[llaveAuxiliar]={lista[0]:valorReasignar}
+                
                 else: 
                     if(len(valorReasignar.split("."))!=1):
                         tipoVariableR = list(diccionario[llaveAuxiliar].keys())[0]

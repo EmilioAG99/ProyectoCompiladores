@@ -1,4 +1,4 @@
-abiworld string chrisesguapo = "holaaa" , char variable2 = 'a' , int  a= 10 , abirray string arreglo1 = [10];
+abiworld string chrisesguapo = "holaaa" , char variable2 = 'a' , int  a= 10 , abirray string arreglo1 = [10][3];
 abistruct andres {
     string h = "false",
     int guap = 100,
@@ -18,9 +18,7 @@ string funcion2 (int tupodeDato1, int tupodeDato){
         a = 4 * 3;
         int adios = 5
         string juan1 = "juan"
-        chrisesguapo = juan1;
-        
-        
+        chrisesguapo = juan1; 
     }
     return juan1;
 }
@@ -37,8 +35,8 @@ void funcion1 (int tupodeDato3){
         a = andres1.guap;
         int aa =0
         float abuela = 3.0, float abuela2=100.0
-        abuela =abuela2;
-        a = 4 * 3;
+        abuela =100.0 + abuela;
+        a = a + a;
         abif(a<10){
             abin(abijora);
             a = andres.guap;

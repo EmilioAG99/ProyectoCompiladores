@@ -21,6 +21,9 @@ ASIG
 CORA
 NUMERO
 CORC
+CORA
+NUMERO
+CORC
 PC
 ABISTRUCT
 ID
@@ -187,13 +190,15 @@ ASIG
 FLOAT_VALOR
 ID
 ASIG
+FLOAT_VALOR
+AGREGA
 ID
 PC
 ID
 ASIG
-NUMERO
-MULT
-NUMERO
+ID
+AGREGA
+ID
 PC
 ABIF
 PARENTA
@@ -283,8 +288,8 @@ ASIG
 ID
 PC
 LLAVEC
-{'chrisesguapo': {'STRING': '"false"'}, 'variable2': {'CHAR': "'a'"}, 'a': {'INT': '1555'}, 'arreglo1': {'STRING': '10'}, 'andres': {'ESTRUCTURA': 'NULL'}, 'h': {'STRING': {'"false"': 3}}, 'guap': {'INT': {'100': 4}}, 'chris': {'CHAR': {"'a'": 5}}, 'adios': {'INT': {'5': 19}}, 'juan1': {'STRING': {'"juan"': 20}}, 'boleanoss': {'BOOL': ' FALSE'}, 'andres1': {'andres': 'NUEVAESTRUCTURA'}, 'aa': {'INT': {'0': 38}}, 'abuela': {'FLOAT': '100.0'}, 'abuela2': {'FLOAT': {'100.0': 39}}, 'varieble3': {'INT': {'1555': 50}}, 'variableEnmain': {'INT': '20'}, 'b': {'INT': {'20': 63}}}
-{'funcion2': {'STRING': {'DECLARACIONFUNCION': 8}}, 'tupodeDato1': {'INT': 'NULL'}, 'tupodeDato': {'INT': 'NULL'}, 'funcion1': {'VOID': {'DECLARACIONFUNCION': 29}}, 'tupodeDato3': {'INT': 'NULL'}, 'funcion3': {'VOID': {'DECLARACIONFUNCION': 55}}, 'tupodeDato4': {'INT': 'NULL'}, 'tipodeDato5': {'INT': 'NULL'}, 'tipodeDato6': {'INT': 'NULL'}}
+{'chrisesguapo': {'STRING': '"false"'}, 'variable2': {'CHAR': "'a'"}, 'a': {'INT': '1555'}, 'arreglo1': {'STRING': '10'}, 'andres': {'ESTRUCTURA': 'NULL'}, 'h': {'STRING': {'"false"': 3}}, 'guap': {'INT': {'100': 4}}, 'chris': {'CHAR': {"'a'": 5}}, 'adios': {'INT': {'5': 19}}, 'juan1': {'STRING': {'"juan"': 20}}, 'boleanoss': {'BOOL': ' FALSE'}, 'andres1': {'andres': 'NUEVAESTRUCTURA'}, 'aa': {'INT': {'0': 36}}, 'abuela': {'FLOAT': ' 100.0 + abuela'}, 'abuela2': {'FLOAT': {'100.0': 37}}, 'varieble3': {'INT': {'1555': 48}}, 'variableEnmain': {'INT': '20'}, 'b': {'INT': {'20': 61}}}
+{'funcion2': {'STRING': {'DECLARACIONFUNCION': 8}}, 'tupodeDato1': {'INT': 'NULL'}, 'tupodeDato': {'INT': 'NULL'}, 'funcion1': {'VOID': {'DECLARACIONFUNCION': 27}}, 'tupodeDato3': {'INT': 'NULL'}, 'funcion3': {'VOID': {'DECLARACIONFUNCION': 53}}, 'tupodeDato4': {'INT': 'NULL'}, 'tipodeDato5': {'INT': 'NULL'}, 'tipodeDato6': {'INT': 'NULL'}}
 variable unica
 variable unica
 variable unica
@@ -308,7 +313,6 @@ variable unica
 variable unica
 se encontro el ELSE
 Se encontro el IF
-antessss [{'STRING': {'DECLARACIONFUNCION': 8}}, {'INT': 'NULL'}, {'INT': 'NULL'}, {'VOID': {'DECLARACIONFUNCION': 29}}, {'INT': 'NULL'}, {'VOID': {'DECLARACIONFUNCION': 55}}, {'INT': 'NULL'}, {'INT': 'NULL'}, {'INT': 'NULL'}]
 encuentra Parametro
 variable unica
 variable unica

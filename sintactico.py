@@ -50,6 +50,7 @@ def p_tipoValores(p):
         
 def p_declaracionArreglo(p):
     ''' declaracionArreglo : ABIRRAY tipoDatos ID ASIG CORA NUMERO CORC
+                           | ABIRRAY tipoDatos ID ASIG CORA NUMERO CORC CORA NUMERO CORC
                            | ABIRRAY tipoDatos ID '''  
     print("ABIRRAY DETECTADO")
 def p_declaracionEstructuras(p):
@@ -213,7 +214,6 @@ def p_return(p):
     
     if(contadorReturn == 0):
         listaReturnFunciones = list(diccionarioFunciones.values())
-        print("antessss", listaReturnFunciones)
         global listaFinal
         for elements in listaReturnFunciones:
             if(type(list(elements.values())[0]) == dict  ):
@@ -238,8 +238,10 @@ def p_empty(p):
 	pass
  
 def p_error(p):
-    sys.exit("Error de sintaxis en la linea {0}".format(int((p.lineno - (numeroLinea - 1))/2 ) ))
-
+    if(p!= None):
+        sys.exit("Error de sintaxis en la linea {0}".format(int((p.lineno - (numeroLinea - 1))/2 ) ))
+    else: 
+        sys.exit("Error de sintaxis, no se encontro main")
 
 fp = codecs.open("pruebas2.txt","r","utf-8")
 cadena = fp.read()
