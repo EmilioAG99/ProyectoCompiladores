@@ -287,8 +287,24 @@ ID
 ASIG
 ID
 PC
+ABIJOR
+PARENTA
+INT
+ID
+ASIG
+NUMERO
+PC
+ID
+LTE
+NUMERO
+PC
+ID
+INCREMENTO
+PARENTC
+LLAVEA
 LLAVEC
-{'chrisesguapo': {'STRING': '"false"'}, 'variable2': {'CHAR': "'a'"}, 'a': {'INT': '1555'}, 'arreglo1': {'STRING': '10'}, 'andres': {'ESTRUCTURA': 'NULL'}, 'h': {'STRING': {'"false"': 3}}, 'guap': {'INT': {'100': 4}}, 'chris': {'CHAR': {"'a'": 5}}, 'adios': {'INT': {'5': 19}}, 'juan1': {'STRING': {'"juan"': 20}}, 'boleanoss': {'BOOL': ' FALSE'}, 'andres1': {'andres': 'NUEVAESTRUCTURA'}, 'aa': {'INT': {'0': 36}}, 'abuela': {'FLOAT': ' 100.0 + abuela'}, 'abuela2': {'FLOAT': {'100.0': 37}}, 'varieble3': {'INT': {'1555': 48}}, 'variableEnmain': {'INT': '20'}, 'b': {'INT': {'20': 61}}}
+LLAVEC
+{'chrisesguapo': {'STRING': '"false"'}, 'variable2': {'CHAR': "'a'"}, 'a': {'INT': '1555'}, 'arreglo1': {'STRING': '10'}, 'andres': {'ESTRUCTURA': 'NULL'}, 'h': {'STRING': {'"false"': 3}}, 'guap': {'INT': {'100': 4}}, 'chris': {'CHAR': {"'a'": 5}}, 'adios': {'INT': {'5': 19}}, 'juan1': {'STRING': {'"juan"': 20}}, 'boleanoss': {'BOOL': ' FALSE'}, 'andres1': {'andres': 'NUEVAESTRUCTURA'}, 'aa': {'INT': {'0': 36}}, 'abuela': {'FLOAT': ' 100.0 + abuela'}, 'abuela2': {'FLOAT': {'100.0': 37}}, 'varieble3': {'INT': {'1555': 48}}, 'variableEnmain': {'INT': '20'}, 'b': {'INT': {'20': 61}}, 'c': {'INT': {'0': 63}}}
 {'funcion2': {'STRING': {'DECLARACIONFUNCION': 8}}, 'tupodeDato1': {'INT': 'NULL'}, 'tupodeDato': {'INT': 'NULL'}, 'funcion1': {'VOID': {'DECLARACIONFUNCION': 27}}, 'tupodeDato3': {'INT': 'NULL'}, 'funcion3': {'VOID': {'DECLARACIONFUNCION': 53}}, 'tupodeDato4': {'INT': 'NULL'}, 'tipodeDato5': {'INT': 'NULL'}, 'tipodeDato6': {'INT': 'NULL'}}
 variable unica
 variable unica
@@ -337,6 +353,7 @@ citaaaaaaaaa None
 variable unica
 variable unica
 Multiples variables
+se encontro el ciclo
 se encontro main
 inicio
 None

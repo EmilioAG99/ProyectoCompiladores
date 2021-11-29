@@ -60,5 +60,7 @@ abimain{
        about("gamer",abijora);
        int variableEnmain =10, int b=20
        variableEnmain = b;
-         
+        abijor( int c=0 ; c<=10 ; c++){
+
+        }
 }

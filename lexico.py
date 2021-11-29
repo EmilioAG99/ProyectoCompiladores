@@ -175,7 +175,7 @@ while True:
             else:  sys.exit("Repeticion de declaracion con nombre {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))
         if tok.type == "PARENTA":
             asignacionSimple = 0
-            if(diccionarioFunciones.get(llaveAuxiliar) is None):
+            if(diccionarioFunciones.get(llaveAuxiliar) is None and (llaveAuxiliar!="abin" or llaveAuxiliar!="about") ):
                 diccionarioFunciones[llaveAuxiliar]={tipoAuxiliar:{"DECLARACIONFUNCION":int((numeroLinea/2)+1)}}
             else:sys.exit("Repeticion de declaracion con nombre {0} en linea {1}".format(llaveAuxiliar, int((numeroLinea/2)+1)))
         if(reasigna != 0):
@@ -368,6 +368,9 @@ while True:
           valorReasignar= ""
           reasigna = 0
         if tok.type == "PARENTC":
+            valorReasignar =""
+            reasigna = 0
+        if tok.type == "LTE" or tok.type == "LT" or tok.type == "GTE" or tok.type == "GT":
             valorReasignar =""
             reasigna = 0
         if tok.type == "PARENTA" and valorReasignar=="":
