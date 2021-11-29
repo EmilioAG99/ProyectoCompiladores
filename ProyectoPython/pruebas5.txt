@@ -1,0 +1,21 @@
+
+string funcion1 (string dato){
+    string var = "funciones, f1"
+    about("f1" ,var );
+    return var;
+}
+
+int funcion2 (int dato1){
+    int a = 2, 
+    int b = 3, 
+    b = a;
+    return b;
+}
+
+void funcion3 (){
+    return  ;
+}
+
+abimain{
+  
+}

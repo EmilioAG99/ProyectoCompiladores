@@ -1,0 +1,10 @@
+abiworld abirray string arreglo1 = [10], abirray int arreglo2 = [5];
+
+abimain{
+    int a = 10
+    abirray float arreglo3 = [2]
+
+    abin(a);
+    
+    about("array2",arreglo2);     
+}

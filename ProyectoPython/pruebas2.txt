@@ -1,8 +1,8 @@
-abiworld string chrisesguapo = "holaaa" , char variable2 = 'a' , int  a= 10 , abirray string arreglo1 = [10][3];
+abiworld string chrisesguapo = "strins" , char variable2 = 'a' , int  a= 10 , abirray string arreglo1 = [5];
 abistruct andres {
     string h = "false",
     int guap = 100,
-    char chris = 'a',
+    char chris = 'a'
 };
 
 string funcion2 (int tupodeDato1, int tupodeDato){
@@ -20,6 +20,7 @@ string funcion2 (int tupodeDato1, int tupodeDato){
         string juan1 = "juan"
         chrisesguapo = juan1; 
     }
+   
     return juan1;
 }
 
@@ -54,13 +55,14 @@ void funcion3 (int tupodeDato4, int tipodeDato5, int tipodeDato6){
      return  ;
 }
 abimain{
-    
-       abin(abijora);
-      
+       int x = 0
+       abin(x);
+       arreglo1[1] = "a";
+       int variable33 = 0
        about("gamer",abijora);
        int variableEnmain =10, int b=20
        variableEnmain = b;
-        abijor( int c=0 ; c<=10 ; c++){
-
+        abijor( int c=0;  c<=10 ; c++){
+            a= a+c;
         }
 }

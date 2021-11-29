@@ -1,0 +1,17 @@
+abistruct struct {
+    string h = "false",
+    int c = 100,
+    char d = 's'
+};
+
+abimain{
+
+    abideclara struct nuevaStruct;
+    char nuevo = 'a' 
+    int a = 0
+    nuevo = nuevaStruct.d;
+
+    a = struct.c;
+    
+    about("struct nueva",nuevaStruct);
+}

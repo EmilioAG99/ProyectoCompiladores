@@ -1,0 +1,10 @@
+abiworld string variable = "soyvar" , char variable2 = 'a' , int  a= 10 , float b = 0.01 ;
+
+abimain{
+    int c = 10
+    string var1 = "hola"
+    
+    c = a;
+    var1 = variable;
+    abiout(c);
+}

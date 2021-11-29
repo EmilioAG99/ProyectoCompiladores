@@ -21,9 +21,6 @@ ASIG
 CORA
 NUMERO
 CORC
-CORA
-NUMERO
-CORC
 PC
 ABISTRUCT
 ID
@@ -33,4 +30,348 @@ ID
 ASIG
 STRING_VALOR
 C
-caracter ilegal ':'
+INT
+ID
+ASIG
+NUMERO
+C
+CHAR
+ID
+ASIG
+CHAR_VALOR
+LLAVEC
+PC
+STRING
+ID
+PARENTA
+INT
+ID
+C
+INT
+ID
+PARENTC
+LLAVEA
+ABIF
+PARENTA
+ID
+LT
+NUMERO
+PARENTC
+LLAVEA
+ABIN
+PARENTA
+ID
+PARENTC
+PC
+ABOUT
+PARENTA
+STRING_VALOR
+C
+ID
+PARENTC
+PC
+ID
+ASIG
+NUMERO
+MULT
+NUMERO
+PC
+ID
+ASIG
+NUMERO
+PC
+LLAVEC
+ELSE
+LLAVEA
+ABIN
+PARENTA
+ID
+PARENTC
+PC
+ABOUT
+PARENTA
+STRING_VALOR
+C
+ID
+PARENTC
+PC
+ID
+ASIG
+NUMERO
+MULT
+NUMERO
+PC
+INT
+ID
+ASIG
+NUMERO
+STRING
+ID
+ASIG
+STRING_VALOR
+ID
+ASIG
+ID
+PC
+LLAVEC
+RETURN
+ID
+PC
+LLAVEC
+VOID
+ID
+PARENTA
+INT
+ID
+PARENTC
+LLAVEA
+BOOL
+ID
+ASIG
+TRUE
+ID
+ASIG
+FALSE
+PC
+ABIF
+PARENTA
+ID
+LT
+NUMERO
+AND
+NOT
+PARENTA
+ID
+PARENTC
+PARENTC
+LLAVEA
+ABIDECLARA
+ID
+ID
+PC
+ID
+ASIG
+ID
+P
+ID
+PC
+ID
+ASIG
+ID
+P
+ID
+PC
+ID
+P
+ID
+PC
+ID
+ASIG
+ID
+P
+ID
+PC
+INT
+ID
+ASIG
+NUMERO
+FLOAT
+ID
+ASIG
+FLOAT_VALOR
+C
+FLOAT
+ID
+ASIG
+FLOAT_VALOR
+ID
+ASIG
+FLOAT_VALOR
+AGREGA
+ID
+PC
+ID
+ASIG
+ID
+AGREGA
+ID
+PC
+ABIF
+PARENTA
+ID
+LT
+NUMERO
+PARENTC
+LLAVEA
+ABIN
+PARENTA
+ID
+PARENTC
+PC
+ID
+ASIG
+ID
+P
+ID
+PC
+ABOUT
+PARENTA
+STRING_VALOR
+PARENTC
+PC
+LLAVEC
+ABOUT
+PARENTA
+STRING_VALOR
+PARENTC
+PC
+LLAVEC
+ELSE
+LLAVEA
+INT
+ID
+ASIG
+NUMERO
+ID
+ASIG
+ID
+PC
+LLAVEC
+RETURN
+PC
+LLAVEC
+VOID
+ID
+PARENTA
+INT
+ID
+C
+INT
+ID
+C
+INT
+ID
+PARENTC
+LLAVEA
+RETURN
+PC
+LLAVEC
+ABIMAIN
+LLAVEA
+INT
+ID
+ASIG
+NUMERO
+ABIN
+PARENTA
+ID
+PARENTC
+PC
+ID
+CORA
+NUMERO
+CORC
+ASIG
+STRING_VALOR
+PC
+INT
+ID
+ASIG
+NUMERO
+ABOUT
+PARENTA
+STRING_VALOR
+C
+ID
+PARENTC
+PC
+INT
+ID
+ASIG
+NUMERO
+C
+INT
+ID
+ASIG
+NUMERO
+ID
+ASIG
+ID
+PC
+ABIJOR
+PARENTA
+INT
+ID
+ASIG
+NUMERO
+PC
+ID
+LTE
+NUMERO
+PC
+ID
+INCREMENTO
+PARENTC
+LLAVEA
+ID
+ASIG
+ID
+AGREGA
+ID
+PC
+LLAVEC
+LLAVEC
+{'chrisesguapo': {'STRING': '"false"'}, 'variable2': {'CHAR': "'a'"}, 'a': {'INT': ' a + c'}, 'arreglo1': {'STRING': ' [ 1 ] "a"'}, 'andres': {'ESTRUCTURA': 'NULL'}, 'h': {'STRING': {'"false"': 3}}, 'guap': {'INT': {'100': 4}}, 'chris': {'CHAR': {"'a'": 5}}, 'adios': {'INT': {'5': 19}}, 'juan1': {'STRING': {'"juan"': 20}}, 'boleanoss': {'BOOL': ' FALSE'}, 'andres1': {'andres': 'NUEVAESTRUCTURA'}, 'aa': {'INT': {'0': 37}}, 'abuela': {'FLOAT': ' 100.0 + abuela'}, 'abuela2': {'FLOAT': {'100.0': 38}}, 'varieble3': {'INT': {'1555': 49}}, 'x': {'INT': {'0': 58}}, 'variable33': {'INT': {'0': 61}}, 'variableEnmain': {'INT': '20'}, 'b': {'INT': {'20': 63}}, 'c': {'INT': {'0': 65}}}
+{'funcion2': {'STRING': {'DECLARACIONFUNCION': 8}}, 'tupodeDato1': {'INT': 'NULL'}, 'tupodeDato': {'INT': 'NULL'}, 'funcion1': {'VOID': {'DECLARACIONFUNCION': 28}}, 'tupodeDato3': {'INT': 'NULL'}, 'funcion3': {'VOID': {'DECLARACIONFUNCION': 54}}, 'tupodeDato4': {'INT': 'NULL'}, 'tipodeDato5': {'INT': 'NULL'}, 'tipodeDato6': {'INT': 'NULL'}}
+variable unica
+variable unica
+variable unica
+ABIRRAY DETECTADO
+variable unica
+Multiples variables
+Multiples variables
+Multiples variables
+abiworld
+variable unica
+variable unica
+variable unica
+Multiples variables
+Multiples variables
+abistruct
+encuentra Parametro
+encuentra Parametro
+encuentra multiparametros
+variable unica
+variable unica
+se encontro el ELSE
+Se encontro el IF
+encuentra Parametro
+variable unica
+variable unica
+variable unica
+variable unica
+Multiples variables
+Se encontro el IF
+variable unica
+se encontro el ELSE
+Se encontro el IF
+encuentra Parametro
+encuentra Parametro
+encuentra Parametro
+encuentra multiparametros
+encuentra multiparametros
+SE ENCONTRO FUNCION
+citaaaaaaaaa None
+SE ENCONTRO FUNCION
+citaaaaaaaaa None
+SE ENCONTRO FUNCION
+citaaaaaaaaa None
+variable unica
+variable unica
+variable unica
+variable unica
+Multiples variables
+se encontro el ciclo
+se encontro main
+inicio
+None

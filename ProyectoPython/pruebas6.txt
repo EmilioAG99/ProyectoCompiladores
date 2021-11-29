@@ -1,0 +1,5 @@
+abimain{
+    abijor ( int a = 0 ; a < 10 ; a++){
+        abiout(a);
+    }
+}
