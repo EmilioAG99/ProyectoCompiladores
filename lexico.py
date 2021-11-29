@@ -87,8 +87,7 @@ def t_NUMERO(t):
 
 def t_error (t):
     print ("caracter ilegal '%s'" % t.value[0])
-    if not t: return
-    t.lexer.skip(1)
+    sys.exit("Caracter ilegal {0} en linea {1}".format(t.value[0], int(numeroLinea/2 +1)))
 
 
 archivo = './pruebas2.txt'
